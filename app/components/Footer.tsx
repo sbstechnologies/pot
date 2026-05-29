@@ -81,7 +81,7 @@ export default function Footer() {
           </div>
 
           {/* COLUMN 2 */}
-          <div className="mt-14 md:mt-0">
+          <div className="mt-14 ml-20 md:mt-0">
             <h4 className="text-[15px] tracking-[0.18em] text-[#E09428] mb-8 font-[Plus_Jakarta_Sans]">
               EXPLORE
             </h4>
@@ -134,7 +134,7 @@ export default function Footer() {
           </div>
 
           {/* COLUMN 3 */}
-          <div className="mt-14 lg:mt-0">
+          <div className="mt-14 ml-20 lg:mt-0">
             <h4 className="text-[15px] tracking-[0.18em] text-[#E09428] mb-8 font-[Plus_Jakarta_Sans]">
               LEASING
             </h4>
