@@ -2,13 +2,14 @@
 
 import Image from "next/image";
 import { useState, useEffect } from "react";
-import Header from "./components/Header";
-import HeaderTop from "./components/HeaderTop";
+
 import Footer from "./components/Footer";
 import LeasePortal from "./components/LeasePortal";
 import { articles } from "@/app/config/content";
 import LoriChatWidget from "./components/LoriChatWidget";
 import PromoCardWidget from "./components/PromoCardWidget";
+import Header from "./components/Header";
+import HeaderTop from "./components/HeaderTop";
 
 import { Wrench, Users, Droplets, Car, PawPrint, Shirt } from "lucide-react";
 import {
@@ -88,15 +89,14 @@ export default function Home() {
 
   return (
     <>
-      <LoriChatWidget />
-      <PromoCardWidget />
-      <HeaderTop show={showTopBar} setShow={setShowTopBar} />
-      <Header showTopBar={showTopBar} />
-
       {/* ================= HERO SECTION ================= */}
-      <section className="relative w-full min-h-[100svh] lg:min-h-[105vh] 2xl:min-h-[118vh] overflow-hidden">
+
+      <section className="relative w-full min-h-[100svh] lg:min-h-[130vh] 2xl:min-h-[118vh] overflow-hidden">
+        <HeaderTop show={showTopBar} setShow={setShowTopBar} />
+        <Header showTopBar={showTopBar} />
+
         <Image
-          src={images.home26}
+          src={images.home22}
           alt={images.alt26}
           fill
           priority
@@ -106,51 +106,53 @@ export default function Home() {
 
         <div className="absolute inset-0 bg-black/50" />
 
+        {/* MAIN LAYOUT WRAPPER (Now handles the entire animation entry) */}
         <div
-          className={`absolute left-1/2 -translate-x-1/2 z-[2] flex w-full max-w-[1440px] flex-col items-center justify-center text-center text-white px-4 sm:px-6 pb-14 select-none animate-[hero-in_1s_cubic-bezier(0.4,0,0.2,1)_0.15s_1_normal_both_running] ${
+          className={`absolute left-1/2 -translate-x-1/2 z-[2] flex w-full max-w-[1440px] flex-col items-center justify-center text-center text-white px-6 pb-14 select-none animate-hero-container ${
             showTopBar
               ? "pt-36 md:pt-44 lg:pt-52 2xl:pt-60"
               : "pt-28 md:pt-36 lg:pt-44 2xl:pt-48"
           }`}
         >
-          {/* TOP BADGE STRIP */}
-          <div className="mb-[30px] flex items-center gap-3 sm:gap-4 max-w-[90vw]">
-            <div className="h-[1px] w-8 sm:w-[72px] flex-shrink-0 bg-white/15" />
-            <span className="font-[Plus_Jakarta_Sans] text-[9px] sm:text-[10px] font-bold uppercase tracking-[0.15em] sm:tracking-[0.2em] text-white/50 text-center">
-              Parks on Taylor&nbsp;·&nbsp;Sherman, TX&nbsp;·&nbsp;Now Leasing
+          {/* 1. TOP BADGE STRIP */}
+          <div className="mb-[30px] flex items-center gap-4 max-w-[90vw] w-full justify-center">
+            <div className="h-[1px] max-w-[72px] flex-1 bg-[#F5F2ED]/15" />
+            <span className="font-[Plus_Jakarta_Sans] text-[10px] font-bold uppercase tracking-[0.2em] text-[#F5F2ED]/50 text-center">
+              Parks&nbsp;&nbsp;on&nbsp;&nbsp;Taylor &nbsp;·&nbsp; Sherman, TX
+              &nbsp;·&nbsp; Now Leasing
             </span>
-            <div className="h-[1px] w-8 sm:w-[72px] flex-shrink-0 bg-white/15" />
+            <div className="h-[1px] max-w-[72px] flex-1 bg-[#F5F2ED]/15" />
           </div>
 
-          {/* HERO HEADING — no whitespace-nowrap, allow wrap on small screens */}
-          <h1 className="font-serif font-normal text-[clamp(2.2rem,6.5vw,6.4rem)] leading-[1.05] tracking-[-0.03em] text-[#F5F2ED] m-0 max-w-[90vw] sm:max-w-none">
+          {/* 2. HERO HEADING */}
+          <h1 className="font-['Instrument_Serif',Georgia,serif] font-italic text-[clamp(2rem,5.2vw,4.5rem)] leading-[1.05] tracking-[-0.03em] text-[#F5F2ED] m-0 max-w-none md:whitespace-nowrap">
             Affordable, Safe, and
             <br />
-            <em className="not-italic text-[#E09428]/90 italic">
+            <em className="inline-block italic text-[#E09428]/90 md:whitespace-nowrap">
               Clean Living in Sherman.
             </em>
           </h1>
 
-          {/* DIVIDER */}
-          <div className="mx-auto my-6 sm:my-7 flex items-center gap-2.5">
-            <div className="h-[1px] w-10 sm:w-13 bg-[#E09428]/45" />
+          {/* 3. DIVIDER */}
+          <div className="mx-auto my-5 flex items-center gap-2.5">
+            <div className="h-[1px] w-[52px] bg-[#E09428]/45" />
             <div className="h-1 w-1 rounded-full bg-[#E09428]/60" />
             <div className="h-1 w-1 rounded-full bg-[#E09428]/35" />
             <div className="h-1 w-1 rounded-full bg-[#E09428]/60" />
-            <div className="h-[1px] w-10 sm:w-13 bg-[#E09428]/45" />
+            <div className="h-[1px] w-[52px] bg-[#E09428]/45" />
           </div>
 
-          {/* SUBTEXT */}
-          <p className="font-[Plus_Jakarta_Sans] text-[clamp(13px,1.3vw,17px)] leading-[1.72] text-[#F5F2ED]/60 mb-8 sm:mb-9 max-w-[340px] sm:max-w-[500px]">
+          {/* 4. SUBTEXT */}
+          <p className="font-[Plus_Jakarta_Sans] text-[clamp(12px,1.3vw,15px)] leading-[1.72] text-[#F5F2ED]/58 mb-9 max-w-[500px]">
             Responsive management and a community you can trust. Conveniently
             located near Fairway Park.
           </p>
 
-          {/* CTA BUTTONS — stack on mobile */}
+          {/* 5. CTA BUTTONS */}
           <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-[320px] sm:max-w-none">
             <a
               href="/#unit"
-              className="flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-3.5 sm:py-3 rounded-full bg-[#1e3872] text-[#f5f2ed] text-[14px] font-bold font-[Plus_Jakarta_Sans] tracking-[0.01em] shadow-[rgba(30,56,114,0.5)_0px_4px_22px] transition duration-200 active:scale-[0.98]"
+              className="flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-2 rounded-full bg-[#1e3872] text-[#f5f2ed] text-[14px] font-bold font-[Plus_Jakarta_Sans] tracking-[0.01em] shadow-[rgba(30,56,114,0.5)_0px_4px_22px] transition duration-300 hover:brightness-110 active:scale-[0.98]"
             >
               <span>View Available Units</span>
               <svg
@@ -171,19 +173,20 @@ export default function Home() {
 
             <a
               href="/#unit"
-              className="flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-3.5 sm:py-3 rounded-full bg-transparent text-[#f5f2ed]/80 text-[14px] font-semibold font-[Plus_Jakarta_Sans] tracking-[0.01em] border-[1.5px] border-white/20 transition duration-200 hover:bg-white/10"
+              className="flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-2 rounded-full bg-transparent text-[#f5f2ed]/80 text-[14px] font-semibold font-[Plus_Jakarta_Sans] tracking-[0.01em] border-[1.5px] border-white/20 transition duration-300 hover:bg-white/10 active:scale-[0.98]"
             >
               Schedule a Tour
             </a>
           </div>
 
-          {/* SCROLL INDICATOR */}
-          <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 flex flex-col items-center gap-1 opacity-30">
-            <span className="font-[Plus_Jakarta_Sans] text-[9px] font-bold uppercase tracking-[0.16em] text-[#F5F2ED]">
+          {/* 6. SCROLL INDICATOR */}
+          <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 flex flex-col items-center gap-[5px]">
+            <span className="font-[Plus_Jakarta_Sans] text-[9px] font-bold uppercase tracking-[0.16em] text-[#F5F2ED] opacity-[0.32]">
               Scroll
             </span>
-            <div className="w-[1px] h-[22px] bg-white/50" />
+            <div className="w-[1px] h-[22px] bg-white/30" />
             <svg
+              className="opacity-[0.4]"
               xmlns="http://www.w3.org/2000/svg"
               width="12"
               height="12"
@@ -1636,6 +1639,9 @@ export default function Home() {
           </div>
         </div>
       </section>
+
+      <LoriChatWidget />
+      <PromoCardWidget />
 
       <Footer />
     </>

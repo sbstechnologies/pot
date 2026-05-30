@@ -13,24 +13,14 @@ export default function PromoCardWidget() {
     <>
       {/* Dynamic Promo Card Container */}
       {/* Kept fixed on the bottom-left corner across all screen sizes with a uniform margin */}
-      <div className="fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-[9998] w-[calc(100%-2rem)] max-w-[288px] sm:w-72 rounded-[18px] overflow-hidden bg-[#FDFCF0] shadow-[0_12px_48px_rgba(6,13,30,0.28),0_2px_8px_rgba(6,13,30,0.18)] font-['Plus_Jakarta_Sans',system-ui,sans-serif]">
+      <div className="animate-promo-card fixed bottom-4 left-4 sm:bottom-6 sm:left-6 z-[9998] w-[calc(100%-2rem)] max-w-[288px] sm:w-72 rounded-[18px] overflow-hidden bg-[#FDFCF0] shadow-[0_12px_48px_rgba(6,13,30,0.28),0_2px_8px_rgba(6,13,30,0.18)] font-['Plus_Jakarta_Sans',system-ui,sans-serif]">
         {/* Shimmering Top Accent Line */}
         <div
-          className="h-[3px] bg-[linear-gradient(90deg,rgb(224,148,40)_0%,rgb(245,185,66)_60%,rgb(224,148,40)_100%)] bg-[length:300px_100%] animate-[shimmer_2.5s_linear_infinite]"
+          className="animate-promo-shimmer h-[3px] bg-[linear-gradient(90deg,rgb(224,148,40)_0%,rgb(245,185,66)_60%,rgb(224,148,40)_100%)] bg-[length:300px_100%] animate-[shimmer_2.5s_linear_infinite]"
           style={{
             animationName: "shimmer",
           }}
         />
-        <style jsx global>{`
-          @keyframes shimmer {
-            0% {
-              background-position: -300px 0;
-            }
-            100% {
-              background-position: 300px 0;
-            }
-          }
-        `}</style>
 
         {/* Header Block */}
         <div className="bg-[linear-gradient(135deg,rgb(30,56,114)_0%,rgb(22,43,94)_65%,rgb(15,30,72)_100%)] p-3.5 px-4 pb-3 relative flex items-start justify-between gap-2.5">

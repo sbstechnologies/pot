@@ -1,6 +1,5 @@
 @import "tailwindcss";
-@import '@fontsource-variable/plus-jakarta-sans'; 
-
+@import "@fontsource-variable/plus-jakarta-sans";
 
 :root {
   --background: #ffffff;
@@ -24,5 +23,51 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: 'Plus Jakarta Sans Variable', sans-serif;
+  font-family: "Plus Jakarta Sans Variable", sans-serif;
+}
+
+@keyframes hero-in {
+  0% {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-hero-container {
+  animation: hero-in 1s cubic-bezier(0.4, 0, 0.2, 1) 0.15s both;
+}
+
+/*PromoCard animation uses the exact 0.85s duration, cubic-bezier, and 0.4s delay from your reference*/
+@keyframes promoEntrance {
+  0% {
+    opacity: 0;
+    transform: translateY(40px) scale(0.96);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes promo-shimmer {
+  0% {
+    background-position: -300px 0;
+  }
+  100% {
+    background-position: 300px 0;
+  }
+}
+
+.animate-promo-card {
+  animation: promoEntrance 0.85s cubic-bezier(0.215, 0.61, 0.355, 1) 0.4s normal
+    both running;
+}
+
+.animate-promo-shimmer {
+  animation: promo-shimmer 2.5s linear 0s infinite normal none running;
 }

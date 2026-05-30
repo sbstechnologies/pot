@@ -504,19 +504,19 @@ export default function LeasePortal() {
 
       {/* ── MOBILE SHEETS ────────────────────────────────────────────────── */}
       {mobileSheet === "date" && (
-        <MobileSheet title="{leasePortalConfig.labels.moveInDate}">
+        <MobileSheet title={leasePortalConfig.labels.moveInDate}>
           <CalendarGrid />
         </MobileSheet>
       )}
 
       {mobileSheet === "unit" && (
-        <MobileSheet title="Choose {leasePortalConfig.labels.unitType}">
+        <MobileSheet title={`Choose ${leasePortalConfig.labels.unitType}`}>
           <UnitList onSelect={() => setMobileSheet(null)} />
         </MobileSheet>
       )}
 
       {mobileSheet === "pet" && (
-        <MobileSheet title="{leasePortalConfig.labels.petFriendly}">
+        <MobileSheet title={leasePortalConfig.labels.petFriendly}>
           <div className="space-y-4">
             <p className="text-[14px] text-[#5a6260]">
               Do you have pets? We welcome cats and dogs!
