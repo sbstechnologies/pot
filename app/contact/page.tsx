@@ -16,7 +16,7 @@ export default function Contact() {
       {/* ===== HERO ===== */}
       <section className="relative overflow-hidden bg-[#1f376d] px-6 pt-32 pb-24 text-white md:px-16">
         <div className="relative z-10 max-w-4xl">
-          <p className="mb-6 font-[Plus_Jakarta_Sans] text-xs tracking-[0.35em] text-[#E39B2D]">
+          <p className="mb-6 font-[Plus_Jakarta_Sans] text-xs mt-[15px] font-bold uppercase tracking-[0.35em] text-[#E39B2D]">
             GET IN TOUCH
           </p>
 

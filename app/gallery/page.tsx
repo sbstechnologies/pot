@@ -5,7 +5,12 @@ import HeaderOther from "@/app/components/HeaderOther";
 import Footer from "@/app/components/Footer";
 import LoriChatWidget from "@/app/components/LoriChatWidget";
 import PromoCardWidget from "@/app/components/PromoCardWidget";
-import { images, type Category, type GalleryItem, gallery } from "@/app/config/content";
+import {
+  images,
+  type Category,
+  type GalleryItem,
+  gallery,
+} from "@/app/config/content";
 
 type FilterType = "All" | Category;
 
@@ -62,13 +67,15 @@ export default function Gallery() {
 
   const nextImage = () => {
     setCurrentIndex((prev) =>
-      prev === null ? 0 : (prev + 1) % filteredGallery.length
+      prev === null ? 0 : (prev + 1) % filteredGallery.length,
     );
   };
 
   const prevImage = () => {
     setCurrentIndex((prev) =>
-      prev === null ? 0 : (prev - 1 + filteredGallery.length) % filteredGallery.length
+      prev === null
+        ? 0
+        : (prev - 1 + filteredGallery.length) % filteredGallery.length,
     );
   };
 
@@ -98,11 +105,11 @@ export default function Gallery() {
       {/* HERO SECTION */}
       <section className="bg-[#1E3872] text-[#F5F2ED] px-6 md:px-16 py-24 md:py-28 font-[Plus_Jakarta_Sans]">
         <div className="max-w-3xl">
-          <p className="text-xs tracking-[0.3em] text-[#E09428] mb-6 uppercase">
+          <p className="text-xs tracking-[0.3em] text-[#E09428] mb-6 mt-[15px] font-bold uppercase">
             Community Gallery
           </p>
 
-          <h1 className="text-5xl md:text-7xl font-[Instrument_Serif] leading-tight">
+          <h1 className="text-[64px] md:text-[70px]  font-[Instrument_Serif] leading-tight">
             Life at <br />
             <span className="text-[#E09428] italic">Parks on Taylor</span>
           </h1>
@@ -133,7 +140,9 @@ export default function Gallery() {
               {item.count && (
                 <span
                   className={`ml-2 text-xs ${
-                    activeFilter === item.label ? "text-white/75" : "text-[#9aa3af]"
+                    activeFilter === item.label
+                      ? "text-white/75"
+                      : "text-[#9aa3af]"
                   }`}
                 >
                   {item.count}

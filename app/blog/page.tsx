@@ -6,20 +6,18 @@ import { images, type Post, posts, featuredPost } from "@/app/config/content";
 import LoriChatWidget from "@/app/components/LoriChatWidget";
 import PromoCardWidget from "@/app/components/PromoCardWidget";
 
-
-
 export default function Blog() {
   const [showTopBar, setShowTopBar] = useState(true);
   const [selectedPost, setSelectedPost] = useState<Post | null>(null);
 
   return (
     <>
-    <LoriChatWidget />
-    <PromoCardWidget />
+      <LoriChatWidget />
+      <PromoCardWidget />
       <HeaderOther />
       <section className="bg-[#1f376d] text-white pt-32 pb-24 px-6 md:px-16 relative overflow-hidden">
         <div className="relative z-10 max-w-5xl">
-          <p className="text-xs tracking-[0.35em] text-[#E39B2D] mb-6 font-[Plus_Jakarta_Sans]">
+          <p className="text-xs tracking-[0.35em] text-[#E39B2D] mb-6 font-[Plus_Jakarta_Sans] mt-[15px] font-bold uppercase">
             SHERMAN LIVING GUIDE
           </p>
 
@@ -38,7 +36,8 @@ export default function Blog() {
       {/* FEATURED CARD */}
       <section className="bg-[#f5f2ed] px-6 md:px-16 pt-10 md:pt-14 pb-24 relative z-10">
         <div className="max-w-[1400px] mx-auto">
-          <div className="grid md:grid-cols-2 rounded-3xl overflow-hidden border bg-white
+          <div
+            className="grid md:grid-cols-2 rounded-3xl overflow-hidden border bg-white
                 shadow-sm hover:shadow-2xl
                 hover:-translate-y-1
                 transition-all duration-300 ease-in-out"
@@ -148,7 +147,9 @@ export default function Blog() {
                       <span className="font-[Plus_Jakarta_Sans] text-[#334155] font-medium">
                         {post.author}
                       </span>
-                      <span className="font-[Plus_Jakarta_Sans] mx-2 text-[#b0b4bb]">·</span>
+                      <span className="font-[Plus_Jakarta_Sans] mx-2 text-[#b0b4bb]">
+                        ·
+                      </span>
                       {post.date}
                     </p>
                   </div>

@@ -3,15 +3,9 @@ import HeaderOther from "@/app/components/HeaderOther";
 import LoriChatWidget from "@/app/components/LoriChatWidget";
 import PromoCardWidget from "@/app/components/PromoCardWidget";
 import Footer from "@/app/components/Footer";
-import { Bed, Bath, MoveUpRight } from 'lucide-react';
+import { Bed, Bath, MoveUpRight } from "lucide-react";
 import { useState, useMemo } from "react";
-import {
-  images,
-  floorPlans,
-  type FloorPlan,
-} from "@/app/config/content";
-
-
+import { images, floorPlans, type FloorPlan } from "@/app/config/content";
 
 type CardProps = {
   plan: FloorPlan;
@@ -36,13 +30,12 @@ function Card({
 
   const prevImage = () => {
     setCurrentImage((prev) =>
-      prev === 0 ? plan.interiorImages.length - 1 : prev - 1
+      prev === 0 ? plan.interiorImages.length - 1 : prev - 1,
     );
   };
 
   return (
     <>
-
       <div className="bg-[#fffdf9] rounded-[26px] overflow-hidden border border-[#e5ded3] shadow-[0_18px_45px_rgba(26,29,27,0.12)]">
         {/* TOP IMAGE */}
         <div className="relative h-[275px] w-full overflow-hidden rounded-t-[26px]">
@@ -91,10 +84,11 @@ function Card({
               <button
                 key={index}
                 onClick={() => setCurrentImage(index)}
-                className={`rounded-full transition-all ${currentImage === index
-                  ? "h-[7px] w-[23px] bg-white"
-                  : "h-[7px] w-[7px] bg-white/60"
-                  }`}
+                className={`rounded-full transition-all ${
+                  currentImage === index
+                    ? "h-[7px] w-[23px] bg-white"
+                    : "h-[7px] w-[7px] bg-white/60"
+                }`}
               />
             ))}
           </div>
@@ -152,8 +146,14 @@ function Card({
             <div className="flex items-center gap-2">
               {/* Combined with a relative container to get the exact double-ended diagonal arrow look */}
               <div className="relative h-5 w-5 text-[#1f376d]">
-                <MoveUpRight className="absolute inset-0 h-5 w-5" strokeWidth={2} />
-                <MoveUpRight className="absolute inset-0 h-5 w-5 rotate-180" strokeWidth={2} />
+                <MoveUpRight
+                  className="absolute inset-0 h-5 w-5"
+                  strokeWidth={2}
+                />
+                <MoveUpRight
+                  className="absolute inset-0 h-5 w-5 rotate-180"
+                  strokeWidth={2}
+                />
               </div>
               <span>{plan.area} sq ft</span>
             </div>
@@ -190,12 +190,13 @@ function Card({
             <button
               onClick={() => onToggleCompare(plan.title)}
               disabled={!isSelected && !canSelectMore}
-              className={`h-[50px] rounded-[11px] border font-[Plus_Jakarta_Sans] text-[15px] font-bold transition ${isSelected
-                ? "border-[#223f82] bg-[#223f82] text-white"
-                : canSelectMore
-                  ? "border-[#cbd3df] bg-white text-[#3c3c3c] hover:bg-[#f5f7fb]"
-                  : "cursor-not-allowed border-[#e4ddd2] bg-[#f3efe8] text-[#b2aaa0]"
-                }`}
+              className={`h-[50px] rounded-[11px] border font-[Plus_Jakarta_Sans] text-[15px] font-bold transition ${
+                isSelected
+                  ? "border-[#223f82] bg-[#223f82] text-white"
+                  : canSelectMore
+                    ? "border-[#cbd3df] bg-white text-[#3c3c3c] hover:bg-[#f5f7fb]"
+                    : "cursor-not-allowed border-[#e4ddd2] bg-[#f3efe8] text-[#b2aaa0]"
+              }`}
             >
               {isSelected ? "Selected" : "Compare"}
             </button>
@@ -220,18 +221,23 @@ function ComparisonDrawer({
     { label: "BATHROOMS", left: leftPlan.baths, right: rightPlan.baths },
     { label: "SQ FOOTAGE", left: leftPlan.area, right: rightPlan.area },
     { label: "PRICE", left: leftPlan.price, right: rightPlan.price },
-    { label: "AVAILABLE", left: leftPlan.available, right: rightPlan.available },
+    {
+      label: "AVAILABLE",
+      left: leftPlan.available,
+      right: rightPlan.available,
+    },
   ];
 
   const biggerArea = (a: string, b: string) =>
-    parseInt(a.replace(/[^0-9]/g, ""), 10) > parseInt(b.replace(/[^0-9]/g, ""), 10);
+    parseInt(a.replace(/[^0-9]/g, ""), 10) >
+    parseInt(b.replace(/[^0-9]/g, ""), 10);
 
   const cheaperPrice = (a: string, b: string) =>
-    parseInt(a.replace(/[^0-9]/g, ""), 10) < parseInt(b.replace(/[^0-9]/g, ""), 10);
+    parseInt(a.replace(/[^0-9]/g, ""), 10) <
+    parseInt(b.replace(/[^0-9]/g, ""), 10);
 
   return (
     <>
-
       <div className="fixed inset-0 bg-black/30 z-40" onClick={onClear} />
 
       <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#F5F2ED] rounded-t-[28px] shadow-2xl border-t border-[#d8d2c7] max-h-[82vh] overflow-y-auto">
@@ -289,10 +295,16 @@ function ComparisonDrawer({
                     key={row.label}
                     className="h-[52px] border-b border-[#d8d2c7] flex items-center text-[22px] text-[#2d3230]"
                   >
-                    <span className={highlight ? "text-[#29488d] font-semibold" : ""}>
+                    <span
+                      className={
+                        highlight ? "text-[#29488d] font-semibold" : ""
+                      }
+                    >
                       {row.left}
                     </span>
-                    {highlight && <span className="ml-2 text-[#E09428]">★</span>}
+                    {highlight && (
+                      <span className="ml-2 text-[#E09428]">★</span>
+                    )}
                   </div>
                 );
               })}
@@ -324,10 +336,16 @@ function ComparisonDrawer({
                     key={row.label}
                     className="h-[52px] border-b border-[#d8d2c7] flex items-center text-[22px] text-[#2d3230]"
                   >
-                    <span className={highlight ? "text-[#29488d] font-semibold" : ""}>
+                    <span
+                      className={
+                        highlight ? "text-[#29488d] font-semibold" : ""
+                      }
+                    >
                       {row.right}
                     </span>
-                    {highlight && <span className="ml-2 text-[#E09428]">★</span>}
+                    {highlight && (
+                      <span className="ml-2 text-[#E09428]">★</span>
+                    )}
                   </div>
                 );
               })}
@@ -442,7 +460,8 @@ function UnitDetailModal({
                                     ? images.alt34
                                     : allImages[activeImage] === images.floor9
                                       ? images.alt35
-                                      : allImages[activeImage] === images.floor10
+                                      : allImages[activeImage] ===
+                                          images.floor10
                                         ? images.alt36
                                         : images.alt37
                   }
@@ -454,10 +473,11 @@ function UnitDetailModal({
                   <button
                     key={img}
                     onClick={() => setActiveImage(index)}
-                    className={`h-[58px] w-[78px] overflow-hidden rounded-[9px] border-2 ${activeImage === index
-                      ? "border-[#1e3872]"
-                      : "border-transparent"
-                      }`}
+                    className={`h-[58px] w-[78px] overflow-hidden rounded-[9px] border-2 ${
+                      activeImage === index
+                        ? "border-[#1e3872]"
+                        : "border-transparent"
+                    }`}
                   >
                     <img
                       src={img}
@@ -574,7 +594,6 @@ function UnitDetailModal({
   );
 }
 
-
 export default function Floor() {
   const [selectedCompare, setSelectedCompare] = useState<string[]>([]);
   const [detailPlan, setDetailPlan] = useState<FloorPlan | null>(null);
@@ -591,7 +610,7 @@ export default function Floor() {
 
   const selectedPlans = useMemo(
     () => floorPlans.filter((plan) => selectedCompare.includes(plan.title)),
-    [selectedCompare]
+    [selectedCompare],
   );
 
   const clearComparison = () => setSelectedCompare([]);
@@ -606,19 +625,19 @@ export default function Floor() {
         <div className="pointer-events-none absolute inset-0 opacity-[0.12] [background-image:radial-gradient(rgba(245,242,237,0.45)_1px,transparent_1px)] [background-size:50px_50px]" />
 
         <div className="relative z-10 max-w-[680px]">
-          <p className="font-[Plus_Jakarta_Sans] text-[13px] font-bold uppercase tracking-[0.32em] text-[#E09428] mb-[22px]">
+          <p className="font-[Plus_Jakarta_Sans] text-[13px] mt-[28px] font-bold uppercase tracking-[0.32em] text-[#E09428] mb-[22px]">
             PARKS ON TAYLOR · SHERMAN, TX
           </p>
 
-          <h1 className="font-[Instrument_Serif] text-[64px] md:text-[86px] leading-[0.98] tracking-[-0.04em] text-[#F5F2ED]">
+          <h1 className="font-[Instrument_Serif] text-[64px] md:text-[70px] leading-[0.98] tracking-[-0.04em] text-[#F5F2ED]">
             Floor Plans & <br />
             <span className="italic text-[#E09428]">Pricing</span>
           </h1>
 
           <p className="mt-[28px] max-w-[570px] font-[Plus_Jakarta_Sans] text-[20px] leading-[1.72] text-[#b7bfd0] tracking-[-0.04em]">
-            Six thoughtfully designed layouts — from cozy 1-bedrooms
-            to spacious 2-bed townhomes. All include premium finishes
-            and in-unit connections.
+            Six thoughtfully designed layouts — from cozy 1-bedrooms to spacious
+            2-bed townhomes. All include premium finishes and in-unit
+            connections.
           </p>
 
           <div className="mt-[58px] grid grid-cols-2 md:grid-cols-4 gap-x-[52px] gap-y-8">
@@ -673,10 +692,8 @@ export default function Floor() {
 
       <section className="bg-[#F5F2ED] pb-24 px-5 md:px-10 lg:px-16">
         <div className="mx-auto max-w-[1600px]">
-
           <div className="rounded-[20px] border border-dashed border-[#bdc8d8] bg-[#f1eeee] px-9 py-7">
             <div className="flex items-center gap-4">
-
               <div className="flex h-[45px] w-[45px] shrink-0 items-center justify-center rounded-[12px] bg-[#d9dce4]">
                 <span className="flex h-[21px] w-[21px] items-center justify-center rounded-full border-2 border-[#173a7a] text-[13px] font-bold text-[#173a7a]">
                   ✓
@@ -689,13 +706,12 @@ export default function Floor() {
                 </p>
 
                 <p className="mt-1 font-[Plus_Jakarta_Sans] text-[15px] text-[#334155]">
-                  Click "Compare" on any two cards to see a side-by-side breakdown of specs and pricing.
+                  Click "Compare" on any two cards to see a side-by-side
+                  breakdown of specs and pricing.
                 </p>
               </div>
-
             </div>
           </div>
-
         </div>
       </section>
       <Footer />
