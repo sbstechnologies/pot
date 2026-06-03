@@ -573,7 +573,7 @@ export const homePageConfig = {
 };
 export const plans = {
   A1: {
-    title: "Plan A1 · 1 Bed · 1 Bath",
+    title: "Plan A1 · 1 Bedroom · 1 Bath",
     price: "$799/mo",
     area: "625 sq ft",
     img: images.home1,
@@ -582,7 +582,7 @@ export const plans = {
   },
 
   A2: {
-    title: "Plan A2 · 1 Bed · 1 Bath",
+    title: "Plan A2 · 1 Bedroom · 1 Bath",
     price: "$849/mo",
     area: "724 sq ft",
     img: images.home2,
@@ -591,7 +591,7 @@ export const plans = {
   },
 
   A3: {
-    title: "Plan A3 · 1 Bed · 1 Bath",
+    title: "Plan A3 · 1 Bedroom · 1 Bath",
     price: "$849/mo",
     area: "724 sq ft",
     img: images.home3,
@@ -600,7 +600,7 @@ export const plans = {
   },
 
   B1: {
-    title: "Plan B1 · 2 Bed · 1 Bath",
+    title: "Plan B1 · 2 Bedrooms · 1 Bath",
     price: "$999/mo",
     area: "850 sq ft",
     img: images.home4,
@@ -609,7 +609,7 @@ export const plans = {
   },
 
   B2: {
-    title: "Plan B2 · 2 Bed · 2 Bath",
+    title: "Plan B2 · 2 Bedrooms · 2 Baths",
     price: "$1049/mo",
     area: "886 sq ft",
     img: images.home5,
@@ -618,7 +618,7 @@ export const plans = {
   },
 
   B3: {
-    title: "Plan B3 · 2 Bed · 2 Bath",
+    title: "Plan B3 · 2 Bedrooms · 2 Bath",
     price: "$1099/mo",
     area: "1003 sq ft",
     img: images.home6,
@@ -675,7 +675,7 @@ export const floorPlans: FloorPlan[] = [
     title: "Plan A1",
     description:
       "Perfect for the minimalist professional — efficient layout with premium finishes.",
-    beds: "1 Bed",
+    beds: "1 Bedroom",
     baths: "1 Bath",
     area: "625 sq ft",
     price: "$799/mo",
@@ -697,7 +697,7 @@ export const floorPlans: FloorPlan[] = [
     title: "Plan A2",
     description:
       "Our best-selling 1-bedroom — spacious open kitchen and a dedicated sleeping area.",
-    beds: "1 Bed",
+    beds: "1 Bedroom",
     baths: "1 Bath",
     area: "724 sq ft",
     price: "$849/mo",
@@ -719,7 +719,7 @@ export const floorPlans: FloorPlan[] = [
     title: "Plan A3",
     description:
       "Mirror layout of A2 with an oversized balcony — great for outdoor entertaining.",
-    beds: "1 Bed",
+    beds: "1 Bedroom",
     baths: "1 Bath",
     area: "724 sq ft",
     price: "$849/mo",
@@ -741,7 +741,7 @@ export const floorPlans: FloorPlan[] = [
     title: "Plan B1",
     description:
       "Ideal for roommates or a growing household — spacious bedrooms at an accessible price.",
-    beds: "2 Beds",
+    beds: "2 Bedrooms",
     baths: "1 Bath",
     area: "850 sq ft",
     price: "$999/mo",
@@ -763,7 +763,7 @@ export const floorPlans: FloorPlan[] = [
     title: "Plan B2",
     description:
       "2-bed with a half-bath bonus and a dedicated den — the flexible home-office layout.",
-    beds: "2 Beds",
+    beds: "2 Bedrooms",
     baths: "1.5 Baths",
     area: "886 sq ft",
     price: "$1,049/mo",
@@ -785,7 +785,7 @@ export const floorPlans: FloorPlan[] = [
     title: "Plan B3",
     description:
       "Our flagship townhome — over 1,000 sq ft, 2 full baths, and an oversized balcony.",
-    beds: "2 Beds",
+    beds: "2 Bedrooms",
     baths: "2 Baths",
     area: "1,003 sq ft",
     price: "$1,099/mo",
