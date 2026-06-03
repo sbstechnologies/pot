@@ -76,10 +76,10 @@ export default function Home() {
     const lowerTitle = title.toLowerCase();
     if (lowerTitle.includes("maintenance"))
       return <Wrench className="w-3 h-3" />;
-    if (lowerTitle.includes("management")) return <Users className="w-3 h-3" />;
+    if (lowerTitle.includes("fitness")) return <Users className="w-3 h-3" />;
     if (lowerTitle.includes("pool")) return <Droplets className="w-3 h-3" />;
     if (lowerTitle.includes("parking")) return <Car className="w-3 h-3" />;
-    if (lowerTitle.includes("dog")) return <PawPrint className="w-3 h-3" />;
+    if (lowerTitle.includes("park")) return <PawPrint className="w-3 h-3" />;
     if (lowerTitle.includes("laundry")) return <Shirt className="w-3 h-3" />;
     return null;
   };
@@ -245,7 +245,7 @@ export default function Home() {
                   <span
                     className="font-[Instrument_Serif] font-bold text-[20px] sm:text-[18px]
     font-size: 20px;
-    letter-spacing: -0.02em sm:text-[18px] tracking-[-0.02em] text-[#f5f2ee] letter-spacing: -0.02em; leading-none   px-3 py-1 whitespace-nowrap"
+    letter-spacing: -0.02em sm:text-[18px] tracking-[-0.02em] text-[#f5f2ee] letter-spacing: -0.02em; leading-none   px-3 py-1  whitespace-nowrap"
                   >
                     Only $99 Total to Move In
                   </span>
@@ -539,7 +539,7 @@ export default function Home() {
                           {item}
                         </button>
                       ))
-                    : (["Pool", "Fitness", "Dog Park", "Laundry"] as const).map(
+                    : (["Pool", "Fitness", "Park", "Laundry"] as const).map(
                         (item) => (
                           <button
                             key={item}
@@ -578,9 +578,11 @@ export default function Home() {
                         ? images.alt13
                         : amenityCategory === "Fitness"
                           ? images.alt14
-                          : amenityCategory === "Dog Park"
+                          : amenityCategory === "Park"
                             ? images.alt25
-                            : images.alt19
+                            : amenityCategory === "Laundry"
+                              ? images.alt25
+                              : images.alt19
                   }
                   fill
                   sizes="(max-width: 1280px) 100vw, 40vw"

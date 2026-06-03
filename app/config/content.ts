@@ -26,6 +26,7 @@ export const images = {
   home24: "/webp/landscape/10.webp",
   home25: "/webp/landscape/12.webp",
   home26: "/webp/features/community.webp",
+  home27: "/webp/landscape/8.webp",
 
   alt1: "1 bedroom apartment floor plan A1 at Parks on Taylor apartments in Sherman TX",
   alt2: "Modern apartment interior and amenities at Parks on Taylor apartments in Sherman Texas",
@@ -481,7 +482,7 @@ export const homePageConfig = {
     },
     {
       name: "Maria T.",
-      role: "2–Bedroom Townhome",
+      role: "2–Bed Townhome",
       years: "Resident for 2 Years",
       initials: "MT",
       rating: 5,
@@ -621,7 +622,7 @@ export const plans = {
     price: "$1099/mo",
     area: "1003 sq ft",
     img: images.home6,
-    bed: "2 Bedrooms",
+    bed: "2 Bed",
     bath: "2 Bath",
   },
 };
@@ -635,8 +636,8 @@ export const interiorPhotos = {
 
 export const amenityPhotos = {
   Pool: images.home11,
-  Fitness: images.home12,
-  "Dog Park": images.home25,
+  Fitness: images.home21,
+  Park: images.home27,
   Laundry: images.home13,
 } as const;
 
@@ -650,7 +651,7 @@ export type PreviewCategory =
   | "Kitchen"
   | "Bathroom";
 
-export type AmenityCategory = "Pool" | "Park" | "Dog Park" | "Laundry";
+export type AmenityCategory = "Pool" | "Fitness" | "Park" | "Laundry";
 
 //floor page
 export type FloorPlan = {
