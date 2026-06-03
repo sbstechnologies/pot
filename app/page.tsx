@@ -125,7 +125,7 @@ export default function Home() {
           </div>
 
           {/* 2. HERO HEADING */}
-          <h1 className="font-['Instrument_Serif',Georgia,serif] font-italic text-[clamp(3rem,8vw,11rem)] leading-[1.05] tracking-[-0.03em] text-[#F5F2ED] m-0 max-w-none md:whitespace-nowrap">
+          <h1 className="font-['Instrument_Serif',Georgia,serif] font-italic text-[clamp(3rem,7.3vw,9.3rem)] leading-[1.05] tracking-[-0.03em] text-[#F5F2ED] m-0 max-w-none md:whitespace-nowrap">
             Affordable, Safe, and
             <br />
             <em className="inline-block italic text-[#E09428]/90 md:whitespace-nowrap">
@@ -241,10 +241,14 @@ export default function Home() {
                 </span>
               </div>
               <div className="flex flex-col xs:flex-row flex-wrap items-start xs:items-center gap-2 sm:gap-3">
-                <span className="font-[Instrument_Serif] text-[18px] sm:text-[20px] tracking-[-0.02em] text-[#f5f2ee] leading-none">
-                  Only $99 Total to Move In
-                </span>
                 <div className="flex flex-wrap gap-2">
+                  <span
+                    className="font-[Instrument_Serif] font-bold text-[20px] sm:text-[18px]
+    font-size: 20px;
+    letter-spacing: -0.02em sm:text-[18px] tracking-[-0.02em] text-[#f5f2ee] letter-spacing: -0.02em; leading-none   px-3 py-1 whitespace-nowrap"
+                  >
+                    Only $99 Total to Move In
+                  </span>
                   <span className="font-[Plus_Jakarta_Sans] text-xs sm:text-[13px] font-semibold text-[#f5f2ee]/80 bg-[#f5f2ee]/15 px-3 py-1 rounded-full whitespace-nowrap">
                     1BR from $799 · A1–A3
                   </span>

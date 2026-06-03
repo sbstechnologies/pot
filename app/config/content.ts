@@ -175,21 +175,21 @@ export const units = [
   },
   {
     name: "B1",
-    type: "2 Bedroom",
+    type: "2 Bedrooms",
     price: "$999/mo",
     area: "850 sq ft",
     available: "Mar 15",
   },
   {
     name: "B2",
-    type: "2 Bedroom",
+    type: "2 Bedrooms",
     price: "$1,049/mo",
     area: "886 sq ft",
     available: "Mar 15",
   },
   {
     name: "B3",
-    type: "2 Bedroom",
+    type: "2 Bedrooms",
     price: "$1,099/mo",
     area: "1,003 sq ft",
     available: "Available Now",
@@ -326,7 +326,7 @@ export const leasePortalConfig = {
   unitTabs: {
     all: "All Units",
     "1bed": "1 Bedroom",
-    "2bed": "2 Bedroom",
+    "2bed": "2 Bedrooms",
   },
 
   availabilityText:
@@ -481,7 +481,7 @@ export const homePageConfig = {
     },
     {
       name: "Maria T.",
-      role: "2–Bed Townhome",
+      role: "2–Bedroom Townhome",
       years: "Resident for 2 Years",
       initials: "MT",
       rating: 5,
@@ -576,7 +576,7 @@ export const plans = {
     price: "$799/mo",
     area: "625 sq ft",
     img: images.home1,
-    bed: "1 Bed",
+    bed: "1 Bedroom",
     bath: "1 Bath",
   },
 
@@ -585,7 +585,7 @@ export const plans = {
     price: "$849/mo",
     area: "724 sq ft",
     img: images.home2,
-    bed: "1 Bed",
+    bed: "1 Bedroom",
     bath: "1 Bath",
   },
 
@@ -594,7 +594,7 @@ export const plans = {
     price: "$849/mo",
     area: "724 sq ft",
     img: images.home3,
-    bed: "1 Bed",
+    bed: "1 Bedroom",
     bath: "1 Bath",
   },
 
@@ -603,7 +603,7 @@ export const plans = {
     price: "$999/mo",
     area: "850 sq ft",
     img: images.home4,
-    bed: "2 Bed",
+    bed: "2 Bedrooms",
     bath: "1 Bath",
   },
 
@@ -612,7 +612,7 @@ export const plans = {
     price: "$1049/mo",
     area: "886 sq ft",
     img: images.home5,
-    bed: "2 Bed",
+    bed: "2 Bedrooms",
     bath: "2 Bath",
   },
 
@@ -621,7 +621,7 @@ export const plans = {
     price: "$1099/mo",
     area: "1003 sq ft",
     img: images.home6,
-    bed: "2 Bed",
+    bed: "2 Bedrooms",
     bath: "2 Bath",
   },
 };
@@ -650,7 +650,7 @@ export type PreviewCategory =
   | "Kitchen"
   | "Bathroom";
 
-export type AmenityCategory = "Pool" | "Fitness" | "Dog Park" | "Laundry";
+export type AmenityCategory = "Pool" | "Park" | "Dog Park" | "Laundry";
 
 //floor page
 export type FloorPlan = {
