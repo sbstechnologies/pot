@@ -119,14 +119,13 @@ export default function Home() {
           <div className="mb-[30px] flex items-center gap-4 max-w-[90vw] w-full justify-center">
             <div className="h-[1px] max-w-[72px] flex-1 bg-[#F5F2ED]/15" />
             <span className="font-[Plus_Jakarta_Sans] text-[10px] font-bold uppercase tracking-[0.2em] text-[#F5F2ED]/50 text-center">
-              Parks&nbsp;&nbsp;on&nbsp;&nbsp;Taylor &nbsp;·&nbsp; Sherman, TX
-              &nbsp;·&nbsp; Now Leasing
+              PARKS ON TAYLOR • SHERMAN, TX • NOW LEASING
             </span>
             <div className="h-[1px] max-w-[72px] flex-1 bg-[#F5F2ED]/15" />
           </div>
 
           {/* 2. HERO HEADING */}
-          <h1 className="font-['Instrument_Serif',Georgia,serif] font-italic text-[clamp(2rem,5.2vw,4.5rem)] leading-[1.05] tracking-[-0.03em] text-[#F5F2ED] m-0 max-w-none md:whitespace-nowrap">
+          <h1 className="font-['Instrument_Serif',Georgia,serif] font-italic text-[clamp(3rem,8vw,11rem)] leading-[1.05] tracking-[-0.03em] text-[#F5F2ED] m-0 max-w-none md:whitespace-nowrap">
             Affordable, Safe, and
             <br />
             <em className="inline-block italic text-[#E09428]/90 md:whitespace-nowrap">
