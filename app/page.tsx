@@ -10,6 +10,7 @@ import LoriChatWidget from "./components/LoriChatWidget";
 import PromoCardWidget from "./components/PromoCardWidget";
 import Header from "./components/Header";
 import HeaderTop from "./components/HeaderTop";
+import PromoBanner from "./components/PromoBanner";
 
 import { Wrench, Users, Droplets, Car, PawPrint, Shirt } from "lucide-react";
 import {
@@ -93,6 +94,7 @@ export default function Home() {
 
       <section className="relative w-full min-h-[100svh] lg:min-h-[130vh] 2xl:min-h-[118vh] overflow-hidden">
         <HeaderTop show={showTopBar} setShow={setShowTopBar} />
+
         <Header showTopBar={showTopBar} />
 
         <Image
@@ -394,7 +396,7 @@ export default function Home() {
                 </div>
               </div>
 
-              {/* FLOORPLAN IMAGE */}
+              {/* FLOOR PLAN IMAGE */}
               <div className="relative h-[260px] sm:h-[360px] lg:h-[500px] border-b border-[#ddd7cc] bg-[white]">
                 <Image
                   src={plans[selectedPlan].img}

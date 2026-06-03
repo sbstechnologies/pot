@@ -3,7 +3,19 @@
 import Link from "next/link";
 import { useState } from "react";
 import { headerConfig } from "@/app/config/content";
+import { Instrument_Serif } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
+import Image from "next/image";
 
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-jakarta",
+});
 
 type HeaderProps = {
   showTopBar: boolean;
@@ -19,7 +31,6 @@ export default function Header({ showTopBar }: HeaderProps) {
       }`}
     >
       <div className="flex w-full items-center justify-between bg-white/80 px-6 py-4 md:px-12 lg:px-16 select-none">
-        
         {/* BRAND IDENTITY / LOGO */}
         <div className="min-w-0">
           <Link
@@ -27,42 +38,24 @@ export default function Header({ showTopBar }: HeaderProps) {
             onClick={() => setOpen(false)}
             className="flex items-center gap-3"
           >
-            {/* Custom SVG Icon Container */}
-            <span className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-[12px] bg-[#1e3872]">
-              <svg viewBox="0 0 24 24" width="20" height="20" fill="none">
-                <path
-                  d="M12 3 C8 3 5 6 5 10 C5 14 8 17 12 17 C16 17 19 14 19 10 C19 6 16 3 12 3Z"
-                  fill="rgba(245,242,237,0.2)"
-                  stroke="rgba(245,242,237,0.95)"
-                  strokeWidth="1.75"
-                />
-                <path
-                  d="M12 17 L12 21"
-                  stroke="rgba(245,242,237,0.8)"
-                  strokeWidth="1.75"
-                  strokeLinecap="round"
-                />
-                <path
-                  d="M8 21 L16 21"
-                  stroke="rgba(245,242,237,0.6)"
-                  strokeWidth="1.75"
-                  strokeLinecap="round"
-                />
-                <circle
-                  cx="12"
-                  cy="10"
-                  r="2.5"
-                  fill="rgba(245,242,237,0.9)"
-                />
-              </svg>
+            {/* Logo Icon Container */}
+            <span className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-[12px] bg-[var(--primary)]">
+              <Image
+                src="/images/logo.png"
+                alt={headerConfig.logo.alt_title}
+                width={38}
+                height={38}
+              />
             </span>
 
             <div className="min-w-0 flex flex-col justify-center">
-              <h1 className="font-serif text-[22px] font-normal leading-[1.1] text-[#2d3230] tracking-wide sm:text-[23px]">
+              <p className={instrumentSerif.className}>
                 {headerConfig.logo.title}
-              </h1>
+              </p>
 
-              <p className="mt-0.5 font-[Plus_Jakarta_Sans] text-[9px] font-bold uppercase tracking-[0.15em] text-[#5a6260]/90">
+              <p
+                className={`mt-0.5 ${jakarta.className} text-[9px] font-bold uppercase tracking-[0.15em] text-[var(--light-grey)]/90`}
+              >
                 {headerConfig.logo.subtitle}
               </p>
             </div>
@@ -70,7 +63,7 @@ export default function Header({ showTopBar }: HeaderProps) {
         </div>
 
         {/* DESKTOP NAV ARCHITECTURE */}
-        <nav className="hidden items-center gap-6 font-[Plus_Jakarta_Sans] text-[14px] font-semibold text-[#2d3230]/90 lg:flex xl:gap-8">
+        <nav className="hidden items-center gap-6 font-[Plus_Jakarta_Sans] text-[14px] font-semibold text-[var(--grey)]/90 lg:flex xl:gap-8">
           {headerConfig.navLinks.map((link) =>
             link.external ? (
               <a
@@ -90,7 +83,7 @@ export default function Header({ showTopBar }: HeaderProps) {
               >
                 {link.label}
               </Link>
-            )
+            ),
           )}
         </nav>
 
@@ -102,15 +95,15 @@ export default function Header({ showTopBar }: HeaderProps) {
           className="hidden items-center gap-2 whitespace-nowrap rounded-full bg-[#1e3872] px-6 py-3 font-[Plus_Jakarta_Sans] text-[13px] font-bold text-white transition duration-150 ease-in-out hover:bg-[#152750] hover:shadow-sm lg:inline-flex"
         >
           <span>{headerConfig.applyText}</span>
-          <svg 
-            xmlns="http://www.w3.org/2000/svg" 
-            width="12" 
-            height="12" 
-            viewBox="0 0 24 24" 
-            fill="none" 
-            stroke="currentColor" 
-            strokeWidth="3" 
-            strokeLinecap="round" 
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="3"
+            strokeLinecap="round"
             strokeLinejoin="round"
           >
             <line x1="5" y1="12" x2="19" y2="12"></line>
@@ -171,7 +164,7 @@ export default function Header({ showTopBar }: HeaderProps) {
                 >
                   {link.label}
                 </Link>
-              )
+              ),
             )}
 
             <a
@@ -182,7 +175,20 @@ export default function Header({ showTopBar }: HeaderProps) {
               className="mt-3 flex items-center justify-center gap-2 rounded-full bg-[#1e3872] px-5 py-4 text-center text-[15px] font-semibold text-white shadow-[0_8px_22px_rgba(30,56,114,0.22)]"
             >
               <span>{headerConfig.applyText}</span>
-              <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="14"
+                height="14"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="3"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
             </a>
           </nav>
         </div>

@@ -4,6 +4,15 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  --primary: #1e3872;
+  --grey: #2d3230;
+  --light-grey: #5a6260;
+
+  --font-geist-sans: "Plus Jakarta Sans Variable", sans-serif;
+  --font-geist-serif: "Instrument Serif", Georgia, serif;
+  --font-geist-mono: "Plus Jakarta Mono Variable", monospace;
+  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
 }
 
 @theme inline {

@@ -226,7 +226,9 @@ export const lookLeaseSpecial = {
 
 export const headerConfig = {
   logo: {
+    image_url: "/images/logo.png",
     title: "Parks on Taylor",
+    alt_title: "Parks on Taylor Apartments Logo",
     subtitle: "Sherman, TX · A LiveNJoy Community",
   },
 
