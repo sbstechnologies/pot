@@ -10,7 +10,6 @@ import LoriChatWidget from "./components/LoriChatWidget";
 import PromoCardWidget from "./components/PromoCardWidget";
 import Header from "./components/Header";
 import HeaderTop from "./components/HeaderTop";
-import PromoBanner from "./components/PromoBanner";
 
 import { Wrench, Users, Droplets, Car, PawPrint, Shirt } from "lucide-react";
 import {
