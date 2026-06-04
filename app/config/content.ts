@@ -623,7 +623,7 @@ export const plans = {
     price: "$1099/mo",
     area: "1003 sq ft",
     img: images.home6,
-    bed: "2 Bed",
+    bed: "2 Bedrooms",
     bath: "2 Bath",
   },
 };
