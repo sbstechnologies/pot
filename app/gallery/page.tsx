@@ -12,6 +12,7 @@ import {
   gallery,
 } from "@/app/config/content";
 import FooterLegalBar from "../components/FooterLegalBar";
+import ComplianceNotice from "../components/ComplianceNotice";
 
 type FilterType = "All" | Category;
 
@@ -220,6 +221,7 @@ export default function Gallery() {
       )}
 
       <Footer />
+      <ComplianceNotice />
       <FooterLegalBar />
     </>
   );

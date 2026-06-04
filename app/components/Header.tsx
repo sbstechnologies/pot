@@ -30,7 +30,7 @@ export default function Header({ showTopBar }: HeaderProps) {
         showTopBar ? "top-0 md:top-11" : "top-0"
       }`}
     >
-      <div className="flex w-full items-center justify-between bg-white/80 px-6 py-4 md:px-12 lg:px-24 select-none">
+      <div className="flex w-full items-center justify-between bg-white/80 px-10 py-4 md:px-12 lg:px-24 select-none">
         {/* BRAND IDENTITY / LOGO */}
         <div className="min-w-0">
           <Link
@@ -141,7 +141,7 @@ export default function Header({ showTopBar }: HeaderProps) {
 
       {/* MOBILE INTERACTIVE NAV EXPANSION */}
       {open && (
-        <div className="absolute left-0 top-full w-full border-t border-[#ded8cf] bg-[#f5f2ed] px-6 py-6 shadow-xl lg:hidden">
+        <div className="absolute left-0 top-full w-full border-t border-[#ded8cf] bg-[#f5f2ed] px-10 py-6 shadow-xl lg:hidden">
           <nav className="flex flex-col gap-2 font-[Plus_Jakarta_Sans]">
             {headerConfig.navLinks.map((link) =>
               link.external ? (

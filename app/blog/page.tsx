@@ -6,6 +6,7 @@ import { images, type Post, posts, featuredPost } from "@/app/config/content";
 import LoriChatWidget from "@/app/components/LoriChatWidget";
 import PromoCardWidget from "@/app/components/PromoCardWidget";
 import FooterLegalBar from "../components/FooterLegalBar";
+import ComplianceNotice from "../components/ComplianceNotice";
 
 export default function Blog() {
   const [showTopBar, setShowTopBar] = useState(true);
@@ -260,6 +261,7 @@ export default function Blog() {
         </div>
       )}
       <Footer />
+      <ComplianceNotice />
       <FooterLegalBar />
     </>
   );

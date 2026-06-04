@@ -25,6 +25,7 @@ import {
   type AmenityCategory,
 } from "@/app/config/content";
 import FooterLegalBar from "./components/FooterLegalBar";
+import ComplianceNotice from "./components/ComplianceNotice";
 
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
@@ -1675,6 +1676,7 @@ export default function Home() {
       <PromoCardWidget />
 
       <Footer />
+      <ComplianceNotice />
       <FooterLegalBar />
     </>
   );

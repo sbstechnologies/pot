@@ -8,6 +8,7 @@ import { siteConfig, handleSubmit } from "@/app/config/content";
 import FooterLegalBar from "../components/FooterLegalBar";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import { FaInstagram, FaFacebookF, FaXTwitter } from "react-icons/fa6";
+import ComplianceNotice from "../components/ComplianceNotice";
 
 export default function Contact() {
   return (
@@ -358,6 +359,7 @@ export default function Contact() {
       </section>
 
       <Footer />
+      <ComplianceNotice />
       <FooterLegalBar />
     </>
   );

@@ -30,7 +30,7 @@ export default function HeaderOther({ showTopBar = true }: HeaderProps) {
         showTopBar ? "top-0" : "top-0"
       }`}
     >
-      <div className="flex w-full items-center justify-between bg-white/80 px-6 py-4 md:px-12 lg:px-24 select-none">
+      <div className="flex w-full items-center justify-between bg-white/80 px-10 py-4 md:px-12 lg:px-24 select-none">
         {/* BRAND IDENTITY / LOGO */}
         <div className="min-w-0">
           <Link
@@ -92,7 +92,7 @@ export default function HeaderOther({ showTopBar = true }: HeaderProps) {
           href={headerConfig.applyLink}
           target="_blank"
           rel="noopener noreferrer"
-          className="hidden items-center gap-2 whitespace-nowrap rounded-full bg-[#1e3872] px-6 py-3 font-[Plus_Jakarta_Sans] text-[13px] font-bold text-white transition duration-150 ease-in-out hover:bg-[#152750] hover:shadow-sm lg:inline-flex"
+          className="hidden items-center gap-2 whitespace-nowrap rounded-full bg-[#1e3872] px-10 py-3 font-[Plus_Jakarta_Sans] text-[13px] font-bold text-white transition duration-150 ease-in-out hover:bg-[#152750] hover:shadow-sm lg:inline-flex"
         >
           <span>{headerConfig.applyText}</span>
           <svg
@@ -141,7 +141,7 @@ export default function HeaderOther({ showTopBar = true }: HeaderProps) {
 
       {/* MOBILE INTERACTIVE NAV EXPANSION */}
       {open && (
-        <div className="absolute left-0 top-full w-full border-t border-[#ded8cf] bg-[#f5f2ed] px-6 py-6 shadow-xl lg:hidden">
+        <div className="absolute left-0 top-full w-full border-t border-[#ded8cf] bg-[#f5f2ed] px-10 py-6 shadow-xl lg:hidden">
           <nav className="flex flex-col gap-2 font-[Plus_Jakarta_Sans]">
             {headerConfig.navLinks.map((link) =>
               link.external ? (
@@ -172,7 +172,7 @@ export default function HeaderOther({ showTopBar = true }: HeaderProps) {
               target="_blank"
               rel="noopener noreferrer"
               onClick={() => setOpen(false)}
-              className="mt-3 flex items-center justify-center gap-2 rounded-full bg-[#1e3872] px-5 py-4 text-center text-[15px] font-semibold text-white shadow-[0_8px_22px_rgba(30,56,114,0.22)]"
+              className="mt-3 flex items-center justify-center gap-2 rounded-full bg-[#1e3872] px-10 py-4 text-center text-[15px] font-semibold text-white shadow-[0_8px_22px_rgba(30,56,114,0.22)]"
             >
               <span>{headerConfig.applyText}</span>
               <svg

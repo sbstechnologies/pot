@@ -7,6 +7,7 @@ import { Bed, Bath, MoveUpRight } from "lucide-react";
 import { useState, useMemo } from "react";
 import { images, floorPlans, type FloorPlan } from "@/app/config/content";
 import FooterLegalBar from "@/app/components/FooterLegalBar";
+import ComplianceNotice from "../components/ComplianceNotice";
 
 type CardProps = {
   plan: FloorPlan;
@@ -716,6 +717,7 @@ export default function Floor() {
         </div>
       </section>
       <Footer />
+      <ComplianceNotice />
       <FooterLegalBar />
     </>
   );
