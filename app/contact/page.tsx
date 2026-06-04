@@ -5,6 +5,7 @@ import PromoCardWidget from "../components/PromoCardWidget";
 import HeaderOther from "../components/HeaderOther";
 import Footer from "../components/Footer";
 import { siteConfig, handleSubmit } from "@/app/config/content";
+import FooterLegalBar from "../components/FooterLegalBar";
 
 export default function Contact() {
   return (
@@ -14,7 +15,7 @@ export default function Contact() {
       <HeaderOther />
 
       {/* ===== HERO ===== */}
-      <section className="relative overflow-hidden bg-[#1f376d] px-6 pt-32 pb-24 text-white md:px-16">
+      <section className="relative overflow-hidden bg-[#1f376d] px-10 pt-32 pb-24 text-white md:px-10 lg:px-24">
         <div className="relative z-10 max-w-4xl">
           <p className="mb-6 font-[Plus_Jakarta_Sans] text-xs mt-[15px] font-bold uppercase tracking-[0.35em] text-[#E39B2D]">
             GET IN TOUCH
@@ -34,7 +35,7 @@ export default function Contact() {
       </section>
 
       {/* ===== CONTACT DETAILS + FORM ===== */}
-      <section className="bg-[#f5f2ed] px-6 py-12 font-[Plus_Jakarta_Sans] md:px-16 md:py-16">
+      <section className="bg-[#f5f2ed] px-10 py-12 font-[Plus_Jakarta_Sans] md:px-10 lg:px-24 md:py-16">
         <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-10 xl:grid-cols-[0.9fr_1.25fr] xl:gap-12">
           {/* LEFT */}
           <div className="space-y-10">
@@ -330,6 +331,7 @@ export default function Contact() {
       </section>
 
       <Footer />
+      <FooterLegalBar />
     </>
   );
 }

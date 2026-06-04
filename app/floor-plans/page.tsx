@@ -6,6 +6,7 @@ import Footer from "@/app/components/Footer";
 import { Bed, Bath, MoveUpRight } from "lucide-react";
 import { useState, useMemo } from "react";
 import { images, floorPlans, type FloorPlan } from "@/app/config/content";
+import FooterLegalBar from "@/app/components/FooterLegalBar";
 
 type CardProps = {
   plan: FloorPlan;
@@ -620,7 +621,7 @@ export default function Floor() {
       <HeaderOther />
       <LoriChatWidget />
       <PromoCardWidget />
-      <section className="relative overflow-hidden bg-[#1f376d] text-[#F5F2ED] min-h-[620px] px-5 md:px-10 lg:px-16 pt-[84px] pb-20">
+      <section className="relative overflow-hidden bg-[#1f376d] text-[#F5F2ED] min-h-[620px] px-10 md:px-10 lg:px-24 pt-[84px] pb-20">
         {/* subtle dotted background */}
         <div className="pointer-events-none absolute inset-0 opacity-[0.12] [background-image:radial-gradient(rgba(245,242,237,0.45)_1px,transparent_1px)] [background-size:50px_50px]" />
 
@@ -660,7 +661,7 @@ export default function Floor() {
         </div>
       </section>
 
-      <section className="bg-[#F5F2ED] px-5 py-16 md:px-10 md:py-24 lg:px-16">
+      <section className="bg-[#F5F2ED] px-10 py-16 md:px-10 md:py-24 lg:px-24">
         <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
           {floorPlans.map((plan) => (
             <Card
@@ -715,6 +716,7 @@ export default function Floor() {
         </div>
       </section>
       <Footer />
+      <FooterLegalBar />
     </>
   );
 }

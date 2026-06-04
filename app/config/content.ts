@@ -130,10 +130,11 @@ export const images = {
   // BLOG PAGE
   blog1: "/webp/landscape/11.webp",
   blog2: "/webp/landscape/3.webp",
-  blog3: "/webp/amenities/4.webp",
+  blog3: "/webp/amenities/14.webp",
   blog4: "/webp/landscape/1.webp",
   blog5: "/webp/landscape/6.webp",
   blog6: "/webp/amenities/5.webp",
+  blog7: "/webp/amenities/14.webp",
 
   alt57: "Scenic hiking trails and outdoor landscape near Sherman Texas",
   alt58: "Sherman Texas farmers market and local community shopping",

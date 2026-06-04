@@ -5,6 +5,7 @@ import Footer from "@/app/components/Footer";
 import { images, type Post, posts, featuredPost } from "@/app/config/content";
 import LoriChatWidget from "@/app/components/LoriChatWidget";
 import PromoCardWidget from "@/app/components/PromoCardWidget";
+import FooterLegalBar from "../components/FooterLegalBar";
 
 export default function Blog() {
   const [showTopBar, setShowTopBar] = useState(true);
@@ -15,7 +16,7 @@ export default function Blog() {
       <LoriChatWidget />
       <PromoCardWidget />
       <HeaderOther />
-      <section className="bg-[#1f376d] text-white pt-32 pb-24 px-6 md:px-16 relative overflow-hidden">
+      <section className="bg-[#1f376d] text-white pt-32 pb-24 px-10 md:px-10 lg:px-24 relative overflow-hidden">
         <div className="relative z-10 max-w-5xl">
           <p className="text-xs tracking-[0.35em] text-[#E39B2D] mb-6 font-[Plus_Jakarta_Sans] mt-[15px] font-bold uppercase">
             SHERMAN LIVING GUIDE
@@ -34,7 +35,7 @@ export default function Blog() {
       </section>
 
       {/* FEATURED CARD */}
-      <section className="bg-[#f5f2ed] px-6 md:px-16 pt-10 md:pt-14 pb-24 relative z-10">
+      <section className="bg-[#f5f2ed] px-10 md:px-10 lg:px-24 pt-10 md:pt-14 pb-24 relative z-10">
         <div className="max-w-[1400px] mx-auto">
           <div
             className="grid md:grid-cols-2 rounded-3xl overflow-hidden border bg-white
@@ -99,7 +100,7 @@ export default function Blog() {
       </section>
 
       {/* BLOG GRID */}
-      <section className="bg-[#f5f2ed] px-6 md:px-16 pb-24">
+      <section className="bg-[#f5f2ed] px-10 md:px-10 lg:px-24 pb-24">
         <div className="max-w-[1400px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {posts.map((post, index) => (
@@ -118,7 +119,7 @@ export default function Blog() {
                         ? images.alt57
                         : post.img === images.blog2
                           ? images.alt58
-                          : post.img === images.blog3
+                          : post.img === images.blog7
                             ? images.alt59
                             : post.img === images.blog4
                               ? images.alt60
@@ -201,7 +202,7 @@ export default function Blog() {
                       ? images.alt57
                       : selectedPost.img === images.blog2
                         ? images.alt58
-                        : selectedPost.img === images.blog3
+                        : selectedPost.img === images.blog7
                           ? images.alt59
                           : selectedPost.img === images.blog4
                             ? images.alt60
@@ -259,6 +260,7 @@ export default function Blog() {
         </div>
       )}
       <Footer />
+      <FooterLegalBar />
     </>
   );
 }

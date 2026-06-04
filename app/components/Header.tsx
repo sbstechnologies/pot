@@ -30,7 +30,7 @@ export default function Header({ showTopBar }: HeaderProps) {
         showTopBar ? "top-0 md:top-11" : "top-0"
       }`}
     >
-      <div className="flex w-full items-center justify-between bg-white/80 px-6 py-4 md:px-12 lg:px-16 select-none">
+      <div className="flex w-full items-center justify-between bg-white/80 px-6 py-4 md:px-12 lg:px-24 select-none">
         {/* BRAND IDENTITY / LOGO */}
         <div className="min-w-0">
           <Link

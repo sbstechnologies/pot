@@ -10,6 +10,8 @@ import LoriChatWidget from "./components/LoriChatWidget";
 import PromoCardWidget from "./components/PromoCardWidget";
 import Header from "./components/Header";
 import HeaderTop from "./components/HeaderTop";
+import { Instrument_Serif } from "next/font/google";
+import { Plus_Jakarta_Sans } from "next/font/google";
 
 import { Wrench, Users, Droplets, Car, PawPrint, Shirt } from "lucide-react";
 import {
@@ -22,6 +24,17 @@ import {
   type PreviewCategory,
   type AmenityCategory,
 } from "@/app/config/content";
+import FooterLegalBar from "./components/FooterLegalBar";
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+});
+
+const jakarta = Plus_Jakarta_Sans({
+  subsets: ["latin"],
+  variable: "--font-jakarta",
+});
 
 export default function Home() {
   const [tab, setTab] = useState("amenities");
@@ -653,7 +666,7 @@ export default function Home() {
       {/* ================= AMENITIES ================= */}
       <section
         id="amenities"
-        className="bg-[#0c2340] px-4 sm:px-5 md:px-10 lg:px-12 py-14 md:py-20"
+        className="bg-[#0c2340] px-10 sm:px-10 md:px-10 lg:px-24 py-14 md:py-20"
       >
         <div className="max-w-[1400px] mx-auto">
           <div className="grid md:grid-cols-2 gap-8 md:gap-14 mb-10 md:mb-12">
@@ -747,7 +760,10 @@ export default function Home() {
       </section>
 
       {/* ================= LOCATION INTRO ================= */}
-      <section className="bg-[#f1eee9] px-4 sm:px-6 md:px-12 py-12 sm:py-14 md:py-20">
+      <section
+        id="neighborhood"
+        className="bg-[#f1eee9] px-10 sm:px-10 md:px-12 lg:px-24 py-12 sm:py-14 md:py-20"
+      >
         <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 gap-8 sm:gap-10 items-center">
           <div>
             <p className="font-[Plus_Jakarta_Sans] text-xs tracking-[3px] uppercase text-[#7b7f7d] mb-4 font-bold">
@@ -768,10 +784,7 @@ export default function Home() {
       </section>
 
       {/* ================= LOCATION MAP + DESTINATIONS ================= */}
-      <section
-        id="neighborhood"
-        className="bg-[#f1eee9] px-4 sm:px-6 md:px-12 pb-14 sm:pb-16"
-      >
+      <section className="bg-[#f1eee9] px-10 sm:px-10 md:px-12 lg:px-24 pb-14 sm:pb-16">
         <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 gap-6 sm:gap-8 items-start">
           {/* MAP */}
           <div className="relative h-[280px] sm:h-[350px] md:h-[520px] rounded-2xl sm:rounded-3xl overflow-hidden border bg-[#f3efe8]">
@@ -1049,13 +1062,15 @@ export default function Home() {
       {/* ================= RESIDENT VOICES ================= */}
       <section
         id="residents"
-        className="bg-[#0c2340] px-4 sm:px-6 md:px-10 xl:px-12 py-12 md:py-20 text-white overflow-hidden relative"
+        className="bg-[#0c2340] px-10 sm:px-10 md:px-10 lg:px-24 py-12 md:py-20 text-white overflow-hidden relative"
       >
         <div className="max-w-[900px] mx-auto text-center mb-8 md:mb-10">
           <p className="text-[10px] sm:text-xs tracking-[0.16em] uppercase text-[rgba(224,148,40,0.8)] mb-3 font-[Plus_Jakarta_Sans] font-extrabold">
             Resident Voices
           </p>
-          <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-normal tracking-tight text-[#f5f2ed] leading-tight">
+          <h2
+            className={`text-2xl sm:text-3xl md:text-5xl ${instrumentSerif.className} font-normal tracking-tight text-[#f5f2ed] leading-tight`}
+          >
             Real Stories. Real Residents.
           </h2>
           <p className="text-xs sm:text-sm md:text-[14px] text-[rgba(245,242,237,0.46)] mt-4 max-w-[480px] mx-auto font-[Plus_Jakarta_Sans] leading-[1.65]">
@@ -1327,7 +1342,9 @@ export default function Home() {
               <p className="mb-1 text-[10px] font-bold uppercase tracking-[0.08em] text-[#5A6260]">
                 Sherman Living Guide
               </p>
-              <h2 className="font-serif text-[28px] sm:text-4xl md:text-5xl lg:text-[54px] font-normal leading-[1.1] text-[#2D3230]">
+              <h2
+                className={`${instrumentSerif.className} text-[28px] sm:text-4xl md:text-5xl lg:text-[54px] font-normal leading-[1.1] text-[#2D3230]`}
+              >
                 Stories from the Neighborhood
               </h2>
             </div>
@@ -1535,7 +1552,9 @@ export default function Home() {
             Ready to Begin?
           </p>
 
-          <h2 className="font-serif text-[clamp(2rem,5vw,4.2rem)] font-normal leading-[1.06] tracking-[-0.03em] text-[#f5f2ed] mb-5 max-w-[680px] mx-auto">
+          <h2
+            className={`${instrumentSerif.className} text-[clamp(2rem,5vw,4.2rem)] font-normal leading-[1.06] tracking-[-0.03em] text-[#f5f2ed] mb-5 max-w-[680px] mx-auto`}
+          >
             Make Parks on Taylor
             <br />
             <span className="text-[rgba(245,242,237,0.6)] italic">
@@ -1650,6 +1669,7 @@ export default function Home() {
       <PromoCardWidget />
 
       <Footer />
+      <FooterLegalBar />
     </>
   );
 }

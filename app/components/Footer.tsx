@@ -1,9 +1,12 @@
 import { siteConfig, footerLocation } from "@/app/config/content";
 import { Home, MapPin, Phone, Mail, Clock, ArrowRight } from "lucide-react";
 
+import Image from "next/image";
+import { headerConfig } from "@/app/config/content";
+
 export default function Footer() {
   return (
-    <section className="bg-[#071a33] px-6 md:px-10 lg:px-14 py-16 md:py-20 text-white">
+    <section className="bg-[#0c1a3a] px-10 md:px-10 lg:px-24 py-16 md:py-20 text-white">
       <div className="max-w-[1400px] mx-auto">
         {/* EQUAL 4 COLUMN LAYOUT */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
@@ -11,10 +14,14 @@ export default function Footer() {
           <div>
             {/* LOGO */}
             <div className="flex items-center gap-3 mb-6">
-              <div className="w-[48px] h-[48px] bg-[#1e3a78] rounded-[14px] flex items-center justify-center shrink-0">
-                <Home size={22} className="text-white" />
-              </div>
-
+              <span className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-[12px] bg-[var(--primary)]">
+                <Image
+                  src="/images/logo.png"
+                  alt={headerConfig.logo.alt_title}
+                  width={38}
+                  height={38}
+                />
+              </span>
               <div>
                 <h3 className="font-serif text-[20px] leading-none text-white">
                   {siteConfig.name}
