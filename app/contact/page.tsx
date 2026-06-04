@@ -6,6 +6,8 @@ import HeaderOther from "../components/HeaderOther";
 import Footer from "../components/Footer";
 import { siteConfig, handleSubmit } from "@/app/config/content";
 import FooterLegalBar from "../components/FooterLegalBar";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
+import { FaInstagram, FaFacebookF, FaXTwitter } from "react-icons/fa6";
 
 export default function Contact() {
   return (
@@ -46,7 +48,13 @@ export default function Contact() {
               </p>
 
               <div className="flex items-start gap-4">
-                <div className="mt-1 text-xl text-[#1E3872]">⌖</div>
+                <div className="mt-1 text-xl text-[#1E3872]">
+                  <MapPin
+                    size={16}
+                    className="shrink-0 mt-[2px] text-[#1E3872]"
+                    strokeWidth={2}
+                  />
+                </div>
 
                 <div>
                   <h3 className="text-[18px] font-semibold text-[#1f2937]">
@@ -69,7 +77,11 @@ export default function Contact() {
               <div className="space-y-5">
                 <div className="flex items-start gap-4">
                   <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#cfd6e2] bg-[#eef2f8] text-sm text-[#1E3872]">
-                    ☎
+                    <Phone
+                      size={16}
+                      className="shrink-0 text-[#1E3872]"
+                      strokeWidth={2}
+                    />
                   </div>
 
                   <div>
@@ -86,7 +98,11 @@ export default function Contact() {
 
                 <div className="flex items-start gap-4">
                   <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#cfd6e2] bg-[#eef2f8] text-sm text-[#1E3872]">
-                    ✉
+                    <Mail
+                      size={16}
+                      className="shrink-0 text-[#1E3872]"
+                      strokeWidth={2}
+                    />
                   </div>
 
                   <div>
@@ -111,7 +127,11 @@ export default function Contact() {
 
               <div className="flex items-start gap-4">
                 <div className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#cfd6e2] bg-[#eef2f8] text-sm text-[#1E3872]">
-                  ◔
+                  <Clock
+                    size={16}
+                    className="shrink-0 text-[#1E3872]"
+                    strokeWidth={2}
+                  />
                 </div>
 
                 <div className="w-full max-w-md space-y-1.5 text-[16px]">
@@ -185,13 +205,20 @@ export default function Contact() {
               </p>
 
               <div className="flex gap-3">
-                {["◎", "f", "𝕏"].map((item, index) => (
-                  <button
+                {[
+                  { icon: FaInstagram, href: "#" },
+                  { icon: FaFacebookF, href: "#" },
+                  { icon: FaXTwitter, href: "#" },
+                ].map(({ icon: Icon, href }, index) => (
+                  <a
                     key={index}
-                    className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#c6d0e0] bg-[#edf2fb] text-sm text-[#1E3872]"
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#c6d0e0] bg-[#edf2fb] text-[#1E3872] transition hover:bg-[#1E3872] hover:text-white"
                   >
-                    {item}
-                  </button>
+                    <Icon size={16} />
+                  </a>
                 ))}
               </div>
             </div>
@@ -301,7 +328,7 @@ export default function Contact() {
       </section>
 
       {/* ===== OFFER CTA ===== */}
-      <section className="bg-[#f5f2ed] px-6 pb-14 md:px-12 md:pb-20">
+      <section className="bg-[#f5f2ed] px-10 pb-14 md:px-10 lg:px-24 md:pb-20">
         <div className="mx-auto flex max-w-[1600px] flex-col gap-6 rounded-[26px] bg-[#db8d1f] px-8 py-7 md:px-12 md:py-9 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <p className="mb-4 text-xs font-semibold tracking-[0.3em] text-white/90">

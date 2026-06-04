@@ -217,7 +217,7 @@ export default function Home() {
       </section>
 
       {/* ================= LEASE PORTAL ================= */}
-      <div className="relative z-30 -mt-10 -mb-16 px-3 sm:px-4 sm:px-6 md:px-12">
+      <div className="relative z-30 -mt-10 -mb-16 px-10 sm:px-10 md:px-10 lg:px-24 md:px-12">
         <div className="max-w-[1400px] mx-auto">
           <LeasePortal />
         </div>
@@ -226,7 +226,7 @@ export default function Home() {
       {/* ================= UNIT OVERVIEW ================= */}
       <section
         id="unit"
-        className="bg-[#f5f2ee] px-4 sm:px-6 md:px-12 pt-24 sm:pt-28 md:pt-32 pb-10 sm:pb-12 md:pb-16 overflow-x-hidden"
+        className="bg-[#f5f2ee] px-10 sm:px-10 md:px-10 lg:px-24 pt-24 sm:pt-28 md:pt-32 pb-10 sm:pb-12 md:pb-16 overflow-x-hidden"
       >
         <div className="max-w-[1400px] mx-auto">
           {/* TOP TEXT ROW */}
@@ -769,7 +769,7 @@ export default function Home() {
             <p className="font-[Plus_Jakarta_Sans] text-xs tracking-[3px] uppercase text-[#7b7f7d] mb-4 font-bold">
               Location · Sherman, TX
             </p>
-            <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif text-[#2d3230] leading-[1.2]">
+            <h2 className="text-2xl sm:text-3xl md:text-5xl font-[Instrument_Serif] text-[#2d3230] leading-[1.2]">
               Fall in Love <br />
               With the Location.
             </h2>
@@ -1064,7 +1064,7 @@ export default function Home() {
         id="residents"
         className="bg-[#0c2340] px-10 sm:px-10 md:px-10 lg:px-24 py-12 md:py-20 text-white overflow-hidden relative"
       >
-        <div className="max-w-[900px] mx-auto text-center mb-8 md:mb-10">
+        <div className="max-w-[900px] mx-auto text-center mb-8 md:mb-10 lg:mb-12 relative z-10">
           <p className="text-[10px] sm:text-xs tracking-[0.16em] uppercase text-[rgba(224,148,40,0.8)] mb-3 font-[Plus_Jakarta_Sans] font-extrabold">
             Resident Voices
           </p>
@@ -1081,11 +1081,17 @@ export default function Home() {
 
         <div className="w-full max-w-[760px] xl:max-w-[820px] mx-auto relative">
           {/* REVIEW CARD */}
-          <div className="bg-[rgba(245,242,237,0.04)] border border-[rgba(245,242,237,0.1)] rounded-[20px] sm:rounded-[24px] p-5 sm:p-8 md:p-10 xl:p-[46px] backdrop-blur-[18px] shadow-[0px_24px_64px_rgba(0,0,0,0.36),_inset_0px_1px_0px_rgba(255,255,255,0.05)] relative overflow-hidden">
-            <div className="absolute -top-10 -left-10 w-[160px] h-[160px] rounded-full bg-[#1e3872] opacity-60 filter blur-[40px] pointer-events-none" />
+          <div
+            className={`${instrumentSerif.className} bg-[rgba(245,242,237,0.04)] border border-[rgba(245,242,237,0.1)] rounded-[20px] sm:rounded-[24px] p-5 sm:p-8 md:p-10 xl:p-[46px] backdrop-blur-[18px] shadow-[0px_24px_64px_rgba(0,0,0,0.36),_inset_0px_1px_0px_rgba(255,255,255,0.05)] relative overflow-hidden`}
+          >
+            <div
+              className={`${instrumentSerif.className} absolute -top-10 -left-10 w-[160px] h-[160px] rounded-full bg-[#1e3872] opacity-60 filter blur-[40px] pointer-events-none`}
+            />
 
             {/* STARS */}
-            <div className="flex items-center gap-1 mb-4 sm:mb-5">
+            <div
+              className={`${instrumentSerif.className} flex items-center gap-1 mb-4 sm:mb-5`}
+            >
               {[...Array(5)].map((_, i) => (
                 <svg
                   key={i}
