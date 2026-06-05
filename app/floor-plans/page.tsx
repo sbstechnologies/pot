@@ -242,7 +242,7 @@ function ComparisonDrawer({
       <div className="fixed inset-0 bg-black/30 z-40" onClick={onClear} />
 
       <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#F5F2ED] rounded-t-[28px] shadow-2xl border-t border-[#d8d2c7] max-h-[82vh] overflow-y-auto">
-        <div className="sticky top-0 bg-[#F5F2ED] px-10 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80 pt-4 pb-6 border-b border-[#ddd7cc]">
+        <div className="sticky top-0 bg-[#F5F2ED] px-6 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80 pt-4 pb-6 border-b border-[#ddd7cc]">
           <div className="w-14 h-1.5 rounded-full bg-[#d1cbc1] mx-auto mb-5" />
 
           <div className="flex items-center justify-between gap-4">
@@ -262,7 +262,7 @@ function ComparisonDrawer({
           </div>
         </div>
 
-        <div className="px-10 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-8">
+        <div className="px-6 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-8">
           {/* desktop */}
           <div className="hidden md:grid grid-cols-[220px_1fr_1fr] gap-8">
             <div className="pt-[74px]">
@@ -621,7 +621,7 @@ export default function Floor() {
       <HeaderOther />
 
       <PromoCardWidget />
-      <section className="relative overflow-hidden bg-[#1f376d] text-[#F5F2ED] min-h-[620px] px-10 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80 pt-[84px] pb-20">
+      <section className="relative overflow-hidden bg-[#1f376d] text-[#F5F2ED] min-h-[620px] px-6 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80 pt-[84px] pb-20">
         {/* subtle dotted background */}
         <div className="pointer-events-none absolute inset-0 opacity-[0.12] [background-image:radial-gradient(rgba(245,242,237,0.45)_1px,transparent_1px)] [background-size:50px_50px]" />
 
@@ -661,7 +661,7 @@ export default function Floor() {
         </div>
       </section>
 
-      <section className="bg-[#F5F2ED]  py-16 px-10 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80">
+      <section className="bg-[#F5F2ED]  py-16 px-6 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80">
         <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
           {floorPlans.map((plan) => (
             <Card
@@ -691,7 +691,7 @@ export default function Floor() {
         />
       )}
 
-      <section className="bg-[#F5F2ED] pb-24 px-10 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80">
+      <section className="bg-[#F5F2ED] pb-24 px-6 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80">
         <div className="mx-auto max-w-[1600px]">
           <div className="rounded-[20px] border border-dashed border-[#bdc8d8] bg-[#f1eeee] px-9 py-7">
             <div className="flex items-center gap-4">
