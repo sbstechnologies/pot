@@ -105,7 +105,7 @@ export default function Gallery() {
       <HeaderOther />
 
       {/* HERO SECTION */}
-      <section className="bg-[#1E3872] text-[#F5F2ED] px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-24 md:py-28 font-[Plus_Jakarta_Sans]">
+      <section className="bg-[#1E3872] text-[#F5F2ED] px-10 xs:px-8 sm:px-8 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-24 md:py-28 font-[Plus_Jakarta_Sans]">
         <div className="max-w-3xl">
           <p className="text-xs tracking-[0.3em] text-[#E09428] mb-6 mt-[15px] font-bold uppercase">
             Community Gallery
@@ -126,7 +126,7 @@ export default function Gallery() {
       </section>
 
       {/* FILTER BAR */}
-      <div className="bg-white border-b border-[#e5e1d8] px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-4 font-[Plus_Jakarta_Sans]">
+      <div className="bg-white border-b border-[#e5e1d8] px-10 xs:px-8 sm:px-8 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-4 font-[Plus_Jakarta_Sans]">
         <div className="max-w-[1920px] mx-auto flex gap-3 overflow-x-auto">
           {filters.map((item) => (
             <button
@@ -156,7 +156,7 @@ export default function Gallery() {
       </div>
 
       {/* GALLERY SECTION */}
-      <section className="bg-[#F5F2ED] px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-10 md:py-14">
+      <section className="bg-[#F5F2ED] px-10 xs:px-8 sm:px-8 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-10 md:py-14">
         <div className="max-w-[1920px] mx-auto">
           <div className="columns-1 md:columns-2 lg:columns-3 gap-5 space-y-5">
             {filteredGallery.map((item, index) => (

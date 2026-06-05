@@ -16,7 +16,7 @@ export default function Blog() {
     <>
       <PromoCardWidget />
       <HeaderOther />
-      <section className="bg-[#1f376d] text-white pt-32 pb-24 px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80 relative overflow-hidden">
+      <section className="bg-[#1f376d] text-white pt-32 pb-24 px-10 xs:px-8 sm:px-8 md:px-30 lg:px-60 xl:px-85 xxl:px-80 relative overflow-hidden">
         <div className="relative z-10 max-w-5xl">
           <p className="text-xs tracking-[0.3em] text-[#E09428] mb-6 mt-[15px] font-bold uppercase">
             SHERMAN LIVING GUIDE
@@ -35,7 +35,7 @@ export default function Blog() {
       </section>
 
       {/* FEATURED CARD */}
-      <section className="bg-[#f5f2ed] px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80 pt-10 md:pt-14 pb-24 relative z-10">
+      <section className="bg-[#f5f2ed] px-10 xs:px-8 sm:px-8 md:px-30 lg:px-60 xl:px-85 xxl:px-80 pt-10 md:pt-14 pb-24 relative z-10">
         <div className="max-w-[1920px] mx-auto">
           <div
             className="grid md:grid-cols-2 rounded-3xl overflow-hidden border bg-white
@@ -100,7 +100,7 @@ export default function Blog() {
       </section>
 
       {/* BLOG GRID */}
-      <section className="bg-[#f5f2ed] px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80 pb-24">
+      <section className="bg-[#f5f2ed] px-10 xs:px-8 sm:px-8 md:px-30 lg:px-60 xl:px-85 xxl:px-80 pb-24">
         <div className="max-w-[1920px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {posts.map((post, index) => (
