@@ -218,7 +218,7 @@ export default function Home() {
       </section>
 
       {/* ================= LEASE PORTAL ================= */}
-      <div className="relative z-30 -mt-10 -mb-16 px-10 xs:px-8 sm:px-8 md:px-30 lg:px-60  xl:px-85 xxl:px-80">
+      <div className="relative z-30 -mt-10 -mb-16 px-10 xs:px-6 sm:px-6 md:px-30 lg:px-60  xl:px-85 xxl:px-80">
         <div className="max-w-[1920px] mx-auto">
           <LeasePortal />
         </div>
@@ -227,7 +227,7 @@ export default function Home() {
       {/* ================= UNIT OVERVIEW ================= */}
       <section
         id="unit"
-        className="bg-[#f5f2ee] px-10 xs:px-8 sm:px-8 md:px-30 lg:px-60 xl:px-85 xxl:px-80 pt-24 sm:pt-28 md:pt-32 pb-10 sm:pb-12 md:pb-16 overflow-x-hidden"
+        className="bg-[#f5f2ee] px-10 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80 pt-24 sm:pt-28 md:pt-32 pb-10 sm:pb-12 md:pb-16 overflow-x-hidden"
       >
         <div className="max-w-[1920px] mx-auto">
           {/* TOP TEXT ROW */}
@@ -667,7 +667,7 @@ export default function Home() {
       {/* ================= AMENITIES ================= */}
       <section
         id="amenities"
-        className="bg-[#0c2340]  px-10 xs:px-8 sm:px-8 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-14 md:py-20"
+        className="bg-[#0c2340]  px-10 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-14 md:py-20"
       >
         <div className="max-w-[1920px] mx-auto">
           <div className="grid md:grid-cols-2 gap-8 md:gap-14 mb-10 md:mb-12">
@@ -763,7 +763,7 @@ export default function Home() {
       {/* ================= LOCATION INTRO ================= */}
       <section
         id="neighborhood"
-        className="bg-[#f1eee9]  px-10 xs:px-8 sm:px-8 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-12 sm:py-14 md:py-20"
+        className="bg-[#f1eee9]  px-10 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-12 sm:py-14 md:py-20"
       >
         <div className="max-w-[1920px] mx-auto grid md:grid-cols-2 gap-8 sm:gap-10 items-center">
           <div>
@@ -785,7 +785,7 @@ export default function Home() {
       </section>
 
       {/* ================= LOCATION MAP + DESTINATIONS ================= */}
-      <section className="bg-[#f1eee9] px-10 xs:px-8 sm:px-8 md:px-30 lg:px-60 xl:px-85 xxl:px-80 pb-14 sm:pb-16">
+      <section className="bg-[#f1eee9] px-10 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80 pb-14 sm:pb-16">
         <div className="max-w-[1920px] mx-auto grid md:grid-cols-2 gap-6 sm:gap-8 items-start">
           {/* MAP */}
           <div className="relative h-[280px] sm:h-[350px] md:h-[520px] rounded-2xl sm:rounded-3xl overflow-hidden border bg-[#f3efe8]">
@@ -1063,7 +1063,7 @@ export default function Home() {
       {/* ================= RESIDENT VOICES ================= */}
       <section
         id="residents"
-        className="bg-[#0c2340]  px-10 xs:px-8 sm:px-8 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-12 md:py-20 text-white overflow-hidden relative"
+        className="bg-[#0c2340]  px-10 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-12 md:py-20 text-white overflow-hidden relative"
       >
         <div className="max-w-[900px] mx-auto text-center mb-8 md:mb-10 lg:mb-12 relative z-10">
           <p className="text-[10px] sm:text-xs tracking-[0.16em] uppercase text-[rgba(224,148,40,0.8)] mb-3 font-[Plus_Jakarta_Sans] font-extrabold">
@@ -1342,7 +1342,7 @@ export default function Home() {
 
       {/* ================= ARTICLES CAROUSEL ================= */}
       <section className="w-full bg-[#f5f2ed] py-14 sm:py-16 md:py-20 font-[Plus_Jakarta_Sans] antialiased select-none">
-        <div className="mx-auto max-w-[1920px] px-10 xs:px-8 sm:px-8 md:px-30 lg:px-60 xl:px-85 xxl:px-80">
+        <div className="mx-auto max-w-[1920px] px-10 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80">
           {/* HEADER */}
           <div className="mb-8 sm:mb-10 flex items-end justify-between gap-4">
             <div>
@@ -1538,7 +1538,7 @@ export default function Home() {
       {/* ================= LEASING CTA ================= */}
       <section
         id="leasing-cta"
-        className="bg-[#0c1a3a] px-10 xs:px-8 sm:px-8 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-16 sm:py-[100px] scroll-mt-[72px] relative overflow-hidden text-white"
+        className="bg-[#0c1a3a] px-10 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-16 sm:py-[100px] scroll-mt-[72px] relative overflow-hidden text-white"
       >
         {/* Radial Glow */}
         <div
