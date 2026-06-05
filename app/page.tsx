@@ -105,7 +105,7 @@ export default function Home() {
     <>
       {/* ================= HERO SECTION ================= */}
 
-      <section className="relative w-full min-h-[90svh] lg:min-h-[100vh] xl:min-h-[100vh] 2xl:min-h-[100vh] overflow-hidden">
+      <section className="relative w-full min-h-[100svh] lg:min-h-[100vh] xl:min-h-[100vh] 2xl:min-h-[100vh] overflow-hidden">
         <HeaderTop show={showTopBar} setShow={setShowTopBar} />
 
         <Header showTopBar={showTopBar} />
