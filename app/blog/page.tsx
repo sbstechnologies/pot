@@ -14,16 +14,15 @@ export default function Blog() {
 
   return (
     <>
-      <LoriChatWidget />
       <PromoCardWidget />
       <HeaderOther />
-      <section className="bg-[#1f376d] text-white pt-32 pb-24 px-10 md:px-10 lg:px-24 relative overflow-hidden">
+      <section className="bg-[#1f376d] text-white pt-32 pb-24 px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80 relative overflow-hidden">
         <div className="relative z-10 max-w-5xl">
-          <p className="text-xs tracking-[0.35em] text-[#E39B2D] mb-6 font-[Plus_Jakarta_Sans] mt-[15px] font-bold uppercase">
+          <p className="text-xs tracking-[0.3em] text-[#E09428] mb-6 mt-[15px] font-bold uppercase">
             SHERMAN LIVING GUIDE
           </p>
 
-          <h1 className="font-[Instrument_Serif] leading-[1.05] text-[42px] md:text-[80px]">
+          <h1 className="font-[Instrument_Serif] text-[64px] md:text-[70px] leading-[0.98] tracking-[-0.04em] text-[#F5F2ED]">
             Stories from <br />
             <span className="text-[#E39B2D] italic">the Neighborhood</span>
           </h1>
@@ -36,8 +35,8 @@ export default function Blog() {
       </section>
 
       {/* FEATURED CARD */}
-      <section className="bg-[#f5f2ed] px-10 md:px-10 lg:px-24 pt-10 md:pt-14 pb-24 relative z-10">
-        <div className="max-w-[1400px] mx-auto">
+      <section className="bg-[#f5f2ed] px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80 pt-10 md:pt-14 pb-24 relative z-10">
+        <div className="max-w-[1920px] mx-auto">
           <div
             className="grid md:grid-cols-2 rounded-3xl overflow-hidden border bg-white
                 shadow-sm hover:shadow-2xl
@@ -101,8 +100,8 @@ export default function Blog() {
       </section>
 
       {/* BLOG GRID */}
-      <section className="bg-[#f5f2ed] px-10 md:px-10 lg:px-24 pb-24">
-        <div className="max-w-[1400px] mx-auto">
+      <section className="bg-[#f5f2ed] px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80 pb-24">
+        <div className="max-w-[1920px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {posts.map((post, index) => (
               <article

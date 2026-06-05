@@ -5,21 +5,53 @@
   --background: #ffffff;
   --foreground: #171717;
 
-  --primary: #0c1a3a;
+  --primary: #1e3872;
+  --darkPrimary: #0f1e48;
+  --light-primary: #6b8fd4;
+
+  --secondary: #e09428;
+  --darkSecondary: #e09428;
+  --lightSecondary: #f0a530;
+
+  --textPrimary: #2d3230;
+  --textSecondary: #2d3230;
+  --textTertiary: #5a6260;
+
+  --white: #ffffff;
+  --black: #000000;
+
   --grey: #2d3230;
+  --dark-grey: #2d3230;
   --light-grey: #5a6260;
 
-  --font-geist-sans: "Plus Jakarta Sans Variable", sans-serif;
+  --fontPrimary: "Plus Jakarta Sans Variable", sans-serif;
+  --font-secondary: "Instrument Serif", Georgia, serif;
+  --font-mono: "Plus Jakarta Mono Variable", monospace;
+
+  --LeftMargin: 316px;
+  --RightMargin: 316px;
+
+  --LeftPadding: 316px;
+  --RightPadding: 316px;
+
+  --deskLeftMargin: 32px;
+  --deskRightMargin: 32px;
+
+  --mobileLeftMargin: 32px;
+  --mobileRightMargin: 32px;
+
+  --tabletLeftMargin: 32px;
+  --tabletRightMargin: 32px;
+
+  --layout-padding-xs: 4px;
+  --layout-padding-sm: 8px;
+  --layout-padding-md: 16px;
+  --layout-padding-lg: 32px;
+  --layout-padding-xl: 48px;
+  --layout-padding-xxl:
+    64px --font-geist-sans: "Plus Jakarta Sans Variable", sans-serif;
   --font-geist-serif: "Instrument Serif", Georgia, serif;
   --font-geist-mono: "Plus Jakarta Mono Variable", monospace;
-  font-family: "Plus Jakarta Sans", system-ui, sans-serif;
-}
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -32,7 +64,9 @@
 body {
   background: var(--background);
   color: var(--foreground);
-  font-family: "Plus Jakarta Sans Variable", sans-serif;
+  font-family:
+    "Plus Jakarta Sans", "Instrument Serif", Georgia, serif, system-ui,
+    sans-serif;
 }
 
 @keyframes hero-in {

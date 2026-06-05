@@ -105,7 +105,7 @@ export default function Home() {
     <>
       {/* ================= HERO SECTION ================= */}
 
-      <section className="relative w-full min-h-[100svh] lg:min-h-[130vh] 2xl:min-h-[118vh] overflow-hidden">
+      <section className="relative w-full min-h-[90svh] lg:min-h-[100vh] xl:min-h-[100vh] 2xl:min-h-[100vh] overflow-hidden">
         <HeaderTop show={showTopBar} setShow={setShowTopBar} />
 
         <Header showTopBar={showTopBar} />
@@ -123,7 +123,7 @@ export default function Home() {
 
         {/* MAIN LAYOUT WRAPPER (Now handles the entire animation entry) */}
         <div
-          className={`absolute left-1/2 -translate-x-1/2 z-[2] flex w-full max-w-[1440px] flex-col items-center justify-center text-center text-white px-6 pb-14 select-none animate-hero-container ${
+          className={`absolute left-1/2 -translate-x-1/2 z-[2] flex w-full max-w-[1920px] flex-col items-center justify-center text-center text-white xs:px-4 sm:px-8 md:px-16 lg:px-32 pb-14 select-none animate-hero-container ${
             showTopBar
               ? "pt-36 md:pt-44 lg:pt-52 2xl:pt-60"
               : "pt-28 md:pt-36 lg:pt-44 2xl:pt-48"
@@ -218,8 +218,8 @@ export default function Home() {
       </section>
 
       {/* ================= LEASE PORTAL ================= */}
-      <div className="relative z-30 -mt-10 -mb-16 px-10 sm:px-10 md:px-10 lg:px-24 md:px-12">
-        <div className="max-w-[1400px] mx-auto">
+      <div className="relative z-30 -mt-10 -mb-16 px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60  xl:px-85 xxl:px-80">
+        <div className="max-w-[1920px] mx-auto">
           <LeasePortal />
         </div>
       </div>
@@ -227,9 +227,9 @@ export default function Home() {
       {/* ================= UNIT OVERVIEW ================= */}
       <section
         id="unit"
-        className="bg-[#f5f2ee] px-10 sm:px-10 md:px-10 lg:px-24 pt-24 sm:pt-28 md:pt-32 pb-10 sm:pb-12 md:pb-16 overflow-x-hidden"
+        className="bg-[#f5f2ee] px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80 pt-24 sm:pt-28 md:pt-32 pb-10 sm:pb-12 md:pb-16 overflow-x-hidden"
       >
-        <div className="max-w-[1400px] mx-auto">
+        <div className="max-w-[1920px] mx-auto">
           {/* TOP TEXT ROW */}
           <div className="grid md:grid-cols-2 gap-6 md:gap-10 items-start">
             <div>
@@ -667,9 +667,9 @@ export default function Home() {
       {/* ================= AMENITIES ================= */}
       <section
         id="amenities"
-        className="bg-[#0c2340] px-10 sm:px-10 md:px-10 lg:px-24 py-14 md:py-20"
+        className="bg-[#0c2340]  px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-14 md:py-20"
       >
-        <div className="max-w-[1400px] mx-auto">
+        <div className="max-w-[1920px] mx-auto">
           <div className="grid md:grid-cols-2 gap-8 md:gap-14 mb-10 md:mb-12">
             <div>
               <p className="font-[Plus_Jakarta_Sans] text-[12px] md:text-[13px] tracking-[0.24em] uppercase text-[#E09428] mb-4 font-semibold">
@@ -763,9 +763,9 @@ export default function Home() {
       {/* ================= LOCATION INTRO ================= */}
       <section
         id="neighborhood"
-        className="bg-[#f1eee9] px-10 sm:px-10 md:px-12 lg:px-24 py-12 sm:py-14 md:py-20"
+        className="bg-[#f1eee9]  px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-12 sm:py-14 md:py-20"
       >
-        <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 gap-8 sm:gap-10 items-center">
+        <div className="max-w-[1920px] mx-auto grid md:grid-cols-2 gap-8 sm:gap-10 items-center">
           <div>
             <p className="font-[Plus_Jakarta_Sans] text-xs tracking-[3px] uppercase text-[#7b7f7d] mb-4 font-bold">
               Location · Sherman, TX
@@ -785,8 +785,8 @@ export default function Home() {
       </section>
 
       {/* ================= LOCATION MAP + DESTINATIONS ================= */}
-      <section className="bg-[#f1eee9] px-10 sm:px-10 md:px-12 lg:px-24 pb-14 sm:pb-16">
-        <div className="max-w-[1400px] mx-auto grid md:grid-cols-2 gap-6 sm:gap-8 items-start">
+      <section className="bg-[#f1eee9] px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80 pb-14 sm:pb-16">
+        <div className="max-w-[1920px] mx-auto grid md:grid-cols-2 gap-6 sm:gap-8 items-start">
           {/* MAP */}
           <div className="relative h-[280px] sm:h-[350px] md:h-[520px] rounded-2xl sm:rounded-3xl overflow-hidden border bg-[#f3efe8]">
             <div className="absolute inset-0">
@@ -1063,7 +1063,7 @@ export default function Home() {
       {/* ================= RESIDENT VOICES ================= */}
       <section
         id="residents"
-        className="bg-[#0c2340] px-10 sm:px-10 md:px-10 lg:px-24 py-12 md:py-20 text-white overflow-hidden relative"
+        className="bg-[#0c2340]  px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-12 md:py-20 text-white overflow-hidden relative"
       >
         <div className="max-w-[900px] mx-auto text-center mb-8 md:mb-10 lg:mb-12 relative z-10">
           <p className="text-[10px] sm:text-xs tracking-[0.16em] uppercase text-[rgba(224,148,40,0.8)] mb-3 font-[Plus_Jakarta_Sans] font-extrabold">
@@ -1342,7 +1342,7 @@ export default function Home() {
 
       {/* ================= ARTICLES CAROUSEL ================= */}
       <section className="w-full bg-[#f5f2ed] py-14 sm:py-16 md:py-20 font-[Plus_Jakarta_Sans] antialiased select-none">
-        <div className="mx-auto max-w-[1440px] px-4 sm:px-6 sm:px-10 lg:px-16">
+        <div className="mx-auto max-w-[1920px] px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80">
           {/* HEADER */}
           <div className="mb-8 sm:mb-10 flex items-end justify-between gap-4">
             <div>
@@ -1538,7 +1538,7 @@ export default function Home() {
       {/* ================= LEASING CTA ================= */}
       <section
         id="leasing-cta"
-        className="bg-[#0c1a3a] py-16 sm:py-[100px] scroll-mt-[72px] relative overflow-hidden text-white"
+        className="bg-[#0c1a3a] px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-16 sm:py-[100px] scroll-mt-[72px] relative overflow-hidden text-white"
       >
         {/* Radial Glow */}
         <div
@@ -1554,7 +1554,7 @@ export default function Home() {
           P
         </div>
 
-        <div className="max-w-[1440px] mx-auto px-4 sm:px-6 md:px-[5.56vw] relative z-10 text-center">
+        <div className="max-w-[1920px] mx-auto px-4 sm:px-6 md:px-[5.56vw] relative z-10 text-center">
           <p className="font-[Plus_Jakarta_Sans] text-[11px] font-bold tracking-[0.14em] uppercase text-[rgba(224,148,40,0.85)] mb-4">
             Ready to Begin?
           </p>
@@ -1672,7 +1672,6 @@ export default function Home() {
         </div>
       </section>
 
-      <LoriChatWidget />
       <PromoCardWidget />
 
       <Footer />

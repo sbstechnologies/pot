@@ -13,18 +13,17 @@ import ComplianceNotice from "../components/ComplianceNotice";
 export default function Contact() {
   return (
     <>
-      <LoriChatWidget />
       <PromoCardWidget />
       <HeaderOther />
 
       {/* ===== HERO ===== */}
-      <section className="relative overflow-hidden bg-[#1f376d] px-10 pt-32 pb-24 text-white md:px-10 lg:px-24">
+      <section className="relative overflow-hidden bg-[#1f376d]  pt-32 pb-24 text-white px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80">
         <div className="relative z-10 max-w-4xl">
-          <p className="mb-6 font-[Plus_Jakarta_Sans] text-xs mt-[15px] font-bold uppercase tracking-[0.35em] text-[#E39B2D]">
+          <p className="text-xs tracking-[0.3em] text-[#E09428] mb-6 mt-[15px] font-bold uppercase">
             GET IN TOUCH
           </p>
 
-          <h1 className="font-[Instrument_Serif] text-[42px] leading-[1.05] md:text-[80px]">
+          <h1 className="font-[Instrument_Serif] text-[64px] md:text-[70px] leading-[0.98] tracking-[-0.04em] text-[#F5F2ED]">
             We'd Love to <br />
             <span className="italic text-[#E39B2D]">Hear From You</span>
           </h1>
@@ -38,8 +37,8 @@ export default function Contact() {
       </section>
 
       {/* ===== CONTACT DETAILS + FORM ===== */}
-      <section className="bg-[#f5f2ed] px-10 py-12 font-[Plus_Jakarta_Sans] md:px-10 lg:px-24 md:py-16">
-        <div className="mx-auto grid max-w-[1400px] grid-cols-1 gap-10 xl:grid-cols-[0.9fr_1.25fr] xl:gap-12">
+      <section className="bg-[#f5f2ed] px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-12 font-[Plus_Jakarta_Sans] md:px-10 lg:px-24 md:py-16">
+        <div className="mx-auto grid max-w-[1920px] grid-cols-1 gap-10 xl:grid-cols-[0.9fr_1.25fr] xl:gap-12">
           {/* LEFT */}
           <div className="space-y-10">
             {/* ADDRESS */}
@@ -229,7 +228,7 @@ export default function Contact() {
           <div className="overflow-hidden rounded-[26px] border border-[#e4e1db] bg-white shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
             <div className="h-1 w-full bg-gradient-to-r from-[#1E3872] to-[#E39B2D]" />
 
-            <div className="p-6 md:p-10">
+            <div className="p-6 md:p-10 lg:p-14 xl:p-16 xxl:p-20">
               <h2 className="font-[Instrument_Serif] text-[30px] leading-[1.1] text-[#1f2937] md:text-[40px]">
                 Send Us a Message
               </h2>
@@ -329,7 +328,7 @@ export default function Contact() {
       </section>
 
       {/* ===== OFFER CTA ===== */}
-      <section className="bg-[#f5f2ed] px-10 pb-14 md:px-10 lg:px-24 md:pb-20">
+      <section className="bg-[#f5f2ed] pb-14 px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80 md:pb-20">
         <div className="mx-auto flex max-w-[1600px] flex-col gap-6 rounded-[26px] bg-[#db8d1f] px-8 py-7 md:px-12 md:py-9 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <p className="mb-4 text-xs font-semibold tracking-[0.3em] text-white/90">

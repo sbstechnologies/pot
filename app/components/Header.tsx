@@ -26,123 +26,45 @@ export default function Header({ showTopBar }: HeaderProps) {
 
   return (
     <header
-      className={`fixed left-0 z-40 w-full transition-all duration-300 ${
+      className={`fixed left-0 right-0 z-50 transition-all duration-300 ${
         showTopBar ? "top-0 md:top-11" : "top-0"
       }`}
     >
-      <div className="flex w-full items-center justify-between bg-white/80 px-10 py-4 md:px-12 lg:px-24 select-none">
-        {/* BRAND IDENTITY / LOGO */}
-        <div className="min-w-0">
+      <div className="border-b border-gray-200/50 bg-white/90 backdrop-blur-md">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-10 sm:px-10 lg:px-8">
+          {/* Logo */}
           <Link
             href="/"
             onClick={() => setOpen(false)}
-            className="flex items-center gap-3"
+            className="flex min-w-0 items-center gap-2 md:gap-3"
           >
-            {/* Logo Icon Container */}
-            <span className="flex h-[38px] w-[38px] shrink-0 items-center justify-center rounded-[12px] bg-[var(--primary)]">
+            <div className="flex h-10 w-10 shrink-0 items-center justify-center overflow-hidden rounded-xl bg-[var(--primary)]">
               <Image
                 src="/images/logo.png"
                 alt={headerConfig.logo.alt_title}
-                width={38}
-                height={38}
+                width={40}
+                height={40}
+                priority
               />
-            </span>
+            </div>
 
-            <div className="min-w-0 flex flex-col justify-center">
-              <p className={instrumentSerif.className}>
+            <div className="min-w-0">
+              <p
+                className={`${instrumentSerif.className} truncate text-sm font-medium md:text-base`}
+              >
                 {headerConfig.logo.title}
               </p>
 
               <p
-                className={`mt-0.5 ${jakarta.className} text-[9px] font-bold uppercase tracking-[0.15em] text-[var(--light-grey)]/90`}
+                className={`${jakarta.className} text-[8px] font-bold uppercase tracking-[0.15em] text-[var(--light-grey)] md:text-[9px]`}
               >
                 {headerConfig.logo.subtitle}
               </p>
             </div>
           </Link>
-        </div>
 
-        {/* DESKTOP NAV ARCHITECTURE */}
-        <nav className="hidden items-center gap-6 font-[Plus_Jakarta_Sans] text-[14px] font-semibold text-[var(--grey)]/90 lg:flex xl:gap-8">
-          {headerConfig.navLinks.map((link) =>
-            link.external ? (
-              <a
-                key={link.label}
-                href={link.href}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="whitespace-nowrap transition duration-150 ease-in-out hover:text-[#1e3872]"
-              >
-                {link.label}
-              </a>
-            ) : (
-              <Link
-                key={link.label}
-                href={link.href}
-                className="whitespace-nowrap transition duration-150 ease-in-out hover:text-[#1e3872]"
-              >
-                {link.label}
-              </Link>
-            ),
-          )}
-        </nav>
-
-        {/* DESKTOP CALL TO ACTION BUTTON */}
-        <a
-          href={headerConfig.applyLink}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="hidden items-center gap-2 whitespace-nowrap rounded-full bg-[#1e3872] px-6 py-3 font-[Plus_Jakarta_Sans] text-[13px] font-bold text-white transition duration-150 ease-in-out hover:bg-[#152750] hover:shadow-sm lg:inline-flex"
-        >
-          <span>{headerConfig.applyText}</span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="12"
-            height="12"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="3"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <line x1="5" y1="12" x2="19" y2="12"></line>
-            <polyline points="12 5 19 12 12 19"></polyline>
-          </svg>
-        </a>
-
-        {/* MOBILE RESPONSIVE TRIGGER */}
-        <button
-          type="button"
-          onClick={() => setOpen((prev) => !prev)}
-          aria-label="Toggle menu"
-          aria-expanded={open}
-          className="flex h-11 w-11 shrink-0 items-center justify-center rounded-full border border-[#d8d1c8] bg-white text-[#2d3230] shadow-sm lg:hidden"
-        >
-          <span className="relative block h-4 w-5">
-            <span
-              className={`absolute left-0 top-0 h-[2px] w-5 rounded-full bg-[#2d3230] transition-all ${
-                open ? "translate-y-[7px] rotate-45" : ""
-              }`}
-            />
-            <span
-              className={`absolute left-0 top-[7px] h-[2px] w-5 rounded-full bg-[#2d3230] transition-all ${
-                open ? "opacity-0" : ""
-              }`}
-            />
-            <span
-              className={`absolute left-0 top-[14px] h-[2px] w-5 rounded-full bg-[#2d3230] transition-all ${
-                open ? "-translate-y-[7px] -rotate-45" : ""
-              }`}
-            />
-          </span>
-        </button>
-      </div>
-
-      {/* MOBILE INTERACTIVE NAV EXPANSION */}
-      {open && (
-        <div className="absolute left-0 top-full w-full border-t border-[#ded8cf] bg-[#f5f2ed] px-10 py-6 shadow-xl lg:hidden">
-          <nav className="flex flex-col gap-2 font-[Plus_Jakarta_Sans]">
+          {/* Desktop Navigation */}
+          <nav className="hidden items-center gap-8 lg:flex">
             {headerConfig.navLinks.map((link) =>
               link.external ? (
                 <a
@@ -150,8 +72,7 @@ export default function Header({ showTopBar }: HeaderProps) {
                   href={link.href}
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => setOpen(false)}
-                  className="rounded-2xl px-4 py-3 text-[15px] font-semibold text-[#2d3230] transition hover:bg-white"
+                  className="text-sm font-semibold text-gray-700 transition-colors hover:text-[#1e3872]"
                 >
                   {link.label}
                 </a>
@@ -159,40 +80,123 @@ export default function Header({ showTopBar }: HeaderProps) {
                 <Link
                   key={link.label}
                   href={link.href}
-                  onClick={() => setOpen(false)}
-                  className="rounded-2xl px-4 py-3 text-[15px] font-semibold text-[#2d3230] transition hover:bg-white"
+                  className="text-sm font-semibold text-gray-700 transition-colors hover:text-[#1e3872]"
                 >
                   {link.label}
                 </Link>
               ),
             )}
-
-            <a
-              href={headerConfig.applyLink}
-              target="_blank"
-              rel="noopener noreferrer"
-              onClick={() => setOpen(false)}
-              className="mt-3 flex items-center justify-center gap-2 rounded-full bg-[#1e3872] px-5 py-4 text-center text-[15px] font-semibold text-white shadow-[0_8px_22px_rgba(30,56,114,0.22)]"
-            >
-              <span>{headerConfig.applyText}</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="14"
-                height="14"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="3"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-              >
-                <line x1="5" y1="12" x2="19" y2="12"></line>
-                <polyline points="12 5 19 12 12 19"></polyline>
-              </svg>
-            </a>
           </nav>
+
+          {/* Desktop CTA */}
+          <a
+            href={headerConfig.applyLink}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hidden items-center gap-2 rounded-full bg-[#1e3872] px-5 py-2.5 text-sm font-semibold text-white transition-all hover:bg-[#152750] hover:shadow-md lg:inline-flex"
+          >
+            <span>{headerConfig.applyText}</span>
+
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="14"
+              height="14"
+              viewBox="0 0 24 24"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth="2.5"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+            >
+              <line x1="5" y1="12" x2="19" y2="12" />
+              <polyline points="12 5 19 12 12 19" />
+            </svg>
+          </a>
+
+          {/* Mobile Menu Button */}
+          <button
+            type="button"
+            onClick={() => setOpen(!open)}
+            aria-label="Toggle menu"
+            aria-expanded={open}
+            className="flex h-10 w-10 items-center justify-center rounded-lg border border-gray-200 bg-white shadow-sm lg:hidden"
+          >
+            <span className="relative block h-5 w-5">
+              <span
+                className={`absolute left-0 top-1 h-0.5 w-5 bg-current transition-all ${
+                  open ? "translate-y-2 rotate-45" : ""
+                }`}
+              />
+              <span
+                className={`absolute left-0 top-2.5 h-0.5 w-5 bg-current transition-all ${
+                  open ? "opacity-0" : ""
+                }`}
+              />
+              <span
+                className={`absolute left-0 top-4 h-0.5 w-5 bg-current transition-all ${
+                  open ? "-translate-y-2 -rotate-45" : ""
+                }`}
+              />
+            </span>
+          </button>
         </div>
-      )}
+
+        {/* Mobile Menu */}
+        {open && (
+          <div className="border-t border-gray-200 bg-white shadow-lg lg:hidden">
+            <nav className="flex flex-col p-8">
+              {headerConfig.navLinks.map((link) =>
+                link.external ? (
+                  <a
+                    key={link.label}
+                    href={link.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    onClick={() => setOpen(false)}
+                    className="rounded-lg px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                  >
+                    {link.label}
+                  </a>
+                ) : (
+                  <Link
+                    key={link.label}
+                    href={link.href}
+                    onClick={() => setOpen(false)}
+                    className="rounded-lg px-4 py-3 text-sm font-medium text-gray-700 hover:bg-gray-50"
+                  >
+                    {link.label}
+                  </Link>
+                ),
+              )}
+
+              <a
+                href={headerConfig.applyLink}
+                target="_blank"
+                rel="noopener noreferrer"
+                onClick={() => setOpen(false)}
+                className="mt-4 flex items-center justify-center gap-2 rounded-full bg-[#1e3872] px-5 py-3 text-sm font-semibold text-white"
+              >
+                {headerConfig.applyText}
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="14"
+                  height="14"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2.5"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <line x1="5" y1="12" x2="19" y2="12" />
+                  <polyline points="12 5 19 12 12 19" />
+                </svg>
+              </a>
+            </nav>
+          </div>
+        )}
+      </div>
     </header>
   );
 }

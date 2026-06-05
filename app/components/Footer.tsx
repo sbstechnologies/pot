@@ -6,8 +6,8 @@ import { headerConfig } from "@/app/config/content";
 
 export default function Footer() {
   return (
-    <section className="bg-[#0c1a3a] px-10 md:px-10 lg:px-24 py-16 md:py-20 text-white">
-      <div className="max-w-[1400px] mx-auto">
+    <section className="bg-[#0f1e48] px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-16 md:py-20 text-white">
+      <div className="max-w-[1920px] mx-auto">
         {/* EQUAL 4 COLUMN LAYOUT */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
           {/* COLUMN 1 */}

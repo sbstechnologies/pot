@@ -1,6 +1,5 @@
 "use client";
 import HeaderOther from "@/app/components/HeaderOther";
-import LoriChatWidget from "@/app/components/LoriChatWidget";
 import PromoCardWidget from "@/app/components/PromoCardWidget";
 import Footer from "@/app/components/Footer";
 import { Bed, Bath, MoveUpRight } from "lucide-react";
@@ -243,7 +242,7 @@ function ComparisonDrawer({
       <div className="fixed inset-0 bg-black/30 z-40" onClick={onClear} />
 
       <div className="fixed bottom-0 left-0 right-0 z-50 bg-[#F5F2ED] rounded-t-[28px] shadow-2xl border-t border-[#d8d2c7] max-h-[82vh] overflow-y-auto">
-        <div className="sticky top-0 bg-[#F5F2ED] px-6 md:px-16 pt-4 pb-6 border-b border-[#ddd7cc]">
+        <div className="sticky top-0 bg-[#F5F2ED] px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80 pt-4 pb-6 border-b border-[#ddd7cc]">
           <div className="w-14 h-1.5 rounded-full bg-[#d1cbc1] mx-auto mb-5" />
 
           <div className="flex items-center justify-between gap-4">
@@ -263,7 +262,7 @@ function ComparisonDrawer({
           </div>
         </div>
 
-        <div className="px-6 md:px-16 py-8">
+        <div className="px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-8">
           {/* desktop */}
           <div className="hidden md:grid grid-cols-[220px_1fr_1fr] gap-8">
             <div className="pt-[74px]">
@@ -620,14 +619,14 @@ export default function Floor() {
   return (
     <>
       <HeaderOther />
-      <LoriChatWidget />
+
       <PromoCardWidget />
-      <section className="relative overflow-hidden bg-[#1f376d] text-[#F5F2ED] min-h-[620px] px-10 md:px-10 lg:px-24 pt-[84px] pb-20">
+      <section className="relative overflow-hidden bg-[#1f376d] text-[#F5F2ED] min-h-[620px] px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80 pt-[84px] pb-20">
         {/* subtle dotted background */}
         <div className="pointer-events-none absolute inset-0 opacity-[0.12] [background-image:radial-gradient(rgba(245,242,237,0.45)_1px,transparent_1px)] [background-size:50px_50px]" />
 
         <div className="relative z-10 max-w-[680px]">
-          <p className="font-[Plus_Jakarta_Sans] text-[13px] mt-[28px] font-bold uppercase tracking-[0.32em] text-[#E09428] mb-[22px]">
+          <p className="text-xs tracking-[0.3em] text-[#E09428] mb-6 mt-[15px] font-bold uppercase">
             PARKS ON TAYLOR · SHERMAN, TX
           </p>
 
@@ -662,7 +661,7 @@ export default function Floor() {
         </div>
       </section>
 
-      <section className="bg-[#F5F2ED] px-10 py-16 md:px-10 md:py-24 lg:px-24">
+      <section className="bg-[#F5F2ED]  py-16 px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80">
         <div className="mx-auto grid max-w-[1600px] grid-cols-1 gap-8 md:grid-cols-2 xl:grid-cols-3">
           {floorPlans.map((plan) => (
             <Card
@@ -692,7 +691,7 @@ export default function Floor() {
         />
       )}
 
-      <section className="bg-[#F5F2ED] pb-24 px-5 md:px-10 lg:px-16">
+      <section className="bg-[#F5F2ED] pb-24 px-10 xs:px-10 sm:px-10 md:px-30 lg:px-60 xl:px-85 xxl:px-80">
         <div className="mx-auto max-w-[1600px]">
           <div className="rounded-[20px] border border-dashed border-[#bdc8d8] bg-[#f1eeee] px-9 py-7">
             <div className="flex items-center gap-4">
