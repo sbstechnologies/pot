@@ -109,7 +109,7 @@ export default function Contact() {
                       LEASING INQUIRIES
                     </p>
                     <a href={`mailto:${siteConfig.email}`}>
-                      <p className="mt-1 break-all text-[17px] font-semibold text-[#163c84]">
+                      <p className="mt-1 break-all text-[16px] font-semibold text-[#163c84]">
                         {siteConfig.email}
                       </p>
                     </a>
@@ -200,7 +200,7 @@ export default function Contact() {
                   href="https://maps.google.com/?q=1200+W+Taylor+Street,+Sherman,+TX+75092"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="rounded-full bg-[#1E3872] px-4 py-2 text-[13px] font-semibold text-white transition hover:bg-[#162c5a]"
+                  className="rounded-full bg-[#1E3872] px-4 py-2 text-[13px] font-semibold text-center text-white transition hover:bg-[#162c5a]"
                 >
                   Open Map
                 </a>

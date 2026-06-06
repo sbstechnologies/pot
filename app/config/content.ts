@@ -102,7 +102,7 @@ export const images = {
   gallery15: "/webp/gallery/16.webp",
   gallery16: "/webp/gallery/18.webp",
   gallery17: "/webp/gallery/25.webp",
-  gallery18: "/webp/gallery/2.webp",
+  gallery18: "/webp/landscape/2.webp",
   gallery19: "/webp/gallery/28.webp",
 
   alt38:
@@ -821,12 +821,7 @@ export const gallery: GalleryItem[] = [
     alt: images.alt38,
     category: "Exteriors",
   },
-  {
-    src: images.gallery2,
-    name: "Living Room View #3",
-    alt: images.alt39,
-    category: "Exteriors",
-  },
+
   {
     src: images.gallery3,
     name: "Apartment Building #3",
@@ -847,15 +842,15 @@ export const gallery: GalleryItem[] = [
     category: "Interiors",
   },
   {
-    src: images.gallery6,
-    name: "Modern Kitchen with Quartz Countertops",
-    alt: images.alt43,
-    category: "Interiors",
-  },
-  {
     src: images.gallery7,
     name: "Living Room View #2",
     alt: images.alt44,
+    category: "Interiors",
+  },
+  {
+    src: images.gallery2,
+    name: "Living Room View #3",
+    alt: images.alt39,
     category: "Interiors",
   },
   {
@@ -864,6 +859,13 @@ export const gallery: GalleryItem[] = [
     alt: images.alt45,
     category: "Interiors",
   },
+  {
+    src: images.gallery6,
+    name: "Modern Kitchen with Quartz Countertops",
+    alt: images.alt43,
+    category: "Interiors",
+  },
+
   {
     src: images.gallery9,
     name: "Living Room — Floor-to-Ceiling Windows",
@@ -922,7 +924,7 @@ export const gallery: GalleryItem[] = [
   },
   {
     src: images.gallery18,
-    name: "Landscaped Courtyard",
+    name: "Community Bird's Eye View",
     alt: images.alt55,
     category: "Neighborhood",
   },
