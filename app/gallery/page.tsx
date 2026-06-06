@@ -3,7 +3,7 @@
 import { useState, useEffect } from "react";
 import HeaderOther from "@/app/components/HeaderOther";
 import Footer from "@/app/components/Footer";
-import LoriChatWidget from "@/app/components/LoriChatWidget";
+
 import PromoCardWidget from "@/app/components/PromoCardWidget";
 import {
   images,
@@ -100,7 +100,6 @@ export default function Gallery() {
 
   return (
     <>
-      <LoriChatWidget />
       <PromoCardWidget />
       <HeaderOther />
 
