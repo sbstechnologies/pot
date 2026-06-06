@@ -150,8 +150,8 @@ export const siteConfig = {
   phone: "(903) 961–6391",
   tel: "tel:+19039616391",
   email: "potmanager@livenjoymgt.com",
-  hours: "Mon–Fri 8:30 AM – 5:30 PM · Sat 10 AM – 4 PM",
-  hours1: "Sat 10 AM – 4 PM",
+  hours: "Mon–Fri : 8:30 AM – 5:30 PM",
+  hours1: "Sat : 10 AM – 4 PM",
 };
 
 export const units = [
@@ -167,14 +167,14 @@ export const units = [
     type: "1 Bedroom",
     price: "$849/mo",
     area: "724 sq ft",
-    available: "Apr 1",
+    available: "Jun 1",
   },
   {
     name: "A3",
     type: "1 Bedroom",
     price: "$849/mo",
     area: "724 sq ft",
-    available: "Apr 1",
+    available: "Jun 1",
   },
   {
     name: "B1",
@@ -638,7 +638,7 @@ export const interiorPhotos = {
 
 export const amenityPhotos = {
   Pool: images.home11,
-  Fitness: images.home21,
+  Parking: images.home21,
   Park: images.home27,
   Laundry: images.home13,
 } as const;
@@ -653,7 +653,7 @@ export type PreviewCategory =
   | "Kitchen"
   | "Bathroom";
 
-export type AmenityCategory = "Pool" | "Fitness" | "Park" | "Laundry";
+export type AmenityCategory = "Pool" | "Parking" | "Park" | "Laundry";
 
 //floor page
 export type FloorPlan = {

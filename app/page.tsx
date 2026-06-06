@@ -6,7 +6,7 @@ import { useState, useEffect } from "react";
 import Footer from "./components/Footer";
 import LeasePortal from "./components/LeasePortal";
 import { articles } from "@/app/config/content";
-import LoriChatWidget from "./components/LoriChatWidget";
+
 import PromoCardWidget from "./components/PromoCardWidget";
 import Header from "./components/Header";
 import HeaderTop from "./components/HeaderTop";
@@ -90,9 +90,8 @@ export default function Home() {
     const lowerTitle = title.toLowerCase();
     if (lowerTitle.includes("maintenance"))
       return <Wrench className="w-3 h-3" />;
-    if (lowerTitle.includes("fitness")) return <Users className="w-3 h-3" />;
-    if (lowerTitle.includes("pool")) return <Droplets className="w-3 h-3" />;
     if (lowerTitle.includes("parking")) return <Car className="w-3 h-3" />;
+    if (lowerTitle.includes("pool")) return <Droplets className="w-3 h-3" />;
     if (lowerTitle.includes("park")) return <PawPrint className="w-3 h-3" />;
     if (lowerTitle.includes("laundry")) return <Shirt className="w-3 h-3" />;
     return null;
@@ -105,7 +104,7 @@ export default function Home() {
     <>
       {/* ================= HERO SECTION ================= */}
 
-      <section className="relative w-full min-h-[100svh] lg:min-h-[100vh] xl:min-h-[100vh] 2xl:min-h-[80vh] overflow-hidden">
+      <section className="relative min-h-screen w-full overflow-hidden">
         <HeaderTop show={showTopBar} setShow={setShowTopBar} />
 
         <Header showTopBar={showTopBar} />
@@ -115,104 +114,83 @@ export default function Home() {
           alt={images.alt26}
           fill
           priority
+          quality={100}
           sizes="100vw"
-          className="object-cover"
+          className="object-cover object-center"
         />
 
         <div className="absolute inset-0 bg-black/50" />
 
         {/* MAIN LAYOUT WRAPPER (Now handles the entire animation entry) */}
-        <div
-          className={`absolute left-1/2 -translate-x-1/2 z-[2] flex w-full max-w-[1920px] flex-col items-center justify-center text-center text-white xs:px-4 sm:px-8 md:px-16 lg:px-32 pb-14 select-none animate-hero-container ${
-            showTopBar
-              ? "pt-36 md:pt-44 lg:pt-52 2xl:pt-60"
-              : "pt-28 md:pt-36 lg:pt-44 2xl:pt-48"
-          }`}
-        >
-          {/* 1. TOP BADGE STRIP */}
-          <div className="mb-[30px] flex items-center gap-4 max-w-[90vw] w-full justify-center">
-            <div className="h-[1px] max-w-[72px] flex-1 bg-[#F5F2ED]/15" />
-            <span className="font-[Plus_Jakarta_Sans] text-[10px] font-bold uppercase tracking-[0.2em] text-[#F5F2ED]/50 text-center">
-              PARKS ON TAYLOR • SHERMAN, TX • NOW LEASING
-            </span>
-            <div className="h-[1px] max-w-[72px] flex-1 bg-[#F5F2ED]/15" />
-          </div>
+        <div className="absolute inset-0 z-[2] flex items-center justify-center">
+          <div
+            className={`w-full max-w-[1920px] px-4 sm:px-8 md:px-16 lg:px-32 flex flex-col items-center justify-center text-center text-white select-none animate-hero-container ${
+              showTopBar ? "pt-20 md:pt-24" : "pt-12 md:pt-16"
+            }`}
+          >
+            {/* 1. TOP BADGE STRIP */}
+            <div className="mb-8 flex items-center gap-4 w-full max-w-[900px] justify-center">
+              <div className="h-px flex-1 max-w-[72px] bg-[#F5F2ED]/15" />
+              <span className="text-[10px] font-bold uppercase tracking-[0.2em] text-[#F5F2ED]/50">
+                PARKS ON TAYLOR • SHERMAN, TX • NOW LEASING
+              </span>
+              <div className="h-px flex-1 max-w-[72px] bg-[#F5F2ED]/15" />
+            </div>
 
-          {/* 2. HERO HEADING */}
-          <h1 className="font-['Instrument_Serif',Georgia,serif] font-italic text-[clamp(3rem,7.3vw,9.3rem)] leading-[1.05] tracking-[-0.03em] text-[#F5F2ED] m-0 max-w-none md:whitespace-nowrap">
-            Affordable, Safe, and
-            <br />
-            <em className="inline-block italic text-[#E09428]/90 md:whitespace-nowrap">
-              Clean Living in Sherman.
-            </em>
-          </h1>
+            {/* 2. HERO HEADING */}
+            <h1 className="font-['Instrument_Serif',Georgia,serif] text-[clamp(3rem,7.3vw,9.3rem)] leading-[1.05] tracking-[-0.03em] text-[#F5F2ED]">
+              Affordable, Safe, and
+              <br />
+              <em className="inline-block italic text-[#E09428]/90">
+                Clean Living in Sherman.
+              </em>
+            </h1>
 
-          {/* 3. DIVIDER */}
-          <div className="mx-auto my-5 flex items-center gap-2.5">
-            <div className="h-[1px] w-[52px] bg-[#E09428]/45" />
-            <div className="h-1 w-1 rounded-full bg-[#E09428]/60" />
-            <div className="h-1 w-1 rounded-full bg-[#E09428]/35" />
-            <div className="h-1 w-1 rounded-full bg-[#E09428]/60" />
-            <div className="h-[1px] w-[52px] bg-[#E09428]/45" />
-          </div>
+            {/* 3. DIVIDER */}
+            <div className="my-6 flex items-center gap-2.5">
+              <div className="h-px w-[52px] bg-[#E09428]/45" />
+              <div className="h-1 w-1 rounded-full bg-[#E09428]/60" />
+              <div className="h-1 w-1 rounded-full bg-[#E09428]/35" />
+              <div className="h-1 w-1 rounded-full bg-[#E09428]/60" />
+              <div className="h-px w-[52px] bg-[#E09428]/45" />
+            </div>
 
-          {/* 4. SUBTEXT */}
-          <p className="font-[Plus_Jakarta_Sans] text-[clamp(12px,1.3vw,15px)] leading-[1.72] text-[#F5F2ED]/58 mb-9 max-w-[500px]">
-            Responsive management and a community you can trust. Conveniently
-            located near Fairway Park.
-          </p>
+            {/* 4. SUBTEXT */}
+            <p className="text-[clamp(12px,1.3vw,15px)] leading-[1.72] text-[#F5F2ED]/70 mb-10 max-w-[500px]">
+              Responsive management and a community you can trust. Conveniently
+              located near Fairway Park.
+            </p>
 
-          {/* 5. CTA BUTTONS */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-[320px] sm:max-w-none">
-            <a
-              href="/#unit"
-              className="flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-2 rounded-full bg-[#1e3872] text-[#f5f2ed] text-[14px] font-bold font-[Plus_Jakarta_Sans] tracking-[0.01em] shadow-[rgba(30,56,114,0.5)_0px_4px_22px] transition duration-300 hover:brightness-110 active:scale-[0.98]"
-            >
-              <span>View Available Units</span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="15"
-                height="15"
-                viewBox="0 0 24 24"
-                fill="none"
-                stroke="currentColor"
-                strokeWidth="2"
-                strokeLinecap="round"
-                strokeLinejoin="round"
+            {/* 5. CTA BUTTONS */}
+            <div className="flex flex-col sm:flex-row items-center justify-center gap-3 w-full max-w-[320px] sm:max-w-none">
+              <a
+                href="/#unit"
+                className="flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-3 rounded-full bg-[#1e3872] text-[#f5f2ed] text-[14px] font-bold shadow-[rgba(30,56,114,0.5)_0px_4px_22px] transition duration-300 hover:brightness-110"
               >
-                <path d="M5 12h14" />
-                <path d="m12 5 7 7-7 7" />
-              </svg>
-            </a>
+                <span>View Available Units</span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="15"
+                  height="15"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                >
+                  <path d="M5 12h14" />
+                  <path d="m12 5 7 7-7 7" />
+                </svg>
+              </a>
 
-            <a
-              href="/#unit"
-              className="flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-2 rounded-full bg-transparent text-[#f5f2ed]/80 text-[14px] font-semibold font-[Plus_Jakarta_Sans] tracking-[0.01em] border-[1.5px] border-white/20 transition duration-300 hover:bg-white/10 active:scale-[0.98]"
-            >
-              Schedule a Tour
-            </a>
-          </div>
-
-          {/* 6. SCROLL INDICATOR */}
-          <div className="absolute bottom-2.5 left-1/2 -translate-x-1/2 flex flex-col items-center gap-[5px]">
-            <span className="font-[Plus_Jakarta_Sans] text-[9px] font-bold uppercase tracking-[0.16em] text-[#F5F2ED] opacity-[0.32]">
-              Scroll
-            </span>
-            <div className="w-[1px] h-[22px] bg-white/30" />
-            <svg
-              className="opacity-[0.4]"
-              xmlns="http://www.w3.org/2000/svg"
-              width="12"
-              height="12"
-              viewBox="0 0 24 24"
-              fill="none"
-              stroke="#F5F2ED"
-              strokeWidth="2"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-            >
-              <path d="m6 9 6 6 6-6" />
-            </svg>
+              <a
+                href="/#unit"
+                className="flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-3 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-[#f5f2ed] text-[14px] font-semibold transition duration-300 hover:bg-white/10"
+              >
+                Schedule a Tour
+              </a>
+            </div>
           </div>
         </div>
       </section>
@@ -455,7 +433,7 @@ export default function Home() {
                   },
                   {
                     label: "Available",
-                    value: "Apr 1",
+                    value: "Jun 1",
                     border: "border-t sm:border-t-0",
                   },
                 ].map(({ label, value, border }) => (
@@ -553,7 +531,7 @@ export default function Home() {
                           {item}
                         </button>
                       ))
-                    : (["Pool", "Fitness", "Park", "Laundry"] as const).map(
+                    : (["Pool", "Parking", "Park", "Laundry"] as const).map(
                         (item) => (
                           <button
                             key={item}
@@ -590,7 +568,7 @@ export default function Home() {
                             : images.alt2
                       : amenityCategory === "Pool"
                         ? images.alt13
-                        : amenityCategory === "Fitness"
+                        : amenityCategory === "Parking"
                           ? images.alt14
                           : amenityCategory === "Park"
                             ? images.alt25
@@ -623,7 +601,7 @@ export default function Home() {
                       {plans[selectedPlan].title}
                     </p>
                     <p className="text-[13px] sm:text-[15px] text-[#68706d] mt-2">
-                      {plans[selectedPlan].area} · Available Apr 1, 2026
+                      {plans[selectedPlan].area} · Available Jun 1, 2026
                     </p>
                   </div>
                   <div className="font-[Instrument_Serif] text-[20px] sm:text-[22px] text-[#1e3872] tracking-[-0.02em] whitespace-nowrap">
@@ -838,7 +816,7 @@ export default function Home() {
                   return (
                     <div
                       key={item.title}
-                      className="bg-[#f0ede6]/40 rounded-xl sm:rounded-2xl p-3 sm:p-[14px_18px] flex items-center justify-between border border-[#e3dfd8] shadow-[0_2px_8px_rgba(0,0,0,0.01)]"
+                      className="bg-[#FDFCF0]/40 rounded-xl sm:rounded-2xl p-3 sm:p-[14px_18px] flex items-center justify-between border border-[#e3dfd8] shadow-[0_2px_8px_rgba(0,0,0,0.01)]"
                     >
                       <div className="flex items-center gap-3 min-w-0">
                         {isFairwayPark ? (

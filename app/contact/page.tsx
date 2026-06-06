@@ -1,13 +1,12 @@
 "use client";
 
-import LoriChatWidget from "../components/LoriChatWidget";
 import PromoCardWidget from "../components/PromoCardWidget";
 import HeaderOther from "../components/HeaderOther";
 import Footer from "../components/Footer";
 import { siteConfig, handleSubmit } from "@/app/config/content";
 import FooterLegalBar from "../components/FooterLegalBar";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import { FaInstagram, FaFacebookF, FaXTwitter } from "react-icons/fa6";
+
 import ComplianceNotice from "../components/ComplianceNotice";
 
 export default function Contact() {
@@ -134,7 +133,7 @@ export default function Contact() {
                   />
                 </div>
 
-                <div className="w-full max-w-md space-y-1.5 text-[16px]">
+                <div className="w-full max-w-md space-y-1.5 text-[14px]">
                   <div className="flex justify-between gap-6 text-[#1f2937]">
                     <span>Monday – Friday</span>
                     <span className="font-semibold text-[#163c84]">
@@ -154,7 +153,7 @@ export default function Contact() {
                     <span className="font-semibold text-[#ef4444]">Closed</span>
                   </div>
 
-                  <p className="pt-2 text-[15px] text-[#4b5563]">
+                  <p className="pt-2 text-[14px] text-[#4b5563]">
                     Languages: English & Spanish
                   </p>
                 </div>
@@ -176,15 +175,25 @@ export default function Contact() {
                 />
               </div>
 
-              <div className="flex items-center justify-between px-5 py-4">
-                <div>
-                  <h3 className="font-[Plus_Jakarta_Sans] text-[16px] font-bold text-[#1E3872]">
-                    Parks on Taylor
-                  </h3>
+              <div className="flex items-center justify-between px-4 py-4">
+                <div className="flex items-start gap-4">
+                  <div className="mt-1 text-xl text-[#1E3872]">
+                    <MapPin
+                      size={16}
+                      className="shrink-0 mt-[2px] text-[#1E3872]"
+                      strokeWidth={2}
+                    />
+                  </div>
 
-                  <p className="mt-1 text-[14px] text-[#4b5563]">
-                    ⌖ {siteConfig.address}
-                  </p>
+                  <div>
+                    <h3 className="text-[18px] font-semibold text-[#1f2937]">
+                      Parks on Taylor
+                    </h3>
+
+                    <p className="mt-1 text-[12px] leading-[1.6] text-[#4b5563]">
+                      {siteConfig.address}
+                    </p>
+                  </div>
                 </div>
 
                 <a
@@ -195,31 +204,6 @@ export default function Contact() {
                 >
                   Open Map
                 </a>
-              </div>
-            </div>
-
-            {/* SOCIAL */}
-            <div>
-              <p className="mb-5 font-[Plus_Jakarta_Sans] text-xs font-semibold tracking-[0.3em] text-[#334155]">
-                FOLLOW ALONG
-              </p>
-
-              <div className="flex gap-3">
-                {[
-                  { icon: FaInstagram, href: "#" },
-                  { icon: FaFacebookF, href: "#" },
-                  { icon: FaXTwitter, href: "#" },
-                ].map(({ icon: Icon, href }, index) => (
-                  <a
-                    key={index}
-                    href={href}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="flex h-10 w-10 items-center justify-center rounded-lg border border-[#c6d0e0] bg-[#edf2fb] text-[#1E3872] transition hover:bg-[#1E3872] hover:text-white"
-                  >
-                    <Icon size={16} />
-                  </a>
-                ))}
               </div>
             </div>
           </div>

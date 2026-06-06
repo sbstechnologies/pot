@@ -67,6 +67,10 @@ export default function Footer() {
 
                 <span>{siteConfig.hours}</span>
               </div>
+
+              <div className="flex items-start gap-3">
+                <span>{siteConfig.hours1}</span>
+              </div>
             </div>
 
             {/* BUTTON */}

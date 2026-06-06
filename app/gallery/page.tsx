@@ -13,6 +13,12 @@ import {
 } from "@/app/config/content";
 import FooterLegalBar from "../components/FooterLegalBar";
 import ComplianceNotice from "../components/ComplianceNotice";
+import { Instrument_Serif } from "next/font/google";
+
+const instrumentSerif = Instrument_Serif({
+  subsets: ["latin"],
+  weight: "400",
+});
 
 type FilterType = "All" | Category;
 
@@ -37,8 +43,10 @@ function ImageCard({ item, index, onView }: ImageCardProps) {
       <div className="absolute inset-0 bg-black/10 group-hover:bg-black/25 transition duration-300" />
       <div className="absolute inset-x-0 bottom-0 h-24 bg-gradient-to-t from-black/80 via-black/25 to-transparent" />
 
-      <div className="absolute bottom-4 left-4 z-10 text-white pr-4">
-        <h3 className="text-sm md:text-lg leading-snug font-serif">
+      <div className="absolute bottom-4 left-4 z-10 text-white  pr-4">
+        <h3
+          className={`text-sm md:text-lg leading-snug ${instrumentSerif.className}`}
+        >
           {item.name}
         </h3>
       </div>
