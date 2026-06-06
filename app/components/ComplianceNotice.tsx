@@ -1,9 +1,9 @@
 export default function ComplianceNotice() {
   return (
     <div className="bg-[#0f1e48] px-6 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-6 md:px-12 md:py-4 lg:px-24 lg:py-10">
-      <div className="mx-auto border border-[#6b8fd4] flex max-w-[1920px] flex-col gap-6 rounded-[26px] bg-[#0f1e48] px-8 py-4 md:px-12 md:py-9 lg:flex-row lg:items-center lg:justify-between">
+      <div className="mx-auto border border-style:solid border-width: 16px  border-[#24468d] flex max-w-[1920px] flex-col gap-6 rounded-[26px] bg-[#0f1e48] px-8 py-4 md:px-12 md:py-9 lg:flex-row lg:items-center lg:justify-between">
         <div>
-          <h2 className="font-[Instrument_Serif] text-[24px] leading-none text-[#6b8fd4]">
+          <h2 className="font-[Instrument_Serif] text-[24px] leading-none text-[#8e99ad]">
             Equal Housing Opportunity
           </h2>
 

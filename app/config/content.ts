@@ -823,7 +823,7 @@ export const gallery: GalleryItem[] = [
   },
   {
     src: images.gallery2,
-    name: "Apartment Building Exterior",
+    name: "Living Room View #3",
     alt: images.alt39,
     category: "Exteriors",
   },
@@ -916,7 +916,7 @@ export const gallery: GalleryItem[] = [
   },
   {
     src: images.gallery17,
-    name: "Private Covered Balcony",
+    name: "Community Park Area",
     alt: images.alt54,
     category: "Neighborhood",
   },
