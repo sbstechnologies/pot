@@ -50,7 +50,7 @@ export default function Header({ showTopBar }: HeaderProps) {
 
             <div className="min-w-0">
               <p
-                className={`${instrumentSerif.className} truncate text-sm font-medium md:text-base`}
+                className={`${instrumentSerif.className} truncate font-semibold text-gray-700 transition-colors hover:text-[#1e3872] md:text-lg`}
               >
                 {headerConfig.logo.title}
               </p>
