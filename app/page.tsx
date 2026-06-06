@@ -13,7 +13,18 @@ import HeaderTop from "./components/HeaderTop";
 import { Instrument_Serif } from "next/font/google";
 import { Plus_Jakarta_Sans } from "next/font/google";
 
-import { Wrench, Users, Droplets, Car, PawPrint, Shirt } from "lucide-react";
+import { siteConfig } from "@/app/config/content";
+
+import {
+  Wrench,
+  Clock,
+  Droplets,
+  Car,
+  Phone,
+  PawPrint,
+  Shirt,
+  Mail,
+} from "lucide-react";
 import {
   images,
   homePageConfig,
@@ -1584,66 +1595,33 @@ export default function Home() {
 
           {/* CONTACT INFO — stack on mobile */}
           <div className="flex flex-col sm:flex-row justify-center items-center gap-4 sm:gap-6 md:gap-8 flex-wrap">
-            <div className="flex items-center gap-2">
-              <span className="text-[rgba(100,140,210,0.8)] shrink-0">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z" />
-                </svg>
-              </span>
+            <div className="flex items-center gap-3">
+              <Phone size={17} className="text-[#76a1ff] shrink-0" />
+
               <span className="font-[Plus_Jakarta_Sans] text-[13px] text-[rgba(245,242,237,0.55)]">
-                (903) 961-6391
+                {siteConfig.phone}
               </span>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-[rgba(100,140,210,0.8)] shrink-0">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <rect width="20" height="16" x="2" y="4" rx="2" />
-                  <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7" />
-                </svg>
-              </span>
+
+            <div className="flex items-center gap-3">
+              <Mail size={17} className="text-[#76a1ff] shrink-0" />
+
               <span className="font-[Plus_Jakarta_Sans] text-[13px] text-[rgba(245,242,237,0.55)]">
-                potmanager@livenjoymgt.com
+                {siteConfig.email}
               </span>
             </div>
-            <div className="flex items-center gap-2">
-              <span className="text-[rgba(100,140,210,0.8)] shrink-0">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="14"
-                  height="14"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                  stroke="currentColor"
-                  strokeWidth="2"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                >
-                  <circle cx="12" cy="12" r="10" />
-                  <polyline points="12 6 12 12 16 14" />
-                </svg>
+
+            <div className="flex items-start gap-3">
+              <Clock size={17} className="text-[#76a1ff] shrink-0 mt-[3px]" />
+
+              <span className="font-[Plus_Jakarta_Sans] text-[13px] text-[rgba(245,242,237,0.55)]">
+                {siteConfig.hours}
               </span>
-              <span className="font-[Plus_Jakarta_Sans] text-[13px] text-[rgba(245,242,237,0.55)] text-center sm:text-left">
-                Mon&ndash;Fri 8:30AM&ndash;5:30PM &middot; Sat 10AM&ndash;4PM
+            </div>
+
+            <div className="flex items-start gap-3">
+              <span className="font-[Plus_Jakarta_Sans] text-[13px] text-[rgba(245,242,237,0.55)]">
+                {siteConfig.hours1}
               </span>
             </div>
           </div>
