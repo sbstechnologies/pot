@@ -151,6 +151,7 @@ export const siteConfig = {
   tel: "tel:+19039616391",
   email: "potmanager@livenjoymgt.com",
   hours: "Mon–Fri 8:30 AM – 5:30 PM · Sat 10 AM – 4 PM",
+  hours1: "Sat 10 AM – 4 PM",
 };
 
 export const units = [
