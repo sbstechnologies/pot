@@ -88,6 +88,11 @@ export default function RootLayout({
           position="top-right"
           toastOptions={{
             duration: 5000,
+            style: {
+              background: "#1e3872",
+              color: "#fff",
+              borderRadius: "12px",
+            },
           }}
         />
       </body>

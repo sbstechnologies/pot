@@ -1,3 +1,5 @@
+import toast from "react-hot-toast";
+
 export const images = {
   // HOME
   home1: "/webp/plan/a1.webp",
@@ -1071,19 +1073,24 @@ export const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
     message: formData.get("message"),
   };
 
-  const res = await fetch("/api/contact", {
-    method: "POST",
-    headers: {
-      "Content-Type": "application/json",
-    },
-    body: JSON.stringify(data),
-  });
+  try {
+    const res = await fetch("/api/contact", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify(data),
+    });
 
-  if (res.ok) {
-    alert("Message sent successfully!");
-    form.reset();
-  } else {
-    alert("Something went wrong. Please try again.");
+    if (res.ok) {
+      toast.success("Thank you! Your message has been sent successfully.");
+
+      form.reset();
+    } else {
+      toast.error("Something went wrong. Please try again.");
+    }
+  } catch (error) {
+    toast.error("Unable to connect to the server. Please try again later.");
   }
 };
 
