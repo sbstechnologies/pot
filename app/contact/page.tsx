@@ -3,9 +3,9 @@
 import PromoCardWidget from "../components/PromoCardWidget";
 import HeaderOther from "../components/HeaderOther";
 import Footer from "../components/Footer";
-import { siteConfig, handleSubmit } from "@/app/config/content";
+import { siteConfig } from "@/app/config/content";
 import FooterLegalBar from "../components/FooterLegalBar";
-import { MapPin, Phone, Mail, Clock, Send } from "lucide-react";
+import { MapPin, Phone, Mail, Clock } from "lucide-react";
 import SendMessage from "../components/SendMessage";
 
 import ComplianceNotice from "../components/ComplianceNotice";
