@@ -99,67 +99,46 @@ export async function POST(req: Request) {
       subject: `Contact Form - ${subject?.trim() || "General Inquiry"}`,
 
       html: `
-      <div style="max-width:650px;margin:auto;font-family:Arial,Helvetica,sans-serif;border:1px solid #e5e7eb;border-radius:8px;overflow:hidden;">
-        
-        <div style="background:#1E3872;padding:20px;text-align:center;color:white;">
-          <h2 style="margin:0;">New Contact Form Submission</h2>
-        </div>
-
-        <div style="padding:24px;color:#374151;line-height:1.6;">
-          
-          <table width="100%" cellpadding="8" cellspacing="0">
-            <tr>
-              <td width="150"><strong>Full Name</strong></td>
-              <td>${escapeHtml(fullName)}</td>
-            </tr>
-
-            <tr>
-              <td><strong>Email</strong></td>
-              <td>${escapeHtml(email)}</td>
-            </tr>
-
-            <tr>
-              <td><strong>Phone</strong></td>
-              <td>${escapeHtml(phone || "N/A")}</td>
-            </tr>
-
-            <tr>
-              <td><strong>Subject</strong></td>
-              <td>${escapeHtml(subject || "N/A")}</td>
-            </tr>
-          </table>
-
-          <hr style="margin:24px 0;border:none;border-top:1px solid #e5e7eb;" />
-
-          <h3 style="margin-bottom:10px;">Message</h3>
-
-          <div
-            style="
-              background:#f9fafb;
-              border:1px solid #e5e7eb;
-              border-radius:6px;
-              padding:16px;
-              white-space:pre-wrap;
-            "
-          >
-            ${escapeHtml(message)}
-          </div>
-
-        </div>
-
-        <div
-          style="
-            background:#f3f4f6;
-            padding:15px;
-            text-align:center;
-            font-size:12px;
-            color:#6b7280;
-          "
-        >
-          This email was generated automatically from the website contact form.
-        </div>
-
+      <!-- Header -->
+      <div style="background:linear-gradient(135deg,#1E3872,#2E5AAC);padding:30px;text-align:center;color:#ffffff;">
+      <h1 style="margin:0;font-size:28px;font-weight:700;"> New Contact Form Submission </h1>
+      <p style="margin-top:8px;font-size:14px;opacity:0.9;"> A new inquiry has been received from your website </p>
       </div>
+      <!-- Content -->
+      <div style="padding:30px;">
+      <div style="background:#eef5ff;border-left:4px solid #1E3872;padding:15px 18px;border-radius:8px;margin-bottom:25px;color:#374151;"> A visitor has submitted a contact request. Details are listed below. </div>
+      <h3 style="margin:0 0 20px;color:#111827;font-size:20px;"> Contact Details </h3> <table width="100%" cellpadding="12" cellspacing="0" style="border-collapse:collapse;">
+      <tr>
+      <td width="180" style="font-weight:600;color:#6b7280;border-bottom:1px solid #e5e7eb;"> Full Name </td>
+      <td style="border-bottom:1px solid #e5e7eb;"> ${escapeHtml(fullName)} </td> 
+      </tr>
+      <tr>
+      <td style="font-weight:600;color:#6b7280;border-bottom:1px solid #e5e7eb;"> Email Address </td>
+      <td style="border-bottom:1px solid #e5e7eb;"> <a href="mailto:${escapeHtml(email)}" style="color:#1E3872;text-decoration:none;"> ${escapeHtml(email)} </a> </td> 
+      </tr>
+      <tr>
+      <td style="font-weight:600;color:#6b7280;border-bottom:1px solid #e5e7eb;"> Phone Number </td>
+      <td style="border-bottom:1px solid #e5e7eb;"> ${escapeHtml(phone || "Not Provided")} </td> 
+      </tr>
+      <tr>
+      <td style="font-weight:600;color:#6b7280;border-bottom:1px solid #e5e7eb;"> Subject </td>
+      <td style="border-bottom:1px solid #e5e7eb;"> ${escapeHtml(subject || "General Inquiry")} </td> 
+      </tr>
+      <tr>
+      <td style="font-weight:600;color:#6b7280;"> Submitted On </td>
+      <td> ${new Date().toLocaleString()} </td> </tr> 
+      </table>
+      <div style="margin-top:30px;">
+      <h3 style="margin-bottom:12px;color:#111827;font-size:20px;"> Message </h3>
+      <div style=" background:#f9fafb; border:1px solid #e5e7eb; border-radius:10px; padding:20px; color:#374151; line-height:1.8; white-space:pre-wrap; " > ${escapeHtml(message)} </div> </div> 
+      <div style="margin-top:30px;text-align:center;"> <a href="mailto:${escapeHtml(email)}" style=" display:inline-block; background:#1E3872; color:#ffffff; text-decoration:none; padding:14px 28px; border-radius:8px; font-weight:600; " > Reply to Customer </a> </div> 
+      </div>
+      <!-- Footer -->
+      <div style=" background:#111827; padding:24px; text-align:center; color:#9ca3af; font-size:13px; " > <div style="color:#ffffff;font-size:18px;font-weight:700;"> SBS Technologies </div>
+      <div style="margin-top:8px;"> Erode, Tamil Nadu, India </div>
+      <div style="margin-top:6px;"> 📞 81440 65688 | 96985 29560 </div>
+      <div style="margin-top:15px;"> This email was automatically generated from the website contact form. </div>
+      <div style="margin-top:10px;"> © ${new Date().getFullYear()} SBS Technologies. All Rights Reserved. </div> </div>
       `,
     });
 

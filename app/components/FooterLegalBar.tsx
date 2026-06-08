@@ -30,9 +30,14 @@ export default function FooterLegalBar() {
         </div>
 
         <div className="flex items-center gap-4">
-          <button className="text-[11px] font-semibold text-[#6B8FD4]/60 hover:text-[#6B8FD4] transition-colors">
-            Built by the LiveNJoy Development Team →
-          </button>
+          <Link
+            href="https://www.sbstechnologies.in"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-[11px] font-semibold text-[#6B8FD4]/60 hover:text-[#6B8FD4] transition-colors"
+          >
+            Built by SBS Technologies, Erode, TN, INDIA →
+          </Link>
 
           <button
             onClick={() =>
