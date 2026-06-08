@@ -118,7 +118,7 @@ export default function Gallery() {
             Community Gallery
           </p>
 
-          <h1 className="font-[Instrument_Serif] text-[64px] md:text-[70px] leading-[0.98] tracking-[-0.04em] text-[#F5F2ED]">
+          <h1 className="font-[Instrument_Serif] text-[56px] md:text-[56px] leading-[0.98] tracking-[-0.04em] text-[#F5F2ED]">
             Life at <br />
             <span className="text-[#E09428] italic">Parks on Taylor</span>
           </h1>

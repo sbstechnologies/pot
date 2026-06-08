@@ -1057,43 +1057,6 @@ export const featuredPost: Post = {
   ],
 };
 
-//contacts page
-export const handleSubmit = async (e: React.FormEvent<HTMLFormElement>) => {
-  e.preventDefault();
-
-  const form = e.currentTarget;
-
-  const formData = new FormData(form);
-
-  const data = {
-    fullName: formData.get("fullName"),
-    email: formData.get("email"),
-    phone: formData.get("phone"),
-    subject: formData.get("subject"),
-    message: formData.get("message"),
-  };
-
-  try {
-    const res = await fetch("/api/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify(data),
-    });
-
-    if (res.ok) {
-      toast.success("Thank you! Your message has been sent successfully.");
-
-      form.reset();
-    } else {
-      toast.error("Something went wrong. Please try again.");
-    }
-  } catch (error) {
-    toast.error("Unable to connect to the server. Please try again later.");
-  }
-};
-
 export const articles = [
   {
     id: 1,

@@ -630,7 +630,7 @@ export default function Floor() {
             PARKS ON TAYLOR · SHERMAN, TX
           </p>
 
-          <h1 className="font-[Instrument_Serif] text-[64px] md:text-[70px] leading-[0.98] tracking-[-0.04em] text-[#F5F2ED]">
+          <h1 className="font-[Instrument_Serif] text-[56px] md:text-[56px] leading-[0.98] tracking-[-0.04em] text-[#F5F2ED]">
             Floor Plans & <br />
             <span className="italic text-[#E09428]">Pricing</span>
           </h1>

@@ -22,7 +22,7 @@ export default function Blog() {
             SHERMAN LIVING GUIDE
           </p>
 
-          <h1 className="font-[Instrument_Serif] text-[64px] md:text-[70px] leading-[0.98] tracking-[-0.04em] text-[#F5F2ED]">
+          <h1 className="font-[Instrument_Serif] text-[56px] md:text-[56px] leading-[0.98] tracking-[-0.04em] text-[#F5F2ED]">
             Stories from <br />
             <span className="text-[#E39B2D] italic">the Neighborhood</span>
           </h1>
