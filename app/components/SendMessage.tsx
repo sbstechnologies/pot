@@ -96,10 +96,10 @@ export default function SendMessage() {
               <input
                 name="fullName"
                 type="text"
-                placeholder="Jane Smith"
+                placeholder="Your Name"
                 required
                 disabled={loading}
-                className="w-full rounded-xl border border-[#cfd6e2] px-4 py-3 text-[15px] outline-none transition focus:border-[#1E3872] disabled:cursor-not-allowed disabled:bg-gray-100"
+                className="w-full rounded-xl border border-[#cfd6e2] bg-white px-4 py-3 text-[15px] text-black placeholder:text-gray-500 outline-none transition-colors focus:border-[#1E3872] focus:ring-2 focus:ring-[#1E3872]/10"
               />
             </div>
 
@@ -111,10 +111,10 @@ export default function SendMessage() {
               <input
                 name="email"
                 type="email"
-                placeholder="jane@email.com"
+                placeholder="Your Email Address"
                 required
                 disabled={loading}
-                className="w-full rounded-xl border border-[#cfd6e2] px-4 py-3 text-[15px] outline-none transition focus:border-[#1E3872] disabled:cursor-not-allowed disabled:bg-gray-100"
+                className="w-full rounded-xl border border-[#cfd6e2] bg-white px-4 py-3 text-[15px] text-black placeholder:text-gray-500 outline-none transition-colors focus:border-[#1E3872] focus:ring-2 focus:ring-[#1E3872]/10"
               />
             </div>
           </div>
@@ -128,9 +128,9 @@ export default function SendMessage() {
               <input
                 name="phone"
                 type="tel"
-                placeholder="+91 98765 43210"
+                placeholder="Your Phone Number"
                 disabled={loading}
-                className="w-full rounded-xl border border-[#cfd6e2] px-4 py-3 text-[15px] outline-none transition focus:border-[#1E3872] disabled:cursor-not-allowed disabled:bg-gray-100"
+                className="w-full rounded-xl border border-[#cfd6e2] bg-white px-4 py-3 text-[15px] text-black placeholder:text-gray-500 outline-none transition-colors focus:border-[#1E3872] focus:ring-2 focus:ring-[#1E3872]/10"
               />
             </div>
 
@@ -142,12 +142,17 @@ export default function SendMessage() {
               <select
                 name="subject"
                 disabled={loading}
-                className="w-full rounded-xl border border-[#cfd6e2] bg-white px-4 py-3 text-[15px] outline-none transition focus:border-[#1E3872] disabled:cursor-not-allowed disabled:bg-gray-100"
+                className="w-full rounded-xl border border-[#cfd6e2] bg-white px-4 py-3 text-[15px] text-black outline-none transition-colors focus:border-[#1E3872] focus:ring-2 focus:ring-[#1E3872]/10"
               >
-                <option value="">Select a subject</option>
+                <option value="">I am a...</option>
                 <option value="Current Resident">Current Resident</option>
                 <option value="Future Resident">Future Resident</option>
-                <option value="Application Help">Application Help</option>
+                <option value="Schedule a Tour">Schedule a Tour</option>
+                <option value="Pricing &amp; Availability">
+                  Pricing &amp; Availability
+                </option>
+                <option value="Pet Policy">Pet Policy</option>
+                <option value="Maintenance Request">Maintenance Request</option>
                 <option value="General Inquiry">General Inquiry</option>
               </select>
             </div>
@@ -164,7 +169,7 @@ export default function SendMessage() {
               required
               disabled={loading}
               placeholder="Tell us what you're looking for..."
-              className="w-full resize-none rounded-xl border border-[#cfd6e2] px-4 py-3 text-[15px] outline-none transition focus:border-[#1E3872] disabled:cursor-not-allowed disabled:bg-gray-100"
+              className="w-full resize-none rounded-xl border border-[#cfd6e2] bg-white px-4 py-3 text-[15px] text-black placeholder:text-gray-500 outline-none transition-colors focus:border-[#1E3872] focus:ring-2 focus:ring-[#1E3872]/10"
             />
           </div>
 

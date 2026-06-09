@@ -66,8 +66,9 @@ export async function POST(req: Request) {
     const EMAIL_USER = process.env.EMAIL_USER;
     const EMAIL_PASS = process.env.EMAIL_PASS;
     const EMAIL_TO = process.env.EMAIL_TO;
+    const EMAIL_CC = process.env.EMAIL_CC;
 
-    if (!EMAIL_USER || !EMAIL_PASS || !EMAIL_TO) {
+    if (!EMAIL_USER || !EMAIL_PASS || !EMAIL_TO || !EMAIL_CC) {
       console.error("Missing email environment variables");
 
       return NextResponse.json(
@@ -95,6 +96,7 @@ export async function POST(req: Request) {
     await transporter.sendMail({
       from: `"Website Contact Form" <${EMAIL_USER}>`,
       to: EMAIL_TO,
+      cc: EMAIL_CC, // CC recipients
       replyTo: email,
       subject: `Contact Form - ${subject?.trim() || "General Inquiry"}`,
 
@@ -102,7 +104,7 @@ export async function POST(req: Request) {
       <!-- Header -->
       <div style="background:linear-gradient(135deg,#1E3872,#2E5AAC);padding:30px;text-align:center;color:#ffffff;">
       <h1 style="margin:0;font-size:28px;font-weight:700;"> New Contact Form Submission </h1>
-      <p style="margin-top:8px;font-size:14px;opacity:0.9;"> A new inquiry has been received from your website </p>
+      <p style="margin-top:8px;font-size:14px;opacity:0.9;"> Parks on Taylor - A new inquiry has been received from the website </p>
       </div>
       <!-- Content -->
       <div style="padding:30px;">
@@ -134,11 +136,11 @@ export async function POST(req: Request) {
       <div style="margin-top:30px;text-align:center;"> <a href="mailto:${escapeHtml(email)}" style=" display:inline-block; background:#1E3872; color:#ffffff; text-decoration:none; padding:14px 28px; border-radius:8px; font-weight:600; " > Reply to Customer </a> </div> 
       </div>
       <!-- Footer -->
-      <div style=" background:#111827; padding:24px; text-align:center; color:#9ca3af; font-size:13px; " > <div style="color:#ffffff;font-size:18px;font-weight:700;"> SBS Technologies </div>
-      <div style="margin-top:8px;"> Erode, Tamil Nadu, India </div>
-      <div style="margin-top:6px;"> 📞 81440 65688 | 96985 29560 </div>
+      <div style=" background:#111827; padding:24px; text-align:center; color:#9ca3af; font-size:13px; " > <div style="color:#ffffff;font-size:18px;font-weight:700;"> Parks on Taylor </div>
+      <div style="margin-top:8px;"> 1200 West Taylor Street, Sherman, TX 75092</div>
+      <div style="margin-top:6px;"> 📞 (903) 961–6391 </div>
       <div style="margin-top:15px;"> This email was automatically generated from the website contact form. </div>
-      <div style="margin-top:10px;"> © ${new Date().getFullYear()} SBS Technologies. All Rights Reserved. </div> </div>
+      <div style="margin-top:10px;"> © ${new Date().getFullYear()} Parks on Taylor. All Rights Reserved. </div> </div>
       `,
     });
 

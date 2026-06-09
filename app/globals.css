@@ -74,6 +74,18 @@ body {
     sans-serif;
 }
 
+input,
+textarea,
+select {
+  color: #000000;
+}
+
+input::placeholder,
+textarea::placeholder {
+  color: #2d3230;
+  opacity: 1;
+}
+
 @keyframes hero-in {
   0% {
     opacity: 0;
