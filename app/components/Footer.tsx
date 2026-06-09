@@ -3,6 +3,7 @@ import { Home, MapPin, Phone, Mail, Clock, ArrowRight } from "lucide-react";
 
 import Image from "next/image";
 import { headerConfig } from "@/app/config/content";
+import DisableInspect from "@/app/components/DisableInspect";
 
 export default function Footer() {
   return (
@@ -226,6 +227,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      {process.env.NODE_ENV === "production" && <DisableInspect />}
     </section>
   );
 }

@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import "./globals.css";
 import { Toaster } from "react-hot-toast";
+import { GoogleTagManager } from "@next/third-parties/google";
+import DisableInspect from "@/app/components/DisableInspect";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -90,7 +92,7 @@ export const metadata: Metadata = {
 
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/logo.png",
         width: 1200,
         height: 630,
         alt: "The Parks on Taylor Apartments in Sherman TX",
@@ -117,7 +119,7 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 
   verification: {
-    google: "YOUR_GOOGLE_SEARCH_CONSOLE_CODE",
+    google: "GTM-WLHG2WWT",
   },
 
   referrer: "origin-when-cross-origin",
@@ -172,12 +174,16 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} ${plusJakartaSans.variable}`}
     >
       <body className="min-h-screen font-sans antialiased">
+        <GoogleTagManager gtmId="GTM-WLHG2WWT" />
+
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{
             __html: JSON.stringify(apartmentSchema),
           }}
         />
+        <script src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
+        {process.env.NODE_ENV === "production" && <DisableInspect />}
 
         {children}
 
