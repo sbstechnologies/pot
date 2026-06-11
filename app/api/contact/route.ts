@@ -29,12 +29,14 @@ export async function POST(req: Request) {
       fullName,
       email,
       phone,
+      resident,
       subject,
       message,
     }: {
       fullName: string;
       email: string;
       phone?: string;
+      resident?: string;
       subject?: string;
       message: string;
     } = body;
@@ -121,6 +123,10 @@ export async function POST(req: Request) {
       <tr>
       <td style="font-weight:600;color:#6b7280;border-bottom:1px solid #e5e7eb;"> Phone Number </td>
       <td style="border-bottom:1px solid #e5e7eb;"> ${escapeHtml(phone || "Not Provided")} </td> 
+      </tr>
+       <tr>
+      <td style="font-weight:600;color:#6b7280;border-bottom:1px solid #e5e7eb;"> I AM A </td>
+      <td style="border-bottom:1px solid #e5e7eb;"> ${escapeHtml(resident || "Future Resident")} </td> 
       </tr>
       <tr>
       <td style="font-weight:600;color:#6b7280;border-bottom:1px solid #e5e7eb;"> Subject </td>

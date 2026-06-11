@@ -19,6 +19,7 @@ export default function SendMessage() {
       fullName: formData.get("fullName")?.toString().trim() || "",
       email: formData.get("email")?.toString().trim() || "",
       phone: formData.get("phone")?.toString().trim() || "",
+      resident: formData.get("resident")?.toString().trim() || "",
       subject: formData.get("subject")?.toString().trim() || "",
       message: formData.get("message")?.toString().trim() || "",
     };
@@ -136,6 +137,21 @@ export default function SendMessage() {
 
             <div>
               <label className="mb-2 block text-[12px] font-semibold tracking-[0.12em] text-[#4b5563]">
+                I AM A...
+              </label>
+
+              <select
+                name="resident"
+                disabled={loading}
+                className="w-full rounded-xl border border-[#cfd6e2] bg-white px-4 py-3 text-[15px] text-black outline-none transition-colors focus:border-[#1E3872] focus:ring-2 focus:ring-[#1E3872]/10"
+              >
+                <option value="Current Resident">Current Resident</option>
+                <option value="Future Resident">Future Resident</option>
+              </select>
+            </div>
+
+            <div>
+              <label className="mb-2 block text-[12px] font-semibold tracking-[0.12em] text-[#4b5563]">
                 SUBJECT
               </label>
 
@@ -144,9 +160,6 @@ export default function SendMessage() {
                 disabled={loading}
                 className="w-full rounded-xl border border-[#cfd6e2] bg-white px-4 py-3 text-[15px] text-black outline-none transition-colors focus:border-[#1E3872] focus:ring-2 focus:ring-[#1E3872]/10"
               >
-                <option value="">I am a...</option>
-                <option value="Current Resident">Current Resident</option>
-                <option value="Future Resident">Future Resident</option>
                 <option value="Schedule a Tour">Schedule a Tour</option>
                 <option value="Pricing &amp; Availability">
                   Pricing &amp; Availability
