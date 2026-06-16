@@ -135,7 +135,7 @@ export default function Home() {
         {/* MAIN LAYOUT WRAPPER (Now handles the entire animation entry) */}
         <div className="absolute inset-0 z-[2] flex items-center justify-center">
           <div
-            className={`w-full max-w-[1920px] px-4 sm:px-8 md:px-16 lg:px-32 flex flex-col items-center justify-center text-center text-white select-none animate-hero-container ${
+            className={`w-full max-w-[1920px] px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto flex flex-col items-center justify-center text-center text-white select-none animate-hero-container ${
               showTopBar ? "pt-20 md:pt-24" : "pt-12 md:pt-16"
             }`}
           >
@@ -656,7 +656,7 @@ export default function Home() {
       {/* ================= AMENITIES ================= */}
       <section
         id="amenities"
-        className="bg-[#0c2340]  px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80mx-auto py-14 md:py-20"
+        className="bg-[#0c2340]  px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto py-14 md:py-20"
       >
         <div className="max-w-[1920px] mx-auto">
           <div className="grid md:grid-cols-2 gap-8 md:gap-14 mb-10 md:mb-12">
@@ -752,7 +752,7 @@ export default function Home() {
       {/* ================= LOCATION INTRO ================= */}
       <section
         id="neighborhood"
-        className="bg-[#f1eee9]  px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80mx-auto py-12 sm:py-14 md:py-20"
+        className="bg-[#f1eee9]  px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto py-12 sm:py-14 md:py-20"
       >
         <div className="max-w-[1920px] mx-auto grid md:grid-cols-2 gap-8 sm:gap-10 items-center">
           <div>
@@ -1052,7 +1052,7 @@ export default function Home() {
       {/* ================= RESIDENT VOICES ================= */}
       <section
         id="residents"
-        className="bg-[#0c2340]  px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80mx-auto py-12 md:py-20 text-white overflow-hidden relative"
+        className="bg-[#0c2340]  px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto py-12 md:py-20 text-white overflow-hidden relative"
       >
         <div className="max-w-[900px] mx-auto text-center mb-8 md:mb-10 lg:mb-12 relative z-10">
           <p className="text-[10px] sm:text-xs tracking-[0.16em] uppercase text-[rgba(224,148,40,0.8)] mb-3 font-[Plus_Jakarta_Sans] font-extrabold">
@@ -1527,7 +1527,7 @@ export default function Home() {
       {/* ================= LEASING CTA ================= */}
       <section
         id="leasing-cta"
-        className="bg-[#0c1a3a] px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80mx-auto py-16 sm:py-[100px] scroll-mt-[72px] relative overflow-hidden text-white"
+        className="bg-[#0c1a3a] px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto py-16 sm:py-[100px] scroll-mt-[72px] relative overflow-hidden text-white"
       >
         {/* Radial Glow */}
         <div

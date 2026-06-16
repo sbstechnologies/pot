@@ -262,7 +262,7 @@ function ComparisonDrawer({
           </div>
         </div>
 
-        <div className="px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80mx-auto py-8">
+        <div className="px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto py-8">
           {/* desktop */}
           <div className="hidden md:grid grid-cols-[220px_1fr_1fr] gap-8">
             <div className="pt-[74px]">
