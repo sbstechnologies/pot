@@ -28,7 +28,8 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://theparksontaylor.com"),
 
   title: {
-    default: "Apartments for Rent in Sherman, TX | The Parks on Taylor",
+    default:
+      "The Parks on Taylor Apartments Homes | Apartments for Rent in Sherman, TX",
     template: "%s | The Parks on Taylor",
   },
 
@@ -50,17 +51,17 @@ export const metadata: Metadata = {
     "Grayson County Apartments",
   ],
 
-  applicationName: "The Parks on Taylor",
+  applicationName: "The Parks on Taylor Apartments Homes",
 
   authors: [
     {
-      name: "The Parks on Taylor",
+      name: "The Parks on Taylor Apartments Homes",
       url: "https://theparksontaylor.com",
     },
   ],
 
-  creator: "The Parks on Taylor",
-  publisher: "The Parks on Taylor",
+  creator: "The Parks on Taylor Apartments Homes",
+  publisher: "The Parks on Taylor Apartments Homes",
   category: "Real Estate",
 
   alternates: {
@@ -81,12 +82,12 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "The Parks on Taylor Apartments | Sherman, Texas",
+    title: "The Parks on Taylor Apartments Homes | Sherman, Texas",
     description:
       "Find beautiful apartment homes in Sherman, Texas with spacious floor plans, modern amenities, and a pet-friendly community.",
 
     url: "https://theparksontaylor.com",
-    siteName: "The Parks on Taylor",
+    siteName: "The Parks on Taylor Apartments Homes",
     locale: "en_US",
     type: "website",
 
@@ -95,14 +96,14 @@ export const metadata: Metadata = {
         url: "/images/logo.png",
         width: 1200,
         height: 630,
-        alt: "The Parks on Taylor Apartments in Sherman TX",
+        alt: "The Parks on Taylor Apartments Homes in Sherman TX",
       },
     ],
   },
 
   twitter: {
     card: "summary_large_image",
-    title: "The Parks on Taylor Apartments",
+    title: "The Parks on Taylor Apartments Homes",
     description: "Modern apartment living in Sherman, Texas.",
     images: ["/images/og-image.jpg"],
   },
@@ -140,7 +141,7 @@ export default function RootLayout({
   const apartmentSchema = {
     "@context": "https://schema.org",
     "@type": "ApartmentComplex",
-    name: "The Parks on Taylor",
+    name: "The Parks on Taylor Apartments Homes",
     image: "https://theparksontaylor.com/images/og-image.jpg",
     url: "https://theparksontaylor.com",
     telephone: "+1-903-961-6391",
