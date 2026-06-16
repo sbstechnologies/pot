@@ -3,7 +3,7 @@ import { ArrowUp } from "lucide-react";
 
 export default function FooterLegalBar() {
   return (
-    <section className="bg-[#0f1e48] px-6 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80  text-white">
+    <section className="bg-[#0f1e48] px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto text-white">
       <div className="py-4 flex flex-wrap items-center justify-between gap-4">
         <div className="flex flex-wrap items-center text-[11px]">
           <span className="text-white/30">
@@ -36,7 +36,7 @@ export default function FooterLegalBar() {
             rel="noopener noreferrer"
             className="text-[11px] font-semibold text-[#6B8FD4]/60 hover:text-[#6B8FD4] transition-colors"
           >
-            Built by SBS Technologies, Erode, TN, INDIA →
+            Built by SBS Technologies →
           </Link>
 
           <button

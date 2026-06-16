@@ -17,7 +17,7 @@ export default function Contact() {
       <HeaderOther />
 
       {/* ===== HERO ===== */}
-      <section className="relative overflow-hidden bg-[#1f376d]  pt-32 pb-24 text-white px-6 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80">
+      <section className="relative overflow-hidden bg-[#1f376d]  pt-32 pb-24 text-white px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto">
         <div className="relative z-10 max-w-4xl">
           <p className="text-xs tracking-[0.3em] text-[#E09428] mb-6 mt-[15px] font-bold uppercase">
             GET IN TOUCH
@@ -37,7 +37,7 @@ export default function Contact() {
       </section>
 
       {/* ===== CONTACT DETAILS + FORM ===== */}
-      <section className="bg-[#f5f2ed] px-6 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-12 font-[Plus_Jakarta_Sans] md:px-10 lg:px-24 md:py-16">
+      <section className="bg-[#f5f2ed] px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto py-12 font-[Plus_Jakarta_Sans] md:px-10 lg:px-24 md:py-16">
         <div className="mx-auto grid max-w-[1920px] grid-cols-1 gap-10 xl:grid-cols-[0.9fr_1.25fr] xl:gap-12">
           {/* LEFT */}
           <div className="space-y-10">
@@ -213,7 +213,7 @@ export default function Contact() {
       </section>
 
       {/* ===== OFFER CTA ===== */}
-      <section className="bg-[#f5f2ed] pb-14 px-6 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80 md:pb-20">
+      <section className="bg-[#f5f2ed] pb-14 px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-automd:pb-20">
         <div className="mx-auto flex max-w-[1600px] flex-col gap-6 rounded-[26px] bg-[#db8d1f] px-8 py-7 md:px-12 md:py-9 lg:flex-row lg:items-center lg:justify-between">
           <div>
             <p className="mb-4 text-xs font-semibold tracking-[0.3em] text-white/90">

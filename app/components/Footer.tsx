@@ -7,7 +7,7 @@ import DisableInspect from "@/app/components/DisableInspect";
 
 export default function Footer() {
   return (
-    <section className="bg-[#0f1e48] px-6 xs:px-6 sm:px-6 md:px-30 lg:px-60 xl:px-85 xxl:px-80 py-16 md:py-20 text-white">
+    <section className="bg-[#0f1e48] px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80mx-auto py-16 md:py-20 text-white">
       <div className="max-w-[1920px] mx-auto">
         {/* EQUAL 4 COLUMN LAYOUT */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
@@ -88,7 +88,7 @@ export default function Footer() {
               "
             >
               Schedule a Private Tour
-              <ArrowRight size={17} />
+              <ArrowRight size={15} />
             </a>
           </div>
 

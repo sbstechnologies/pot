@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Tag, X, Sparkles, ArrowRight } from "lucide-react";
 import { PromoCardWidgetConfig } from "../config/content";
 import { siteConfig } from "../config/content";
+import Link from "next/link";
 
 export default function PromoCardWidget() {
   const [showPromo, setShowPromo] = useState(true);
@@ -86,10 +87,12 @@ export default function PromoCardWidget() {
           </div>
 
           {/* CTA Submit Button */}
-          <button className="flex items-center justify-center gap-[7px] w-full py-[11px] rounded-[11px] bg-[#1E3872] text-[#F5F2ED] font-['Plus_Jakarta_Sans'] text-[13px] font-bold tracking-[0.01em] border-none cursor-pointer shadow-[0_4px_18px_rgba(30,56,114,0.38)] transition-all hover:bg-[#162B5E]">
-            {PromoCardWidgetConfig.buttonText}{" "}
-            <ArrowRight size={13} className="text-white" />
-          </button>
+          <Link href={PromoCardWidgetConfig.applyLink} target="_blank">
+            <button className="flex items-center justify-center gap-[7px] w-full py-[11px] rounded-[11px] bg-[#1E3872] text-[#F5F2ED] font-['Plus_Jakarta_Sans'] text-[13px] font-bold tracking-[0.01em] border-none cursor-pointer shadow-[0_4px_18px_rgba(30,56,114,0.38)] transition-all hover:bg-[#162B5E]">
+              {PromoCardWidgetConfig.buttonText}{" "}
+              <ArrowRight size={13} className="text-white" />
+            </button>
+          </Link>
 
           {/* Call Footnote Link */}
           <p className="font-['Plus_Jakarta_Sans'] text-[10px] text-[rgba(90,98,96,0.5)] text-center m-0">
