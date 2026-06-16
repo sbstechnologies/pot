@@ -13,6 +13,8 @@ import HeaderTop from "./components/HeaderTop";
 import { Instrument_Serif } from "next/font/google";
 import { Plus_Jakarta_Sans } from "next/font/google";
 
+import { GoogleTagManager } from "@next/third-parties/google";
+
 import { siteConfig } from "@/app/config/content";
 
 import {
