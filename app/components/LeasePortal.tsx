@@ -95,7 +95,7 @@ export default function LeasePortal() {
   const unitCountLabel =
     unitTab === "all" ? units.length : unitTab === "1bed" ? 3 : 3;
 
-  // ─── Shared subcomponents ──────────────────────────────────────────────────
+  // ─── Shared sub components ──────────────────────────────────────────────────
 
   const CalendarGrid = () => (
     <div>
@@ -275,7 +275,7 @@ export default function LeasePortal() {
   return (
     <>
       {/* ── MOBILE LAYOUT (< md) ─────────────────────────────────────────── */}
-      <div className="md:hidden ">
+      <div className="block w-full md:hidden">
         <div className="rounded-[20px]  border border-[rgba(30,56,114,0.18)] bg-[rgba(245,242,237,0.97)] shadow-[0_16px_48px_rgba(0,0,0,0.18),inset_0_1px_0_rgba(255,255,255,0.45)] overflow-hidden">
           {/* Row 1 — Date + Unit side by side */}
           <div className="grid grid-cols-2 divide-x divide-[rgba(30,56,114,0.1)]">
@@ -375,9 +375,9 @@ export default function LeasePortal() {
 
       {/* ── DESKTOP LAYOUT (md+) ─────────────────────────────────────────── */}
       <div className="hidden md:block max-w-[1920px] mx-auto">
-        <div className="relative flex items-stretch overflow-visible rounded-[20px] border border-[rgba(30,56,114,0.18)] bg-[rgba(245,242,237,0.97)] backdrop-blur-[28px] shadow-[0_32px_80px_rgba(0,0,0,0.3),0_8px_24px_rgba(0,0,0,0.14),inset_0_1px_0_rgba(255,255,255,0.45)]">
+        <div className="relative flex flex-col lg:flex-row items-stretch rounded-[20px] border border-[rgba(30,56,114,0.18)] bg-[rgba(245,242,237,0.97)] backdrop-blur-[28px] shadow-[0_32px_80px_rgba(0,0,0,0.3),0_8px_24px_rgba(0,0,0,0.14),inset_0_1px_0_rgba(255,255,255,0.45)]">
           {/* Move-in Date */}
-          <div className="relative flex-1 min-w-[180px] border-r border-[rgba(30,56,114,0.1)] px-10 py-[18px]">
+          <div className="flex items-center justify-center px-4 py-4 lg:border-l border-[rgba(30,56,114,0.1)]">
             <button
               type="button"
               onClick={() => {

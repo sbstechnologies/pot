@@ -100,7 +100,7 @@ export default function Blog() {
       </section>
 
       {/* BLOG GRID */}
-      <section className="bg-[#f5f2ed] px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-autopb-24">
+      <section className="bg-[#f5f2ed] px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto pb-24">
         <div className="max-w-[1920px] mx-auto">
           <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-8">
             {posts.map((post, index) => (
