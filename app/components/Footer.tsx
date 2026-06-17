@@ -8,9 +8,9 @@ import DisableInspect from "@/app/components/DisableInspect";
 export default function Footer() {
   return (
     <section className="bg-[#0f1e48] px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto py-16 md:py-20 text-white">
-      <div className="max-w-[1920px] mx-auto">
+      <div className="max-w-[1920px]  mx-auto">
         {/* EQUAL 4 COLUMN LAYOUT */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
           {/* COLUMN 1 */}
           <div>
             {/* LOGO */}
@@ -78,7 +78,7 @@ export default function Footer() {
             <a
               href="/contact/"
               className="
-                mt-10 inline-flex items-center gap-3
+                mt-10 mb-10 inline-flex items-center gap-3
                 rounded-full border border-[#24468d]
                 bg-[#0d2347]
                 px-7 py-4
@@ -93,7 +93,7 @@ export default function Footer() {
           </div>
 
           {/* COLUMN 2 */}
-          <div className="mt-14 lg:ml-20 md:mt-0">
+          <div className="lg:mt-0 lg:px-20">
             <h4 className="text-[15px] tracking-[0.18em] text-[#E09428] mb-8 font-[Plus_Jakarta_Sans]">
               EXPLORE
             </h4>
@@ -138,7 +138,7 @@ export default function Footer() {
           </div>
 
           {/* COLUMN 3 */}
-          <div className="mt-14 lg:ml-20 md:mt-0">
+          <div className="lg:mt-0 lg:px-10">
             <h4 className="text-[15px] tracking-[0.18em] text-[#E09428] mb-8 font-[Plus_Jakarta_Sans]">
               LEASING
             </h4>
