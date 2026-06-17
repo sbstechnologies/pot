@@ -196,7 +196,7 @@ export default function Home() {
               </a>
 
               <a
-                href="/#unit"
+                href="/contact/"
                 className="flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-3 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-[#f5f2ed] text-[14px] font-semibold transition duration-300 hover:bg-white/10"
               >
                 Schedule a Tour
@@ -624,7 +624,7 @@ export default function Home() {
                 </div>
                 <div className="mt-4 sm:mt-6 grid sm:grid-cols-2 gap-3">
                   <a
-                    href="/#unit"
+                    href="/contact/"
                     className="text-center w-full rounded-full border border-[#1e3872] text-[#1e3872] py-3.5 sm:py-4 px-5 text-[14px] sm:text-[15px] font-semibold hover:bg-[#f2f5fb] transition"
                   >
                     Schedule Tour
@@ -1566,7 +1566,8 @@ export default function Home() {
           {/* CTA BUTTONS — stack on mobile */}
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-3.5 flex-wrap mb-10 sm:mb-12 px-4 sm:px-0">
             <a
-              href="https://livenjoy.myresman.com/Portal/Access/ApplicantRegistration?accountID=1588&propertyID=5e489ec3-e648-4775-9a6f-d94041b17010&redirectUrl=https%3A%2F%2Flivenjoy.myresman.com%2FPortal%2FApplicants%2FContinue%3FaccountID%3D1588%26propertyID%3D5e489ec3-e648-4775-9a6f-d94041b17010%26unitID%3D8166ba63-9e6c-465b-834e-7da7b21437a0%26coldApplicant%3DFalse"
+              href="https://livenjoy.myresman.com/Portal/Applicants/New/POTS?a=1588"
+              target="_blank"
               className="flex items-center justify-center gap-2 px-8 sm:px-9 py-4 sm:py-[15px] rounded-full bg-[#1e3872] text-[#f5f2ed] font-[Plus_Jakarta_Sans] text-[14px] sm:text-[15px] font-bold cursor-pointer shadow-[rgba(30,56,114,0.5)_0px_4px_24px] tracking-[0.01em] border-none outline-none hover:opacity-95 transition-opacity"
             >
               Apply Now
@@ -1586,7 +1587,7 @@ export default function Home() {
               </svg>
             </a>
             <a
-              href="/#unit"
+              href="/contact/"
               className="flex items-center justify-center gap-2 px-8 sm:px-9 py-4 sm:py-[15px] rounded-full bg-transparent text-[rgba(245,242,237,0.85)] font-[Plus_Jakarta_Sans] text-[14px] sm:text-[15px] font-semibold border-[1.5px] border-[rgba(245,242,237,0.25)] cursor-pointer tracking-[0.01em] hover:bg-white/[0.03] transition-colors"
             >
               Schedule Private Tour

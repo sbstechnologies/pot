@@ -11,10 +11,10 @@ export default function FooterLegalBar() {
           </span>
 
           {[
-            { label: "Privacy Policy", href: "/" },
-            { label: "Terms of Use", href: "/" },
-            { label: "Fair Housing", href: "/" },
-            { label: "Accessibility", href: "/" },
+            { label: "Privacy Policy", href: "/contact/" },
+            { label: "Terms of Use", href: "/contact/" },
+            { label: "Fair Housing", href: "/contact/" },
+            { label: "Accessibility", href: "/contact/" },
           ].map((item) => (
             <div key={item.label} className="inline-flex items-center">
               <span className="mx-2 text-white/20">·</span>

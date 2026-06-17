@@ -76,7 +76,7 @@ export default function Footer() {
 
             {/* BUTTON */}
             <a
-              href="/#unit"
+              href="/contact/"
               className="
                 mt-10 inline-flex items-center gap-3
                 rounded-full border border-[#24468d]
@@ -100,8 +100,14 @@ export default function Footer() {
 
             <ul className="space-y-6 text-[#b2bccd] text-[15px] font-[Plus_Jakarta_Sans]">
               <li>
-                <a href="/floor" className="hover:text-white transition">
+                <a href="/floor-plans/" className="hover:text-white transition">
                   Floor Plans
+                </a>
+              </li>
+
+              <li>
+                <a href="/gallery/" className="hover:text-white transition">
+                  Gallery
                 </a>
               </li>
 
@@ -113,33 +119,19 @@ export default function Footer() {
 
               <li>
                 <a
-                  href="https://livenjoy.myresman.com/Portal/Access/SignIn/POTS"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:text-white transition"
-                >
-                  Community & Events
-                </a>
-              </li>
-
-              <li>
-                <a
                   href="/#neighborhood"
                   className="hover:text-white transition"
                 >
                   Neighborhood
                 </a>
               </li>
-
               <li>
-                <a href="/#unit" className="hover:text-white transition">
-                  Virtual Tour
-                </a>
-              </li>
-
-              <li>
-                <a href="/gallery" className="hover:text-white transition">
-                  Photo Gallery
+                <a
+                  href="/blog/"
+                  rel="noopener noreferrer"
+                  className="hover:text-white transition"
+                >
+                  Community & Events
                 </a>
               </li>
             </ul>
@@ -164,7 +156,7 @@ export default function Footer() {
               </li>
 
               <li>
-                <a href="/#unit" className="hover:text-white transition">
+                <a href="/contact/" className="hover:text-white transition">
                   Schedule a Tour
                 </a>
               </li>
@@ -176,13 +168,13 @@ export default function Footer() {
               </li>
 
               <li>
-                <a href="/#amenities" className="hover:text-white transition">
+                <a href="/contact/" className="hover:text-white transition">
                   Pet Policy
                 </a>
               </li>
 
               <li>
-                <a href="/#look" className="hover:text-white transition">
+                <a href="/contact/" className="hover:text-white transition">
                   FAQs
                 </a>
               </li>
