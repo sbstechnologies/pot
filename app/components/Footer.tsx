@@ -93,7 +93,7 @@ export default function Footer() {
           </div>
 
           {/* COLUMN 2 */}
-          <div className="lg:mt-0 lg:px-20">
+          <div className="py-5 lg:px-20 lg:pt-0">
             <h4 className="text-[15px] tracking-[0.18em] text-[#E09428] mb-8 font-[Plus_Jakarta_Sans]">
               EXPLORE
             </h4>
@@ -138,7 +138,7 @@ export default function Footer() {
           </div>
 
           {/* COLUMN 3 */}
-          <div className="lg:mt-0 lg:px-10">
+          <div className="py-5 lg:px-10 lg:pt-0">
             <h4 className="text-[15px] tracking-[0.18em] text-[#E09428] mb-8 font-[Plus_Jakarta_Sans]">
               LEASING
             </h4>
@@ -182,7 +182,7 @@ export default function Footer() {
           </div>
 
           {/* COLUMN 4 */}
-          <div className="lg:mt-0">
+          <div className="py-5 lg:pt-0">
             <h4 className="text-[15px] tracking-[0.18em] text-[#E09428] mb-8 font-[Plus_Jakarta_Sans]">
               LOCATION
             </h4>
