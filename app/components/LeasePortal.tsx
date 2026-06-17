@@ -89,7 +89,7 @@ export default function LeasePortal() {
   };
 
   const formattedSelectedDate = selectedDate
-    ? `${monthNames[selectedDate.getMonth()].slice(0, 3)} ${(selectedDate.getDate(), selectedDate.getFullYear())}`
+    ? `${monthNames[selectedDate.getMonth()].slice(0, 3)} ${selectedDate.getDate()}, ${selectedDate.getFullYear()}`
     : "Select a date";
 
   const unitCountLabel =
