@@ -252,7 +252,7 @@ export default function LeasePortal() {
       {/* Sheet */}
       <div className="relative rounded-t-[24px] bg-[rgb(250,250,248)] shadow-[0_-8px_40px_rgba(0,0,0,0.2)] max-h-[85svh] flex flex-col">
         {/* Handle + header */}
-        <div className="flex items-center justify-between px-5 pt-4 pb-3 border-b border-[rgba(30,56,114,0.08)] shrink-0">
+        <div className="flex items-center justify-between px-5 pt-5 pb-3 border-b border-[rgba(30,56,114,0.08)] shrink-0">
           <div className="w-10 h-1 rounded-full bg-[rgba(30,56,114,0.15)] absolute top-2.5 left-1/2 -translate-x-1/2" />
           <span className="font-[Instrument_Serif] text-[18px] text-[#2d3230] mt-2">
             {title}
@@ -409,7 +409,7 @@ export default function LeasePortal() {
           </div>
 
           {/* Unit Type */}
-          <div className="relative min-w-[220px] border-r border-[rgba(30,56,114,0.1)] px-6 py-[18px]">
+          <div className="relative min-w-[220px] border-r border-[rgba(30,56,114,0.1)] px-6 py-[20px]">
             <button
               type="button"
               onClick={() => {
@@ -447,7 +447,7 @@ export default function LeasePortal() {
           </div>
 
           {/* Pet Friendly */}
-          <div className="flex flex-1 min-w-[180px] flex-col justify-center px-6 py-[18px]">
+          <div className="flex flex-1 min-w-[180px] flex-col justify-center px-6 py-[20px]">
             <div className="mb-1 flex items-center gap-1 font-[Plus_Jakarta_Sans] text-[10px] font-bold uppercase tracking-[0.14em] text-[#5a6260]">
               <PawPrint size={11} className="text-[#1e3872]" />
               Pet Friendly
@@ -470,7 +470,7 @@ export default function LeasePortal() {
           </div>
 
           {/* CTA */}
-          <div className="flex shrink-0 items-center border-l border-[rgba(30,56,114,0.1)] px-4 py-[12px]">
+          <div className="flex shrink-0 items-center border-l border-[rgba(30,56,114,0.1)] px-4 py-[20px]">
             <Link
               href="/#unit"
               onClick={() => setChecked(true)}
