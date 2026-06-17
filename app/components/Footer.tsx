@@ -182,7 +182,7 @@ export default function Footer() {
           </div>
 
           {/* COLUMN 4 */}
-          <div className="mt-14 lg:mt-0">
+          <div className="lg:mt-0">
             <h4 className="text-[15px] tracking-[0.18em] text-[#E09428] mb-8 font-[Plus_Jakarta_Sans]">
               LOCATION
             </h4>
