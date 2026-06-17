@@ -207,7 +207,7 @@ export default function Home() {
       </section>
 
       {/* ================= LEASE PORTAL ================= */}
-      <div className="relative z-30 -mt-10 -mb-16 px-6 xs:px-6 sm:px-6 md:px-30 lg:px-60  xl:px-85 xxl:px-80">
+      <div className="relative z-30 -mt-10 -mb-16 px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto">
         <div className="max-w-[1920px] mx-auto">
           <LeasePortal />
         </div>
@@ -216,7 +216,7 @@ export default function Home() {
       {/* ================= UNIT OVERVIEW ================= */}
       <section
         id="unit"
-        className="bg-[#f5f2ee] px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-autopt-24 sm:pt-28 md:pt-32 pb-10 sm:pb-12 md:pb-16 overflow-x-hidden"
+        className="bg-[#f5f2ee] px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto pt-24 sm:pt-28 md:pt-32 pb-10 sm:pb-12 md:pb-16 overflow-x-hidden"
       >
         <div className="max-w-[1920px] mx-auto">
           {/* TOP TEXT ROW */}

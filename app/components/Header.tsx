@@ -31,7 +31,7 @@ export default function Header({ showTopBar }: HeaderProps) {
       }`}
     >
       <div className="border-b border-gray-200/50 bg-white/90 backdrop-blur-md">
-        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 sm:px-6 mx-auto">
+        <div className="mx-auto flex h-16 max-w-7xl items-center justify-between px-6 xs:px-6 sm:px-6  xxl:px-80 mx-auto">
           {/* Logo */}
           <Link
             href="/"
