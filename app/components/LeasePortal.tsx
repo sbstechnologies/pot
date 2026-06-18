@@ -265,7 +265,7 @@ export default function LeasePortal() {
           </button>
         </div>
         {/* Scrollable content */}
-        <div className="overflow-y-auto px-5 py-4 flex-1">{children}</div>
+        <div className="overflow-y-auto px-4 py-4 flex-1">{children}</div>
       </div>
     </div>
   );
@@ -339,7 +339,7 @@ export default function LeasePortal() {
             </button>
 
             {/* Check Now */}
-            <div className="flex items-center justify-center px-4 py-3">
+            <div className="flex items-center justify-center px-4 py-4">
               <button
                 type="button"
                 onClick={() => setChecked(true)}
@@ -377,7 +377,7 @@ export default function LeasePortal() {
       <div className="hidden md:block max-w-[1920px] mx-auto">
         <div className="relative flex flex-col lg:flex-row lg:items-stretch rounded-[20px] border border-[rgba(30,56,114,0.18)] bg-[rgba(245,242,237,0.97)] backdrop-blur-[28px] shadow-[0_32px_80px_rgba(0,0,0,0.3),0_8px_24px_rgba(0,0,0,0.14),inset_0_1px_0_rgba(255,255,255,0.45)]">
           {/* Move-in Date */}
-          <div className="relative flex-[1.5] min-w-0 px-8 py-5 border-r border-[rgba(30,56,114,0.1)]">
+          <div className="relative flex-[1.5] min-w-0 px-8 py-[30px] border-r border-[rgba(30,56,114,0.1)]">
             <button
               type="button"
               onClick={() => {
@@ -413,7 +413,7 @@ export default function LeasePortal() {
           </div>
 
           {/* Unit Type */}
-          <div className="relative min-w-[220px] border-r border-[rgba(30,56,114,0.1)] px-6 py-[20px]">
+          <div className="relative min-w-[220px] border-r border-[rgba(30,56,114,0.1)] px-6 py-[30px]">
             <button
               type="button"
               onClick={() => {
@@ -451,7 +451,7 @@ export default function LeasePortal() {
           </div>
 
           {/* Pet Friendly */}
-          <div className="flex flex-1 min-w-[180px] flex-col justify-center px-6 py-[20px]">
+          <div className="flex flex-1 min-w-[220px] flex-col justify-center px-6 py-[20px]">
             <div className="mb-1 flex items-center gap-1 font-[Plus_Jakarta_Sans] text-[10px] font-bold uppercase tracking-[0.14em] text-[#5a6260]">
               <PawPrint size={11} className="text-[#1e3872]" />
               Pet Friendly
@@ -474,7 +474,7 @@ export default function LeasePortal() {
           </div>
 
           {/* CTA */}
-          <div className="flex-[0.9] min-w-0 flex items-center justify-center px-8 py-5">
+          <div className="flex-[0.9] min-w-0 flex items-center justify-center px-8 py-[30px]">
             <Link
               href="/#unit"
               onClick={() => setChecked(true)}
