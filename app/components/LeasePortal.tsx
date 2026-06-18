@@ -375,9 +375,9 @@ export default function LeasePortal() {
 
       {/* ── DESKTOP LAYOUT (md+) ─────────────────────────────────────────── */}
       <div className="hidden md:block max-w-[1920px] mx-auto">
-        <div className="relative flex flex-col lg:flex-row items-stretch rounded-[20px] border border-[rgba(30,56,114,0.18)] bg-[rgba(245,242,237,0.97)] backdrop-blur-[28px] shadow-[0_32px_80px_rgba(0,0,0,0.3),0_8px_24px_rgba(0,0,0,0.14),inset_0_1px_0_rgba(255,255,255,0.45)]">
+        <div className="relative flex flex-col lg:flex-row lg:items-stretch rounded-[20px] border border-[rgba(30,56,114,0.18)] bg-[rgba(245,242,237,0.97)] backdrop-blur-[28px] shadow-[0_32px_80px_rgba(0,0,0,0.3),0_8px_24px_rgba(0,0,0,0.14),inset_0_1px_0_rgba(255,255,255,0.45)]">
           {/* Move-in Date */}
-          <div className="flex items-center justify-center px-4 py-4 lg:border-l border-[rgba(30,56,114,0.1)]">
+          <div className="relative flex-[1.5] min-w-0 px-8 py-5 border-r border-[rgba(30,56,114,0.1)]">
             <button
               type="button"
               onClick={() => {
@@ -390,13 +390,17 @@ export default function LeasePortal() {
                 <CalendarDays size={11} className="text-[#1e3872]" />
                 Move-in Date
               </div>
+
               <div className="flex items-center justify-between gap-2">
                 <span className="truncate font-[Instrument_Serif] text-[17px] tracking-[-0.015em] text-[rgba(45,50,48,0.72)]">
                   {formattedSelectedDate}
                 </span>
+
                 <ChevronDown
                   size={13}
-                  className={`shrink-0 text-[#5a6260] transition-transform duration-200 ${showDatePicker ? "rotate-180" : ""}`}
+                  className={`shrink-0 text-[#5a6260] transition-transform duration-200 ${
+                    showDatePicker ? "rotate-180" : ""
+                  }`}
                 />
               </div>
             </button>
@@ -470,20 +474,21 @@ export default function LeasePortal() {
           </div>
 
           {/* CTA */}
-          <div className="flex shrink-0 items-center border-l border-[rgba(30,56,114,0.1)] px-4 py-[20px]">
+          <div className="flex-[0.9] min-w-0 flex items-center justify-center px-8 py-5">
             <Link
               href="/#unit"
               onClick={() => setChecked(true)}
-              className="flex min-w-[160px] items-center justify-center gap-[9px] whitespace-nowrap rounded-[14px] bg-[#162b5e] px-[30px] py-[14px] font-[Plus_Jakarta_Sans] text-[14px] font-bold tracking-[0.01em] text-[#f5f2ed] shadow-[0_2px_16px_rgba(30,56,114,0.38)] transition hover:bg-[#0c2457]"
+              className="flex w-full max-w-[260px] items-center justify-center gap-[9px] rounded-[14px] bg-[#162b5e] px-8 py-[14px] font-[Plus_Jakarta_Sans] text-[14px] font-bold tracking-[0.01em] text-[#f5f2ed] shadow-[0_2px_16px_rgba(30,56,114,0.38)] transition hover:bg-[#0c2457]"
             >
               {checked ? (
                 <>
-                  <CircleCheck size={15} />{" "}
+                  <CircleCheck size={15} />
                   {leasePortalConfig.labels.homesFound}
                 </>
               ) : (
                 <>
-                  <Search size={15} /> {leasePortalConfig.labels.checkNow}
+                  <Search size={15} />
+                  {leasePortalConfig.labels.checkNow}
                 </>
               )}
             </Link>
