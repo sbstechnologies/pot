@@ -805,16 +805,33 @@ export default function Home() {
                 return (
                   <div
                     key={item.title}
-                    className="w-full min-h-[80px] sm:min-h-[80px] md:min-h-[80px] lg:min-h-[80px] xl:min-h-[80px]  bg-[#F8F5EE] rounded-xl sm:rounded-2xl px-3 sm:px-4 md:px-5 py-3 sm:py-4 flex items-center justify-between border border-[#E6DED2] shadow-[0_2px_10px_rgba(0,0,0,0.03)]"
+                    className="group w-full min-h-[80px] sm:min-h-[80px] md:min-h-[80px] lg:min-h-[80px] xl:min-h-[80px]
+        bg-[#F8F5EE] rounded-xl sm:rounded-2xl px-3 sm:px-4 md:px-5 py-3 sm:py-4
+        flex items-center justify-between border border-[#E6DED2]
+        shadow-[0_2px_10px_rgba(0,0,0,0.03)]
+        transform transition-all duration-300 ease-out
+        hover:-translate-y-2 hover:bg-white
+        hover:border-[#d8cbb7]
+        hover:shadow-[0_12px_30px_rgba(30,56,114,0.12)]"
                   >
                     {/* Left */}
                     <div className="flex items-center gap-2 sm:gap-3 md:gap-4 min-w-0 flex-1">
-                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#EEF1F7] border border-[#DCE3EF] flex items-center justify-center text-lg sm:text-xl shrink-0">
+                      <div
+                        className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl
+            bg-[#EEF1F7] border border-[#DCE3EF]
+            flex items-center justify-center text-lg sm:text-xl shrink-0
+            transition-all duration-300
+            group-hover:scale-110 group-hover:rotate-3"
+                      >
                         {item.icon}
                       </div>
 
                       <div className="min-w-0">
-                        <h3 className="font-bold text-[14px] sm:text-[14px] md:text-[14px] text-[#2d3230] truncate">
+                        <h3
+                          className="font-bold text-[14px] sm:text-[14px] md:text-[14px]
+              text-[#2d3230] truncate transition-colors duration-300
+              group-hover:text-[#1e3872]"
+                        >
                           {item.title}
                         </h3>
 
@@ -827,7 +844,7 @@ export default function Home() {
                     {/* Right */}
                     <div className="ml-2 sm:ml-3 md:ml-4 shrink-0 flex flex-col items-end min-w-[90px] sm:min-w-[110px]">
                       <span
-                        className={`inline-flex items-center px-2 py-1 sm:px-3 sm:py-1.5 rounded-full text-[10px] sm:text-[8px] md:text-[12px] font-bold border whitespace-nowrap ${
+                        className={`inline-flex items-center px-2 py-1 sm:px-3 sm:py-1.5 rounded-full text-[10px] sm:text-[8px] md:text-[12px] font-bold border whitespace-nowrap transition-all duration-300 group-hover:scale-105 ${
                           badgeStyles[item.theme]
                         }`}
                       >
