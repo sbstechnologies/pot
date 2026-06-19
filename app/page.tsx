@@ -25,6 +25,7 @@ import {
   Shirt,
   Mail,
 } from "lucide-react";
+
 import {
   images,
   homePageConfig,
@@ -35,6 +36,7 @@ import {
   type PreviewCategory,
   type AmenityCategory,
 } from "@/app/config/content";
+
 import FooterLegalBar from "./components/FooterLegalBar";
 import ComplianceNotice from "./components/ComplianceNotice";
 
@@ -752,7 +754,7 @@ export default function Home() {
       {/* ================= LOCATION INTRO ================= */}
       <section
         id="neighborhood"
-        className="bg-[#f1eee9]  px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto py-12 sm:py-14 md:py-20"
+        className="bg-[#f1eee9]  px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto py-5"
       >
         <div className="max-w-[1920px] mx-auto grid md:grid-cols-2 gap-8 sm:gap-10 items-center">
           <div>
@@ -764,7 +766,7 @@ export default function Home() {
               With the Location.
             </h2>
           </div>
-          <p className="font-[Plus_Jakarta_Sans] text-sm md:text-base text-[#5a6260] leading-relaxed max-w-xl">
+          <p className="font-[Plus_Jakarta_Sans] text-md md:text-base text-[#5a6260] leading-relaxed max-w-xl">
             Parks on Taylor is literally across the street from Fairway Park and
             its beloved Splash Pad — and just 5 minutes from Sherman Town
             Center's restaurants, retail, and entertainment. The address sells
@@ -774,248 +776,86 @@ export default function Home() {
       </section>
 
       {/* ================= LOCATION MAP + DESTINATIONS ================= */}
-      <section className="bg-[#f1eee9] px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-autopb-14 sm:pb-16">
-        <div className="max-w-[1920px] mx-auto grid md:grid-cols-2 gap-6 sm:gap-8 items-start">
+      <section className="bg-[#f1eee9] px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto">
+        <div className="max-w-[1920px] mx-auto grid grid-cols-1 xl:grid-cols-2 gap-6 lg:gap-8 items-start">
           {/* MAP */}
-          <div className="relative h-[280px] sm:h-[350px] md:h-[520px] rounded-2xl sm:rounded-3xl overflow-hidden border bg-[#f3efe8]">
-            <div className="absolute inset-0">
-              <iframe
-                title="Parks on Taylor Location Map"
-                src="https://www.google.com/maps?q=1200%20West%20Taylor%20Street%2C%20Sherman%2C%20TX%2075092&output=embed"
-                className="h-full w-full border-0"
-                loading="lazy"
-                referrerPolicy="no-referrer-when-downgrade"
-                allowFullScreen
-              />
-              <div className="absolute inset-0 bg-[#f5f2ee]/20 pointer-events-none" />
-            </div>
-            <div className="absolute right-4 sm:right-6 top-4 sm:top-6 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white flex items-center justify-center shadow">
-              <span className="text-xs font-semibold text-[#1e3872]">N</span>
-            </div>
-            <div className="absolute bottom-4 sm:bottom-6 left-4 sm:left-6 text-[11px] text-[#5a6260]">
-              <div className="flex mb-1">
-                <div className="w-10 sm:w-14 h-2 bg-[#1e3872]" />
-                <div className="w-6 sm:w-8 h-2 bg-[#c8d0db]" />
-              </div>
-              <div className="flex gap-4 sm:gap-6">
-                <span>0</span>
-                <span>0.5</span>
-                <span>1 mi</span>
-              </div>
-            </div>
+          <div className="relative h-[260px] sm:h-[350px] lg:h-[450px] xl:h-[520px] rounded-2xl sm:rounded-3xl overflow-hidden border bg-[#f3efe8]">
+            <iframe
+              title="Parks on Taylor Location Map"
+              src="https://www.google.com/maps?q=1200%20West%20Taylor%20Street%2C%20Sherman%2C%20TX%2075092&output=embed"
+              className="h-full w-full border-0"
+              loading="lazy"
+            />
           </div>
 
           {/* DESTINATIONS */}
-          <div className="space-y-5 sm:space-y-6">
-            <div>
-              <p className="font-[Plus_Jakarta_Sans] text-xs font-bold tracking-[2px] uppercase text-[#7b7f7d] mb-4">
-                Key Destinations
-              </p>
-              <div className="space-y-3">
-                {homePageConfig.keyDestinations.map((item) => {
-                  const isFairwayPark = item.title
-                    .toLowerCase()
-                    .includes("fairway");
-                  const isTownCenter = item.title
-                    .toLowerCase()
-                    .includes("town center");
-                  const isHomeBase = item.title
-                    .toLowerCase()
-                    .includes("taylor");
-                  const isFeatured = isFairwayPark || isTownCenter;
+          <div className="py-2">
+            <p className="font-[Plus_Jakarta_Sans] text-xs sm:text-base font-bold tracking-[2px] uppercase text-[#2d3230]">
+              Key Destinations
+            </p>
 
-                  return (
-                    <div
-                      key={item.title}
-                      className="bg-[#FDFCF0]/40 rounded-xl sm:rounded-2xl p-3 sm:p-[14px_18px] flex items-center justify-between border border-[#e3dfd8] shadow-[0_2px_8px_rgba(0,0,0,0.01)]"
-                    >
-                      <div className="flex items-center gap-3 min-w-0">
-                        {isFairwayPark ? (
-                          <div className="w-[44px] h-[44px] sm:w-[52px] sm:h-[52px] rounded-[14px] sm:rounded-[18px] overflow-hidden shrink-0 border border-black/[0.04]">
-                            <img
-                              src="https://images.unsplash.com/photo-1696359668923-75dc8b0ee35f?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200"
-                              alt={item.title}
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                        ) : isTownCenter ? (
-                          <div className="w-[44px] h-[44px] sm:w-[52px] sm:h-[52px] rounded-[14px] sm:rounded-[18px] overflow-hidden shrink-0 border border-black/[0.04]">
-                            <img
-                              src="https://images.unsplash.com/photo-1631330200636-dea9b13ca2f1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&q=80&w=200"
-                              alt={item.title}
-                              className="w-full h-full object-cover"
-                            />
-                          </div>
-                        ) : isHomeBase ? (
-                          <div className="w-[44px] h-[44px] sm:w-[52px] sm:h-[52px] bg-[#dbe2ef]/50 border border-[#1e3872]/15 rounded-[14px] sm:rounded-[18px] flex items-center justify-center shrink-0 text-[#1e3872]">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="18"
-                              height="18"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <path d="m3 9 9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
-                              <polyline points="9 22 9 12 15 12 15 22" />
-                            </svg>
-                          </div>
-                        ) : (
-                          <div className="w-[44px] h-[44px] sm:w-[52px] sm:h-[52px] bg-[#dbe2ef]/50 border border-[#1e3872]/15 rounded-[14px] sm:rounded-[18px] flex items-center justify-center shrink-0 text-[#1e3872]">
-                            <svg
-                              xmlns="http://www.w3.org/2000/svg"
-                              width="16"
-                              height="16"
-                              viewBox="0 0 24 24"
-                              fill="none"
-                              stroke="currentColor"
-                              strokeWidth="2.5"
-                              strokeLinecap="round"
-                              strokeLinejoin="round"
-                            >
-                              <path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4Z" />
-                              <path d="M3 6h18" />
-                              <path d="M16 10a4 4 0 0 1-8 0" />
-                            </svg>
-                          </div>
-                        )}
-                        <div className="min-w-0">
-                          <div className="flex items-center gap-2 flex-wrap">
-                            <p className="font-[Plus_Jakarta_Sans] font-bold text-[14px] sm:text-[16px] text-[#1a211f] tracking-tight leading-tight">
-                              {item.title}
-                            </p>
-                            {isFeatured && (
-                              <span
-                                className={`font-[Plus_Jakarta_Sans] text-[9px] font-bold tracking-wider uppercase px-2 py-0.5 rounded-full border ${
-                                  isTownCenter
-                                    ? "text-[#e09428] bg-[#fff6ed] border-[#e09428]/20"
-                                    : "text-[#2b7be0] bg-[#f0f7ff] border-[#2b7be0]/20"
-                                }`}
-                              >
-                                Featured
-                              </span>
-                            )}
-                          </div>
-                          <p className="font-[Plus_Jakarta_Sans] text-xs text-[#7b7f7d] mt-0.5">
-                            {item.subtitle}
-                          </p>
-                        </div>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-3 sm:gap-4 py-4">
+              {homePageConfig.keyDestinations.map((item) => {
+                const badgeStyles: Record<string, string> = {
+                  gray: "bg-[#EEF1F7] text-[#1e3872] border-[#DCE3EF]",
+                  blue: "bg-[#E7EDF8] text-[#244A92] border-[#DCE3EF]",
+                  orange: "bg-[#FFF5E8] text-[#B9771B] border-[#F4E3C3]",
+                };
+
+                return (
+                  <div
+                    key={item.title}
+                    className="w-full min-h-[90px] sm:min-h-[100px] md:min-h-[108px] bg-[#F8F5EE] rounded-xl sm:rounded-2xl px-3 sm:px-4 md:px-5 py-3 sm:py-4 flex items-center justify-between border border-[#E6DED2] shadow-[0_2px_10px_rgba(0,0,0,0.03)]"
+                  >
+                    {/* Left */}
+                    <div className="flex items-center gap-2 sm:gap-3 md:gap-4 min-w-0 flex-1">
+                      <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-xl sm:rounded-2xl bg-[#EEF1F7] border border-[#DCE3EF] flex items-center justify-center text-lg sm:text-xl shrink-0">
+                        {item.icon}
                       </div>
 
-                      <div className="text-right shrink-0 ml-2 sm:ml-3">
-                        <span
-                          className={`font-[Plus_Jakarta_Sans] text-[11px] sm:text-xs font-medium px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-full whitespace-nowrap inline-flex items-center gap-1 border ${
-                            isHomeBase
-                              ? "bg-[#dbe2ef] text-[#1e3872] border-[#1e3872]/10"
-                              : isFairwayPark
-                                ? "bg-[#e3edfa] text-[#2b7be0] border-[#2b7be0]/10"
-                                : item.title.toLowerCase().includes("commons")
-                                  ? "bg-[#e2eaf4] text-[#2a5a8f] border-[#2a5a8f]/10"
-                                  : "bg-[#fef4e6] text-[#e09428] border-[#e09428]/10"
-                          }`}
-                        >
-                          {isHomeBase && (
-                            <svg
-                              className="w-3 h-3 shrink-0"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              strokeWidth="2.5"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M2.25 12l8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25"
-                              />
-                            </svg>
-                          )}
-                          {isFairwayPark && (
-                            <svg
-                              className="w-3 h-3 shrink-0"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              strokeWidth="2.5"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M15 10.5a3 3 0 11-6 0 3 3 0 016 0z"
-                              />
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M19.5 10.5c0 7.142-7.5 11.25-7.5 11.25S4.5 17.642 4.5 10.5a7.5 7.5 0 1115 0z"
-                              />
-                            </svg>
-                          )}
-                          {item.title.toLowerCase().includes("commons") && (
-                            <svg
-                              className="w-3 h-3 shrink-0"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              strokeWidth="2.5"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
-                              />
-                            </svg>
-                          )}
-                          {isTownCenter && (
-                            <svg
-                              className="w-3 h-3 shrink-0"
-                              fill="none"
-                              stroke="currentColor"
-                              viewBox="0 0 24 24"
-                              strokeWidth="2.5"
-                            >
-                              <path
-                                strokeLinecap="round"
-                                strokeLinejoin="round"
-                                d="M6 12L3.269 3.126A59.768 59.768 0 0121.485 12 59.77 59.77 0 013.27 20.876L5.999 12zm0 0h7.5"
-                              />
-                            </svg>
-                          )}
-                          {item.badge}
-                        </span>
-                        {isFairwayPark && (
-                          <p className="hidden md:block font-[Plus_Jakarta_Sans] text-[11px] text-[#7b7f7d] mt-1 tracking-tight">
-                            Right Across the Street
-                          </p>
-                        )}
-                        {item.title.toLowerCase().includes("commons") && (
-                          <p className="hidden md:block font-[Plus_Jakarta_Sans] text-[11px] text-[#7b7f7d] mt-1 tracking-tight">
-                            0.9 mi
-                          </p>
-                        )}
-                        {isTownCenter && (
-                          <p className="hidden md:block font-[Plus_Jakarta_Sans] text-[11px] text-[#7b7f7d] mt-1 tracking-tight">
-                            1.4 mi
-                          </p>
-                        )}
+                      <div className="min-w-0">
+                        <h3 className="font-bold text-[14px] sm:text-[16px] md:text-[18px] text-[#2d3230] truncate">
+                          {item.title}
+                        </h3>
+
+                        <p className="font-medium text-[11px] sm:text-[12px] md:text-[14px] text-[#5a6260] truncate mt-1">
+                          {item.subtitle}
+                        </p>
                       </div>
                     </div>
-                  );
-                })}
-              </div>
+
+                    {/* Right */}
+                    <div className="ml-2 sm:ml-3 md:ml-4 shrink-0 flex flex-col items-end min-w-[90px] sm:min-w-[110px]">
+                      <span
+                        className={`inline-flex items-center px-2 py-1 sm:px-3 sm:py-1.5 rounded-full text-[10px] sm:text-[11px] md:text-[12px] font-bold border whitespace-nowrap ${
+                          badgeStyles[item.theme]
+                        }`}
+                      >
+                        {item.badge}
+                      </span>
+
+                      {item.distance && (
+                        <p className="font-semibold text-[10px] sm:text-[11px] md:text-[13px] text-[#2d3230] mt-1 sm:mt-2">
+                          {item.distance}
+                        </p>
+                      )}
+                    </div>
+                  </div>
+                );
+              })}
             </div>
 
-            {/* NEARBY CHIPS */}
-            <div className="pt-4 sm:pt-5 border-t border-[#e3dfd8]">
-              <p className="font-[Plus_Jakarta_Sans] text-xs tracking-[1.5px] font-bold uppercase text-[#5a6260] mb-3">
-                Nearby Employers &amp; Schools
+            {/* Nearby */}
+            <div className="pt-4 border-t border-[#e3dfd8]   py-4">
+              <p className="text-xs font-bold uppercase text-[#5a6260] mb-3 tracking-[1.5px]">
+                Nearby Employers & Schools
               </p>
+
               <div className="flex flex-wrap gap-2">
                 {homePageConfig.nearbyPlaces.map((item) => (
                   <span
                     key={item}
-                    className="text-[12px] font-semibold px-[13px] sm:px-[15px] py-1.5 sm:py-2 rounded-full bg-[#e8ecf4] text-[#1e3872] font-[Plus_Jakarta_Sans] inline-block border border-black/[0.01]"
+                    className="text-[11px] sm:text-[12px] font-semibold px-3 sm:px-4 py-1.5 sm:py-2 rounded-full bg-[#e8ecf4] text-[#1e3872]"
                   >
                     {item}
                   </span>
@@ -1023,8 +863,7 @@ export default function Home() {
               </div>
             </div>
 
-            {/* PET PILL */}
-            <div className="pt-1">
+            <div className="pt-1 py-4">
               <span className="font-[Plus_Jakarta_Sans] inline-flex items-center gap-2 text-xs font-bold bg-[#fdf3e7] text-[#d9871e] px-4 py-2.5 rounded-full border border-[#e09428]/15">
                 <svg
                   className="w-3.5 h-3.5 shrink-0"
@@ -1048,7 +887,6 @@ export default function Home() {
           </div>
         </div>
       </section>
-
       {/* ================= RESIDENT VOICES ================= */}
       <section
         id="residents"
