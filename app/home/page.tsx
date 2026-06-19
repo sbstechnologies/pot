@@ -777,7 +777,7 @@ export default function Home() {
 
       {/* ================= LOCATION MAP + DESTINATIONS ================= */}
       <section className="bg-[#f1eee9] px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto">
-        <div className="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-2  xxl:grid-cols-2 gap-6 lg:gap-8 items-start">
+        <div className="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-1  xxl:grid-cols-2 gap-6 lg:gap-8 items-start">
           {/* MAP */}
           <div className="relative h-[260px] sm:h-[350px] lg:h-[450px] xl:h-[520px] rounded-2xl sm:rounded-3xl overflow-hidden border bg-[#f3efe8]">
             <iframe
@@ -805,7 +805,7 @@ export default function Home() {
                 return (
                   <div
                     key={item.title}
-                    className="w-full min-h-[90px] sm:min-h-[90px] md:min-h-[90px] bg-[#F8F5EE] rounded-xl sm:rounded-2xl px-3 sm:px-4 md:px-5 py-3 sm:py-4 flex items-center justify-between border border-[#E6DED2] shadow-[0_2px_10px_rgba(0,0,0,0.03)]"
+                    className="w-full min-h-[80px] sm:min-h-[80px] md:min-h-[80px] lg:min-h-[80px] xl:min-h-[80px]  bg-[#F8F5EE] rounded-xl sm:rounded-2xl px-3 sm:px-4 md:px-5 py-3 sm:py-4 flex items-center justify-between border border-[#E6DED2] shadow-[0_2px_10px_rgba(0,0,0,0.03)]"
                   >
                     {/* Left */}
                     <div className="flex items-center gap-2 sm:gap-3 md:gap-4 min-w-0 flex-1">
