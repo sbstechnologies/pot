@@ -3,13 +3,13 @@
 import Image from "next/image";
 import { useState, useEffect } from "react";
 
-import Footer from "./components/Footer";
-import LeasePortal from "./components/LeasePortal";
+import Footer from "@/app/components/Footer";
+import LeasePortal from "@/app/components/LeasePortal";
 import { articles } from "@/app/config/content";
 
-import PromoCardWidget from "./components/PromoCardWidget";
-import Header from "./components/Header";
-import HeaderTop from "./components/HeaderTop";
+import PromoCardWidget from "@/app/components/PromoCardWidget";
+import Header from "@/app/components/Header";
+import HeaderTop from "@/app/components/HeaderTop";
 import { Instrument_Serif } from "next/font/google";
 import { Plus_Jakarta_Sans } from "next/font/google";
 
@@ -37,8 +37,8 @@ import {
   type AmenityCategory,
 } from "@/app/config/content";
 
-import FooterLegalBar from "./components/FooterLegalBar";
-import ComplianceNotice from "./components/ComplianceNotice";
+import FooterLegalBar from "@/app/components/FooterLegalBar";
+import ComplianceNotice from "@/app/components/ComplianceNotice";
 
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
@@ -777,7 +777,7 @@ export default function Home() {
 
       {/* ================= LOCATION MAP + DESTINATIONS ================= */}
       <section className="bg-[#f1eee9] px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto">
-        <div className="max-w-[1920px] mx-auto grid grid-cols-1 xl:grid-cols-2 gap-6 lg:gap-8 items-start">
+        <div className="max-w-[1920px] mx-auto grid grid-cols-1 lg:grid-cols-1 xl:grid-cols-2  xxl:grid-cols-2 gap-6 lg:gap-8 items-start">
           {/* MAP */}
           <div className="relative h-[260px] sm:h-[350px] lg:h-[450px] xl:h-[520px] rounded-2xl sm:rounded-3xl overflow-hidden border bg-[#f3efe8]">
             <iframe
@@ -805,7 +805,7 @@ export default function Home() {
                 return (
                   <div
                     key={item.title}
-                    className="w-full min-h-[90px] sm:min-h-[100px] md:min-h-[108px] bg-[#F8F5EE] rounded-xl sm:rounded-2xl px-3 sm:px-4 md:px-5 py-3 sm:py-4 flex items-center justify-between border border-[#E6DED2] shadow-[0_2px_10px_rgba(0,0,0,0.03)]"
+                    className="w-full min-h-[90px] sm:min-h-[90px] md:min-h-[90px] bg-[#F8F5EE] rounded-xl sm:rounded-2xl px-3 sm:px-4 md:px-5 py-3 sm:py-4 flex items-center justify-between border border-[#E6DED2] shadow-[0_2px_10px_rgba(0,0,0,0.03)]"
                   >
                     {/* Left */}
                     <div className="flex items-center gap-2 sm:gap-3 md:gap-4 min-w-0 flex-1">
@@ -814,11 +814,11 @@ export default function Home() {
                       </div>
 
                       <div className="min-w-0">
-                        <h3 className="font-bold text-[14px] sm:text-[16px] md:text-[18px] text-[#2d3230] truncate">
+                        <h3 className="font-bold text-[14px] sm:text-[14px] md:text-[14px] text-[#2d3230] truncate">
                           {item.title}
                         </h3>
 
-                        <p className="font-medium text-[11px] sm:text-[12px] md:text-[14px] text-[#5a6260] truncate mt-1">
+                        <p className="font-medium text-[11px] sm:text-[11px] md:text-[11px] text-[#5a6260] truncate mt-1">
                           {item.subtitle}
                         </p>
                       </div>
@@ -827,7 +827,7 @@ export default function Home() {
                     {/* Right */}
                     <div className="ml-2 sm:ml-3 md:ml-4 shrink-0 flex flex-col items-end min-w-[90px] sm:min-w-[110px]">
                       <span
-                        className={`inline-flex items-center px-2 py-1 sm:px-3 sm:py-1.5 rounded-full text-[10px] sm:text-[11px] md:text-[12px] font-bold border whitespace-nowrap ${
+                        className={`inline-flex items-center px-2 py-1 sm:px-3 sm:py-1.5 rounded-full text-[10px] sm:text-[8px] md:text-[12px] font-bold border whitespace-nowrap ${
                           badgeStyles[item.theme]
                         }`}
                       >
@@ -835,7 +835,7 @@ export default function Home() {
                       </span>
 
                       {item.distance && (
-                        <p className="font-semibold text-[10px] sm:text-[11px] md:text-[13px] text-[#2d3230] mt-1 sm:mt-2">
+                        <p className="font-semibold text-[10px] sm:text-[10px] md:text-[10px] text-[#2d3230] mt-1 sm:mt-2">
                           {item.distance}
                         </p>
                       )}
