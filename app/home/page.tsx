@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import Link from "next/link";
 import { useState, useEffect } from "react";
 
 import Footer from "@/app/components/Footer";
@@ -1249,9 +1250,14 @@ export default function Home() {
                 </svg>
               </button>
               <div className="mx-1 sm:mx-2 h-5 w-px bg-[#D6D0C8]" />
-              <button className="hidden sm:flex items-center gap-1 text-[13px] font-bold text-[#1e3872] hover:underline bg-none border-none cursor-pointer tracking-wide">
-                View All{" "}
+
+              <Link
+                href="/blog/"
+                className="group hidden sm:flex items-center gap-1 text-[13px] font-bold text-[#1e3872] tracking-wide transition-all duration-300 hover:text-[#152750]"
+              >
+                View All
                 <svg
+                  className="transition-transform duration-300 group-hover:translate-x-1"
                   xmlns="http://www.w3.org/2000/svg"
                   width="12"
                   height="12"
@@ -1264,7 +1270,7 @@ export default function Home() {
                 >
                   <path d="m9 18 6-6-6-6" />
                 </svg>
-              </button>
+              </Link>
             </div>
           </div>
 

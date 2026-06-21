@@ -125,7 +125,7 @@ export async function POST(req: Request) {
       <td style="border-bottom:1px solid #e5e7eb;"> ${escapeHtml(phone || "Not Provided")} </td> 
       </tr>
        <tr>
-      <td style="font-weight:600;color:#6b7280;border-bottom:1px solid #e5e7eb;"> I AM A </td>
+      <td style="font-weight:600;color:#6b7280;border-bottom:1px solid #e5e7eb;"> I am a </td>
       <td style="border-bottom:1px solid #e5e7eb;"> ${escapeHtml(resident || "Future Resident")} </td> 
       </tr>
       <tr>
