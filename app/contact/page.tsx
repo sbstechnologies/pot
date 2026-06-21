@@ -83,15 +83,16 @@ export default function Contact() {
                       strokeWidth={2}
                     />
                   </div>
-
                   <div>
                     <p className="text-xs font-semibold tracking-[0.08em] text-[#6b7280]">
                       LEASING OFFICE
                     </p>
-                    <a href={`tel:${siteConfig.phone.replace(/\D/g, "")}`}>
-                      <p className="mt-1 cursor-pointer text-[17px] font-semibold text-[#163c84] hover:underline">
-                        {siteConfig.phone}
-                      </p>
+
+                    <a
+                      href={`tel:${siteConfig.phone.replace(/\D/g, "")}`}
+                      className="mt-1 inline-block cursor-pointer text-[17px] font-semibold text-[#163c84] transition-colors duration-300 hover:text-[#0f2f6b]  hover:translate-x-0.5"
+                    >
+                      {siteConfig.phone}
                     </a>
                   </div>
                 </div>
@@ -109,10 +110,12 @@ export default function Contact() {
                     <p className="text-xs font-semibold tracking-[0.08em] text-[#6b7280]">
                       LEASING INQUIRIES
                     </p>
-                    <a href={`mailto:${siteConfig.email}`}>
-                      <p className="mt-1 break-all text-[16px] font-semibold text-[#163c84]">
-                        {siteConfig.email}
-                      </p>
+
+                    <a
+                      href={`mailto:${siteConfig.email}`}
+                      className="mt-1 inline-block break-all text-[16px] font-semibold text-[#163c84] transition-colors duration-300 hover:text-[#0f2f6b]  hover:translate-x-0.5"
+                    >
+                      {siteConfig.email}
                     </a>
                   </div>
                 </div>

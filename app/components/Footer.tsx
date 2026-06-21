@@ -54,13 +54,23 @@ export default function Footer() {
               <div className="flex items-center gap-3">
                 <Phone size={17} className="text-[#76a1ff] shrink-0" />
 
-                <span>{siteConfig.phone}</span>
+                <a
+                  href={`tel:${siteConfig.phone.replace(/[^\d+]/g, "")}`}
+                  className="hover:text-white transition  hover:translate-x-0.5"
+                >
+                  {siteConfig.phone}
+                </a>
               </div>
 
               <div className="flex items-center gap-3">
                 <Mail size={17} className="text-[#76a1ff] shrink-0" />
 
-                <span>{siteConfig.email}</span>
+                <a
+                  href={`mailto:${siteConfig.email}`}
+                  className="hover:text-white transition break-all  hover:translate-x-0.5"
+                >
+                  {siteConfig.email}
+                </a>
               </div>
 
               <div className="flex items-start gap-3">
