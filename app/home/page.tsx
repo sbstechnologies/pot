@@ -545,7 +545,7 @@ export default function Home() {
                           {item}
                         </button>
                       ))
-                    : (["Pool", "Parking", "Park", "Laundry"] as const).map(
+                    : (["Pool", "Parking", "Dog Park", "Laundry"] as const).map(
                         (item) => (
                           <button
                             key={item}
@@ -584,8 +584,8 @@ export default function Home() {
                         ? images.alt13
                         : amenityCategory === "Parking"
                           ? images.alt14
-                          : amenityCategory === "Park"
-                            ? images.alt25
+                          : amenityCategory === "Dog Park"
+                            ? images.home25
                             : amenityCategory === "Laundry"
                               ? images.alt25
                               : images.alt19
