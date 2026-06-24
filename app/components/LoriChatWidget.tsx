@@ -204,7 +204,7 @@ export default function LoriChatWidget() {
                           : item.label === "Pets"
                             ? "🐾 Parks on Taylor is pet friendly — cats and dogs are welcome."
                             : item.label === "Parking"
-                              ? "🚗 Covered parking is available for residents."
+                              ? "🚗 Resident Parking is available for residents."
                               : "📝 Apply online anytime through the Parks on Taylor resident portal.",
                       )
                     }

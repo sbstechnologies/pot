@@ -53,7 +53,7 @@ export const images = {
   alt21: "Responsive apartment maintenance and exterior community view",
   alt22: "Parks on Taylor leasing office and management center",
   alt23: "Swimming pool and sundeck at Parks on Taylor apartments",
-  alt24: "Covered parking and apartment community exterior",
+  alt24: "Resident Parking and apartment community exterior",
   alt25: "Pet friendly dog park at Parks on Taylor apartments",
   alt26:
     "Luxury apartment leasing office and modern community exterior at Parks on Taylor",
@@ -113,7 +113,8 @@ export const images = {
   alt40: "Apartment building and parking area at Parks on Taylor",
   alt41: "Birds eye aerial view of Parks on Taylor apartment community",
   alt42: "Modern apartment living room interior with natural lighting",
-  alt43: "Luxury apartment kitchen with quartz countertops and modern cabinets",
+  alt43:
+    "Luxury apartment kitchen with Clean Finish Countertops and modern cabinets",
   alt44: "Open concept apartment living room at Parks on Taylor",
   alt45: "Apartment living area with spacious layout and premium finishes",
   alt46: "Modern apartment living room with floor to ceiling windows",
@@ -123,7 +124,7 @@ export const images = {
     "Poolside sundeck and lounge seating in Sherman Texas apartment community",
   alt50: "Community park entrance near Parks on Taylor apartments",
   alt51: "Covered resident parking area at Parks on Taylor",
-  alt52: "Apartment covered parking and exterior community view",
+  alt52: "Apartment Resident Parking and exterior community view",
   alt53: "Community entrance signage at Parks on Taylor apartments",
   alt54: "Private covered apartment balcony with outdoor seating",
   alt55: "Landscaped apartment courtyard with green spaces",
@@ -404,7 +405,7 @@ export const homePageConfig = {
       alt: images.alt23,
     },
     {
-      title: "Covered Parking",
+      title: "Resident Parking",
       tag: "RESERVED · COVERED",
       img: images.home24,
       alt: images.alt24,
@@ -722,7 +723,7 @@ export const floorPlans: FloorPlan[] = [
     available: "3 available",
     popular: false,
     tags: [
-      "Quartz Countertops",
+      "Clean Finish Countertops",
       "LVP Flooring",
       "9 ft Ceilings",
       "In-Unit W/D Connections",
@@ -744,7 +745,7 @@ export const floorPlans: FloorPlan[] = [
     available: "3 available",
     popular: true,
     tags: [
-      "Quartz Countertops",
+      "Clean Finish Countertops",
       "LVP Flooring",
       "9 ft Ceilings",
       "In-Unit W/D Connections",
@@ -766,7 +767,7 @@ export const floorPlans: FloorPlan[] = [
     available: "3 available",
     popular: false,
     tags: [
-      "Quartz Countertops",
+      "Clean Finish Countertops",
       "LVP Flooring",
       "9 ft Ceilings",
       "In-Unit W/D Connections",
@@ -788,7 +789,7 @@ export const floorPlans: FloorPlan[] = [
     available: "3 available",
     popular: false,
     tags: [
-      "Quartz Countertops",
+      "Clean Finish Countertops",
       "LVP Flooring",
       "9 ft Ceilings",
       "In-Unit W/D Connections",
@@ -810,7 +811,7 @@ export const floorPlans: FloorPlan[] = [
     available: "3 available",
     popular: true,
     tags: [
-      "Quartz Countertops",
+      "Clean Finish Countertops",
       "LVP Flooring",
       "9 ft Ceilings",
       "In-Unit W/D Connections",
@@ -832,7 +833,7 @@ export const floorPlans: FloorPlan[] = [
     available: "3 available",
     popular: true,
     tags: [
-      "Quartz Countertops",
+      "Clean Finish Countertops",
       "LVP Flooring",
       "9 ft Ceilings",
       "In-Unit W/D Connections",
@@ -899,7 +900,7 @@ export const gallery: GalleryItem[] = [
   },
   {
     src: images.gallery6,
-    name: "Modern Kitchen with Quartz Countertops",
+    name: "Modern Kitchen with Clean Finish Countertops",
     alt: images.alt43,
     category: "Interiors",
   },

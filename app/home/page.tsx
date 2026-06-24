@@ -676,7 +676,7 @@ export default function Home() {
             <div className="md:flex md:items-center">
               <p className="font-[Plus_Jakarta_Sans] text-[15px] sm:text-[16px] md:text-[19px] leading-[1.75] text-[#9faac0] max-w-[680px]">
                 Responsive maintenance and convenient on-site management are the
-                backbone of life here — backed by covered parking, two pools,
+                backbone of life here — backed by resident parking, two pools,
                 and a full appliance package to keep everyday living simple and
                 reliable.
               </p>
@@ -715,8 +715,8 @@ export default function Home() {
                         "Our leasing office is right here in the community with real people, real answers, and support available throughout the week."}
                       {item.title === "Swimming Pools" &&
                         "Two clean, well-maintained pools with a sundeck and relaxing seating areas to cool off and unwind after a long day."}
-                      {item.title === "Covered Parking" &&
-                        "Reserved covered parking helps protect your vehicle from harsh weather, heat, and everyday wear."}
+                      {item.title === "Resident Parking" &&
+                        "Reserved Resident Parking helps protect your vehicle from harsh weather, heat, and everyday wear."}
                       {item.title === "Dog Park" &&
                         "A dedicated fenced dog park gives pets plenty of space to run, play, and socialize close to home."}
                       {item.title === "On-Site Laundry" &&

@@ -407,7 +407,7 @@ function UnitDetailModal({
   const allImages = [...plan.interiorImages, plan.images[0]];
 
   const features = [
-    "Quartz Countertops",
+    "Clean Finish Countertops",
     "LVP Flooring",
     "9 ft Ceilings",
     "In-Unit W/D Connections",
