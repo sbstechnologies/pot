@@ -106,6 +106,7 @@ export const images = {
   gallery17: "/webp/gallery/25.webp",
   gallery18: "/webp/landscape/2.webp",
   gallery19: "/webp/gallery/28.webp",
+  gallery20: "/webp/gallery/30.webp",
 
   alt38:
     "Apartment building exterior at Parks on Taylor apartments in Sherman TX",
@@ -129,17 +130,18 @@ export const images = {
   alt54: "Private covered apartment balcony with outdoor seating",
   alt55: "Landscaped apartment courtyard with green spaces",
   alt56: "Neighborhood overview near Parks on Taylor apartments in Sherman TX",
+  alt57: "Fairview Park: Right Across Parks On Taylor",
 
   // BLOG PAGE
-  blog1: "/webp/landscape/11.webp",
-  blog2: "/webp/landscape/3.webp",
+  blog1: "/webp/blog/2.webp",
+  blog2: "/webp/blog/3.webp",
   blog3: "/webp/amenities/14.webp",
-  blog4: "/webp/landscape/1.webp",
-  blog5: "/webp/landscape/6.webp",
-  blog6: "/webp/amenities/5.webp",
+  blog4: "/webp/blog/5.webp",
+  blog5: "/webp/blog/6.webp",
+  blog6: "/webp/blog/1.webp",
   blog7: "/webp/amenities/14.webp",
 
-  alt57: "Scenic hiking trails and outdoor landscape near Sherman Texas",
+  alt63: "Scenic hiking trails and outdoor landscape near Sherman Texas",
   alt58: "Sherman Texas farmers market and local community shopping",
   alt59: "Modern coffee shop and remote work lifestyle near Parks on Taylor",
   alt60: "Art gallery and cultural attractions near Sherman Texas apartments",
@@ -678,7 +680,7 @@ export const interiorPhotos = {
 export const amenityPhotos = {
   Pool: images.home11,
   Parking: images.home21,
-  Park: images.home27,
+  "Dog Park": images.home25,
   Laundry: images.home13,
 } as const;
 
@@ -692,7 +694,7 @@ export type PreviewCategory =
   | "Kitchen"
   | "Bathroom";
 
-export type AmenityCategory = "Pool" | "Parking" | "Park" | "Laundry";
+export type AmenityCategory = "Pool" | "Parking" | "Dog Park" | "Laundry";
 
 //floor page
 export type FloorPlan = {
@@ -931,9 +933,10 @@ export const gallery: GalleryItem[] = [
     category: "Amenities",
   },
   {
-    src: images.gallery13,
-    name: "Community Park Entrance",
-    alt: images.alt50,
+    src: images.home25,
+    name: "Community Dog Park",
+    alt: images.home25,
+
     category: "Amenities",
   },
   {
@@ -944,7 +947,7 @@ export const gallery: GalleryItem[] = [
   },
   {
     src: images.gallery15,
-    name: "Covered Resident Parking #2",
+    name: "Resident Parking #2",
     alt: images.alt52,
     category: "Amenities",
   },
@@ -956,9 +959,9 @@ export const gallery: GalleryItem[] = [
     category: "Neighborhood",
   },
   {
-    src: images.gallery17,
-    name: "Community Park Area",
-    alt: images.alt54,
+    src: images.gallery20,
+    name: "Fairview Park: Right Across Parks On Taylor",
+    alt: images.alt57,
     category: "Neighborhood",
   },
   {
@@ -1107,7 +1110,7 @@ export const articles = [
     title: "The 7 Best Farm-to-Table Spots Near Sherman",
     description:
       "From field to fork — the freshest seasonal menus within a short drive of Taylor.",
-    image: "webp/amenities/5.webp",
+    image: "webp/blog/1.webp",
   },
   {
     id: 2,
@@ -1121,7 +1124,7 @@ export const articles = [
     title: "Hidden Trails at Eisenhower State Park",
     description:
       "Six routes that most visitors never find — ranked by scenery, difficulty, and weekend crowds.",
-    image: "webp/landscape/11.webp",
+    image: "webp/blog/2.webp",
   },
   {
     id: 3,
@@ -1135,7 +1138,7 @@ export const articles = [
     title: "Sherman Farmers Market: A Weekend Essential",
     description:
       "Every stall worth knowing at Central Texas's most beloved Saturday morning institution.",
-    image: "webp/landscape/3.webp",
+    image: "webp/blog/3.webp",
   },
   {
     id: 4,
@@ -1149,7 +1152,7 @@ export const articles = [
     title: "Best Coffee Spots to Work Remotely Near Taylor",
     description:
       "Reliable Wi-Fi, great espresso, and the right ambience for a productive morning.",
-    image: "webp/amenities/4.webp",
+    image: "webp/amenities/14.webp",
   },
   {
     id: 5,
@@ -1163,7 +1166,7 @@ export const articles = [
     title: "5 Architecture & Gallery Tours Worth the Drive",
     description:
       "Texas's creative corridor has world-class art closer than you might expect.",
-    image: "webp/landscape/1.webp",
+    image: "webp/blog/5.webp",
   },
   {
     id: 6,
@@ -1177,6 +1180,6 @@ export const articles = [
     title: "Sunset Views: Taylor's Most Instagrammable Spots",
     description:
       "Golden hour meets golden hour — where residents go for the best light in the city.",
-    image: "webp/landscape/6.webp",
+    image: "webp/blog/6.webp",
   },
 ];
