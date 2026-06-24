@@ -408,7 +408,7 @@ export const homePageConfig = {
     },
     {
       title: "Resident Parking",
-      tag: "RESERVED · COVERED",
+      tag: "ON-SITE · CONVENIENT",
       img: images.home24,
       alt: images.alt24,
     },
@@ -427,7 +427,6 @@ export const homePageConfig = {
   ],
 
   alsoIncluded: [
-    "Granite Countertops",
     "Ceiling Fans — Living Room & Bedrooms",
     "Intercom Entry",
     "Den / Home Office",
