@@ -1344,23 +1344,28 @@ export default function Home() {
                       <p className="text-[12px] sm:text-[13px] font-light leading-relaxed text-[#5A6260]/90 mb-4 sm:mb-5 line-clamp-2 min-h-[34px] sm:min-h-[38px]">
                         {article.description}
                       </p>
-                      <div className="flex items-center gap-1 text-[12px] font-bold text-[#1e3872] cursor-pointer hover:text-[#152750] transition-colors w-fit">
-                        <span>Read Article</span>
-                        <svg
-                          xmlns="http://www.w3.org/2000/svg"
-                          width="11"
-                          height="11"
-                          viewBox="0 0 24 24"
-                          fill="none"
-                          stroke="currentColor"
-                          strokeWidth="2.5"
-                          strokeLinecap="round"
-                          strokeLinejoin="round"
-                        >
-                          <path d="M5 12h14" />
-                          <path d="m12 5 7 7-7 7" />
-                        </svg>
-                      </div>
+                      <Link
+                        href="/blog/"
+                        className="group hidden sm:flex items-center gap-1 text-[13px] font-bold text-[#1e3872] tracking-wide transition-all duration-300 hover:text-[#152750]"
+                      >
+                        <div className="flex items-center gap-1 text-[12px] font-bold text-[#1e3872] cursor-pointer hover:text-[#152750] transition-colors w-fit">
+                          <span>Read Article</span>
+                          <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            width="11"
+                            height="11"
+                            viewBox="0 0 24 24"
+                            fill="none"
+                            stroke="currentColor"
+                            strokeWidth="2.5"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          >
+                            <path d="M5 12h14" />
+                            <path d="m12 5 7 7-7 7" />
+                          </svg>
+                        </div>
+                      </Link>
                     </div>
                   </article>
                 </div>
