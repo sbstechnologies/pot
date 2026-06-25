@@ -2,8 +2,8 @@
 
 import { useState } from "react";
 import { toast } from "react-hot-toast";
-import { siteConfig } from "../config/content";
-import ThankYouDialog from "./ThankYouDialog";
+import { siteConfig } from "@/app/config/content";
+import ThankYouDialog from "@/app/components/ThankYouDialog";
 
 export default function SendMessage() {
   const [loading, setLoading] = useState(false);
