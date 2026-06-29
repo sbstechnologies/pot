@@ -4,9 +4,11 @@ import { useState } from "react";
 import { toast } from "react-hot-toast";
 import { siteConfig } from "@/app/config/content";
 import ThankYouDialog from "@/app/components/ThankYouDialog";
+import { useRouter } from "next/navigation";
 
 export default function SendMessage() {
   const [loading, setLoading] = useState(false);
+  const router = useRouter();
 
   const [showDialog, setShowDialog] = useState(false);
 
@@ -59,7 +61,11 @@ export default function SendMessage() {
 
       if (res.ok) {
         form.reset();
-        setShowDialog(true);
+        if (data.resident.toLowerCase() === "future resident") {
+          router.push("/thankyou");
+        } else {
+          setShowDialog(true);
+        }
       } else {
         toast.error(result?.error || "Something went wrong. Please try again.");
       }

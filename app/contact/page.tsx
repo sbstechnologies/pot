@@ -1,14 +1,14 @@
 "use client";
 
-import PromoCardWidget from "../components/PromoCardWidget";
-import HeaderOther from "../components/HeaderOther";
-import Footer from "../components/Footer";
+import PromoCardWidget from "@/app/components/PromoCardWidget";
+import HeaderOther from "@/app/components/HeaderOther";
+import Footer from "@/app/components/Footer";
 import { siteConfig } from "@/app/config/content";
-import FooterLegalBar from "../components/FooterLegalBar";
+import FooterLegalBar from "@/app/components/FooterLegalBar";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import SendMessage from "../components/SendMessage";
 
-import ComplianceNotice from "../components/ComplianceNotice";
+import ComplianceNotice from "@/app/components/ComplianceNotice";
+import SendMessage from "../components/SendMessage";
 
 export default function Contact() {
   return (
