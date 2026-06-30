@@ -1,6 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
-import "./globals.css";
+import "@/app/globals.css";
 import { Toaster } from "react-hot-toast";
 import { GoogleTagManager } from "@next/third-parties/google";
 import DisableInspect from "@/app/components/DisableInspect";
@@ -92,12 +92,10 @@ export const metadata: Metadata = {
     title: "The Parks on Taylor Apartments Homes | Sherman, Texas",
     description:
       "Find beautiful apartment homes in Sherman, Texas with spacious floor plans, modern amenities, and a pet-friendly community.",
-
     url: "https://theparksontaylor.com",
     siteName: "The Parks on Taylor Apartments Homes",
     locale: "en_US",
     type: "website",
-
     images: [
       {
         url: "/images/logo.png",
@@ -112,7 +110,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "The Parks on Taylor Apartments Homes",
     description: "Modern apartment living in Sherman, Texas.",
-    images: ["/images/og-image.jpg"],
+    images: ["/images/logo.png"],
   },
 
   icons: {
@@ -149,7 +147,7 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "ApartmentComplex",
     name: "The Parks on Taylor Apartments Homes",
-    image: "https://theparksontaylor.com/images/og-image.jpg",
+    image: "https://theparksontaylor.com/images/logo.png",
     url: "https://theparksontaylor.com",
     telephone: "+1-903-961-6391",
     priceRange: "$$",
@@ -202,7 +200,9 @@ export default function RootLayout({
             __html: JSON.stringify(apartmentSchema),
           }}
         />
+
         <script src="https://cdn.jsdelivr.net/npm/disable-devtool@latest"></script>
+
         {process.env.NODE_ENV === "production" && <DisableInspect />}
 
         {children}

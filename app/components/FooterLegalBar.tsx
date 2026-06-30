@@ -32,9 +32,9 @@ export default function FooterLegalBar() {
             <Image
               src="/images/eho.png"
               alt="Fair Housing Logo"
-              width={50}
-              height={50}
-              className="object-contain opacity-80"
+              width={200}
+              height={80}
+              className="w-[50px] h-auto object-contain opacity-80"
             />
           </div>
         </div>
