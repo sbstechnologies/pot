@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowUp } from "lucide-react";
+import Image from "next/image";
 
 export default function FooterLegalBar() {
   return (
@@ -9,12 +10,11 @@ export default function FooterLegalBar() {
           <span className="text-white/30">
             © 2026 Parks on Taylor · A LiveNJoy Community.
           </span>
-
           {[
-            { label: "Privacy Policy", href: "/contact/" },
-            { label: "Terms of Use", href: "/contact/" },
-            { label: "Fair Housing", href: "/contact/" },
-            { label: "Accessibility", href: "/contact/" },
+            { label: "Privacy Policy", href: "/legal/" },
+            { label: "Terms of Use", href: "/legal/" },
+            { label: "Fair Housing", href: "/legal/" },
+            { label: "Accessibility", href: "/legal/" },
           ].map((item) => (
             <div key={item.label} className="inline-flex items-center">
               <span className="mx-2 text-white/20">·</span>
@@ -27,6 +27,16 @@ export default function FooterLegalBar() {
               </Link>
             </div>
           ))}
+
+          <div className="px-4">
+            <Image
+              src="/images/eho.png"
+              alt="Fair Housing Logo"
+              width={50}
+              height={50}
+              className="object-contain opacity-80"
+            />
+          </div>
         </div>
 
         <div className="flex items-center gap-4">
