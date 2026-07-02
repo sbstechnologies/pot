@@ -709,6 +709,7 @@ export type FloorPlan = {
   images: string[];
   interiorImages: string[];
   popular?: boolean;
+  tour: string;
 };
 
 export const floorPlans: FloorPlan[] = [
@@ -732,6 +733,7 @@ export const floorPlans: FloorPlan[] = [
     ],
     images: [images.floor1],
     interiorImages: [images.floor7, images.floor8, images.floor9],
+    tour: "",
   },
 
   {
@@ -754,6 +756,7 @@ export const floorPlans: FloorPlan[] = [
     ],
     images: [images.floor2],
     interiorImages: [images.floor10, images.floor11, images.floor7],
+    tour: "https://youriguide.com/117_1200_w_taylor_st_sherman_tx",
   },
 
   {
@@ -776,6 +779,7 @@ export const floorPlans: FloorPlan[] = [
     ],
     images: [images.floor3],
     interiorImages: [images.floor9, images.floor7, images.floor8],
+    tour: "",
   },
 
   {
@@ -798,6 +802,7 @@ export const floorPlans: FloorPlan[] = [
     ],
     images: [images.floor4],
     interiorImages: [images.floor8, images.floor9, images.floor10],
+    tour: "https://youriguide.com/144_1200_w_taylor_st_sherman_tx",
   },
 
   {
@@ -820,6 +825,7 @@ export const floorPlans: FloorPlan[] = [
     ],
     images: [images.floor5],
     interiorImages: [images.floor11, images.floor7, images.floor10],
+    tour: "https://youriguide.com/2236_1200_w_taylor_st_sherman_tx",
   },
 
   {
@@ -842,6 +848,7 @@ export const floorPlans: FloorPlan[] = [
     ],
     images: [images.floor6],
     interiorImages: [images.floor7, images.floor9, images.floor8],
+    tour: "https://youriguide.com/226_1200_w_taylor_st_sherman_tx",
   },
 ];
 
