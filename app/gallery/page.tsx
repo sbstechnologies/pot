@@ -165,7 +165,7 @@ export default function Gallery() {
       {/* GALLERY SECTION */}
       <section className="bg-[#F5F2ED] px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto py-10 md:py-14">
         <div className="max-w-[1920px] mx-auto">
-          <div className="columns-1 md:columns-2 lg:columns-3 gap-5 space-y-5">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 space-y-5">
             {filteredGallery.map((item, index) => (
               <ImageCard
                 key={`${item.src}-${index}`}

@@ -134,13 +134,13 @@ function Card({
             {/* Bedrooms */}
             <div className="flex items-center gap-2">
               <Bed className="h-5 w-5 text-[#1f376d]" strokeWidth={2} />
-              <span>{plan.beds} Bed</span>
+              <span>{plan.beds}</span>
             </div>
 
             {/* Bathrooms */}
             <div className="flex items-center gap-2">
               <Bath className="h-5 w-5 text-[#1f376d]" strokeWidth={2} />
-              <span>{plan.baths} Bath</span>
+              <span>{plan.baths}</span>
             </div>
 
             {/* Square Footage */}
