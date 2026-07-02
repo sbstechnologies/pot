@@ -355,7 +355,7 @@ export const PromoCardWidgetConfig = {
     {
       title: "First Month Free",
       text: "Apply before",
-      highlight: "June 30",
+      highlight: "July 31",
       suffix: "",
       theme: "blue",
     },
