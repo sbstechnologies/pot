@@ -193,7 +193,7 @@ export default function Blog() {
               ✕
             </button>
 
-            <div className="-mt-11">
+            <div className="-mt-15">
               <div className="relative h-[260px] md:h-[380px] w-full overflow-hidden">
                 <img
                   src={selectedPost.img}

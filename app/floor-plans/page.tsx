@@ -180,27 +180,47 @@ function Card({
             ))}
           </div>
 
-          <div className="mt-[105px] grid grid-cols-[1fr_105px] gap-3">
-            <button
-              onClick={() => onViewDetail(plan)}
-              className="h-[50px] rounded-[11px] bg-[#223f82] font-[Plus_Jakarta_Sans] text-[16px] font-bold text-white transition hover:bg-[#19346f]"
-            >
-              View Unit
-            </button>
+          <div className="mt-[50px] flex flex-col gap-3">
+            {plan.tour?.trim() && (
+              <button
+                onClick={() => window.open(plan.tour, "_blank")}
+                className="flex h-[50px] w-full items-center justify-center gap-2 rounded-[12px] border border-[#e09428] bg-white font-[Plus_Jakarta_Sans] text-[15px] font-bold text-[#e09428] transition hover:bg-[#faf7ef]"
+              >
+                <svg
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="currentColor"
+                >
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                <span>Virtual Tour</span>
+              </button>
+            )}
 
-            <button
-              onClick={() => onToggleCompare(plan.title)}
-              disabled={!isSelected && !canSelectMore}
-              className={`h-[50px] rounded-[11px] border font-[Plus_Jakarta_Sans] text-[15px] font-bold transition ${
-                isSelected
-                  ? "border-[#223f82] bg-[#223f82] text-white"
-                  : canSelectMore
-                    ? "border-[#cbd3df] bg-white text-[#3c3c3c] hover:bg-[#f5f7fb]"
-                    : "cursor-not-allowed border-[#e4ddd2] bg-[#f3efe8] text-[#b2aaa0]"
-              }`}
-            >
-              {isSelected ? "Selected" : "Compare"}
-            </button>
+            {/* Bottom Buttons */}
+            <div className="grid grid-cols-[1fr_105px] gap-3">
+              <button
+                onClick={() => onViewDetail(plan)}
+                className="h-[50px] rounded-[11px] bg-[#223f82] font-[Plus_Jakarta_Sans] text-[16px] font-bold text-white transition hover:bg-[#19346f]"
+              >
+                View Unit
+              </button>
+
+              <button
+                onClick={() => onToggleCompare(plan.title)}
+                disabled={!isSelected && !canSelectMore}
+                className={`h-[50px] rounded-[11px] border font-[Plus_Jakarta_Sans] text-[15px] font-bold transition ${
+                  isSelected
+                    ? "border-[#223f82] bg-[#223f82] text-white"
+                    : canSelectMore
+                      ? "border-[#cbd3df] bg-white text-[#3c3c3c] hover:bg-[#f5f7fb]"
+                      : "cursor-not-allowed border-[#e4ddd2] bg-[#f3efe8] text-[#b2aaa0]"
+                }`}
+              >
+                {isSelected ? "Selected" : "Compare"}
+              </button>
+            </div>
           </div>
         </div>
       </div>
