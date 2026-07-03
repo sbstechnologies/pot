@@ -83,10 +83,8 @@ export async function POST(req: Request) {
     // Environment variables check
     const EMAIL_USER = process.env.EMAIL_USER;
     const EMAIL_PASS = process.env.EMAIL_PASS;
-    const EMAIL_TO = process.env.EMAIL_TO;
-    const EMAIL_CC = process.env.EMAIL_CC;
 
-    if (!EMAIL_USER || !EMAIL_PASS || !EMAIL_TO || !EMAIL_CC) {
+    if (!EMAIL_USER || !EMAIL_PASS) {
       console.error("Missing email environment variables");
 
       return NextResponse.json(
