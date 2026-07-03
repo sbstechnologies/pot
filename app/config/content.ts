@@ -1001,8 +1001,8 @@ export const posts: Post[] = [
   {
     category: "Outdoors",
     readTime: "6 min",
-    initials: "AT",
-    author: "Alex Torres",
+    initials: "PT",
+    author: "Parks on Taylor Team",
     date: "Jan 12, 2026",
     title: "Hidden Trails at Eisenhower State Park",
     description:
@@ -1018,8 +1018,8 @@ export const posts: Post[] = [
   {
     category: "Community",
     readTime: "3 min",
-    initials: "SK",
-    author: "Sara Kim",
+    initials: "PT",
+    author: "Parks on Taylor Team",
     date: "Jan 5, 2026",
     title: "Sherman Farmers Market: A Weekend Essential",
     description:
@@ -1035,8 +1035,8 @@ export const posts: Post[] = [
   {
     category: "Local Life",
     readTime: "5 min",
-    initials: "JP",
-    author: "James Park",
+    initials: "PT",
+    author: "Parks on Taylor Team",
     date: "Dec 28, 2025",
     title: "Best Coffee Spots to Work Remotely Near Taylor",
     description:
@@ -1052,8 +1052,8 @@ export const posts: Post[] = [
   {
     category: "Culture",
     readTime: "7 min",
-    initials: "NA",
-    author: "Nadia Ali",
+    initials: "PT",
+    author: "Parks on Taylor Team",
     date: "Dec 21, 2025",
     title: "5 Architecture & Gallery Tours Worth the Drive",
     description:
@@ -1069,8 +1069,8 @@ export const posts: Post[] = [
   {
     category: "City Life",
     readTime: "4 min",
-    initials: "CM",
-    author: "Chris Moore",
+    initials: "PT",
+    author: "Parks on Taylor Team",
     date: "Dec 15, 2025",
     title: "Sunset Views: Taylor's Most Instagrammable Spots",
     description:
@@ -1088,8 +1088,8 @@ export const posts: Post[] = [
 export const featuredPost: Post = {
   category: "Local Eats",
   readTime: "4 min",
-  initials: "MC",
-  author: "Maya Chen",
+  initials: "PT",
+  author: "Parks on Taylor Team",
   date: "Jan 18, 2026",
   title: "The 7 Best Farm-to-Table Spots Near Sherman",
   description:
@@ -1109,9 +1109,9 @@ export const articles = [
     category: "Local Eats",
     categoryColor: "bg-[#E09428]/10 text-[#E09428]",
     readTime: "4 min",
-    authorInitials: "MC",
+    authorInitials: "PT",
     authorBg: "bg-[#E09428]/10 text-[#E09428]",
-    authorName: "Maya Chen",
+    authorName: "Parks on Taylor Team",
     date: "Jan 18",
     title: "The 7 Best Farm-to-Table Spots Near Sherman",
     description:
@@ -1123,9 +1123,9 @@ export const articles = [
     category: "Outdoors",
     categoryColor: "bg-[#1E3872]/10 text-[#1E3872]",
     readTime: "6 min",
-    authorInitials: "AT",
+    authorInitials: "PT",
     authorBg: "bg-[#1E3872]/10 text-[#1E3872]",
-    authorName: "Alex Torres",
+    authorName: "Parks on Taylor Team",
     date: "Jan 12",
     title: "Hidden Trails at Eisenhower State Park",
     description:
@@ -1137,9 +1137,9 @@ export const articles = [
     category: "Community",
     categoryColor: "bg-[#2a5a8f]/10 text-[#2a5a8f]",
     readTime: "3 min",
-    authorInitials: "SK",
+    authorInitials: "PT",
     authorBg: "bg-[#2a5a8f]/10 text-[#2a5a8f]",
-    authorName: "Sara Kim",
+    authorName: "Parks on Taylor Team",
     date: "Jan 5",
     title: "Sherman Farmers Market: A Weekend Essential",
     description:
@@ -1151,9 +1151,9 @@ export const articles = [
     category: "Local Life",
     categoryColor: "bg-[#E09428]/10 text-[#E09428]",
     readTime: "5 min",
-    authorInitials: "JP",
+    authorInitials: "PT",
     authorBg: "bg-[#E09428]/10 text-[#E09428]",
-    authorName: "James Park",
+    authorName: "Parks on Taylor Team",
     date: "Dec 28",
     title: "Best Coffee Spots to Work Remotely Near Taylor",
     description:
@@ -1165,9 +1165,9 @@ export const articles = [
     category: "Culture",
     categoryColor: "bg-[#5a3a7a]/10 text-[#5a3a7a]",
     readTime: "7 min",
-    authorInitials: "NA",
+    authorInitials: "PT",
     authorBg: "bg-[#5a3a7a]/10 text-[#5a3a7a]",
-    authorName: "Nadia Ali",
+    authorName: "Parks on Taylor Team",
     date: "Dec 21",
     title: "5 Architecture & Gallery Tours Worth the Drive",
     description:
@@ -1179,9 +1179,9 @@ export const articles = [
     category: "City Life",
     categoryColor: "bg-[#E09428]/10 text-[#E09428]",
     readTime: "4 min",
-    authorInitials: "CM",
+    authorInitials: "PT",
     authorBg: "bg-[#E09428]/10 text-[#E09428]",
-    authorName: "Chris Moore",
+    authorName: "Parks on Taylor Team",
     date: "Dec 15",
     title: "Sunset Views: Taylor's Most Instagrammable Spots",
     description:

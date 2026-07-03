@@ -67,8 +67,8 @@ export default function Gallery() {
 
   const filters: { label: FilterType; count: string }[] = [
     { label: "All", count: "" },
-    { label: "Exteriors", count: "4" },
-    { label: "Interiors", count: "6" },
+    { label: "Exteriors", count: "3" },
+    { label: "Interiors", count: "7" },
     { label: "Amenities", count: "5" },
     { label: "Neighborhood", count: "4" },
   ];

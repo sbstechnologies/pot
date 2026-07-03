@@ -176,18 +176,6 @@ export default function Footer() {
                   Availability
                 </a>
               </li>
-
-              <li>
-                <a href="/contact/" className="hover:text-white transition">
-                  Pet Policy
-                </a>
-              </li>
-
-              <li>
-                <a href="/contact/" className="hover:text-white transition">
-                  FAQs
-                </a>
-              </li>
             </ul>
           </div>
 

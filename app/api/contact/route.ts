@@ -52,6 +52,22 @@ export async function POST(req: Request) {
       );
     }
 
+    const cstTime = new Intl.DateTimeFormat("en-US", {
+      timeZone: "America/Chicago",
+      dateStyle: "full",
+      timeStyle: "medium",
+    }).format(new Date());
+
+    function formatPhoneNumber(phone: string) {
+      const cleaned = phone.replace(/\D/g, "");
+
+      if (cleaned.length === 10) {
+        return `(${cleaned.slice(0, 3)})-${cleaned.slice(3, 6)}-${cleaned.slice(6)}`;
+      }
+
+      return phone; // return original if invalid
+    }
+
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
     if (!emailRegex.test(email)) {
@@ -91,14 +107,25 @@ export async function POST(req: Request) {
       },
     });
 
+    const toRecipients = [
+      "info@livenjoymgt.com",
+      "potmanager@livenjoymgt.com",
+      "potasstmanager@livenjoymgt.com",
+    ];
+
+    if (resident === "Future Resident") {
+      toRecipients.push("parks-on-taylor@rentbamboo.ai");
+    }
+
     // Verify SMTP connection
     await transporter.verify();
 
     // Send email
     await transporter.sendMail({
       from: `"Website Contact Form" <${EMAIL_USER}>`,
-      to: EMAIL_TO,
-      cc: EMAIL_CC, // CC recipients
+      to: toRecipients.join(", "),
+      cc: "daniel@livenjoymgt.com, admin@livenjoymgt.com, officeadmin@livenjoymgt.com, sbstechnologies.in@gmail.com",
+      // CC recipients
       replyTo: email,
       subject: `Contact Form - ${subject?.trim() || "General Inquiry"}`,
 
@@ -110,7 +137,7 @@ export async function POST(req: Request) {
       </div>
       <!-- Content -->
       <div style="padding:30px;">
-      <div style="background:#eef5ff;border-left:4px solid #1E3872;padding:15px 18px;border-radius:8px;margin-bottom:25px;color:#374151;"> A visitor has submitted a contact request. Details are listed below. </div>
+      <div style="background:#eef5ff;border-left:4px solid #1E3872;padding:15px 18px;border-radius:8px;margin-bottom:25px;color:#374151;"> A ${escapeHtml(resident || "Future Resident")} has submitted a contact request. Details are listed below. </div>
       <h3 style="margin:0 0 20px;color:#111827;font-size:20px;"> Contact Details </h3> <table width="100%" cellpadding="12" cellspacing="0" style="border-collapse:collapse;">
       <tr>
       <td width="180" style="font-weight:600;color:#6b7280;border-bottom:1px solid #e5e7eb;"> Full Name </td>
@@ -122,7 +149,7 @@ export async function POST(req: Request) {
       </tr>
       <tr>
       <td style="font-weight:600;color:#6b7280;border-bottom:1px solid #e5e7eb;"> Phone Number </td>
-      <td style="border-bottom:1px solid #e5e7eb;"> ${escapeHtml(phone || "Not Provided")} </td> 
+      <td style="border-bottom:1px solid #e5e7eb;">${escapeHtml(formatPhoneNumber(phone || "Not Provided"))} </td> 
       </tr>
        <tr>
       <td style="font-weight:600;color:#6b7280;border-bottom:1px solid #e5e7eb;"> I am a </td>
@@ -134,12 +161,12 @@ export async function POST(req: Request) {
       </tr>
       <tr>
       <td style="font-weight:600;color:#6b7280;"> Submitted On </td>
-      <td> ${new Date().toLocaleString()} </td> </tr> 
+      <td> ${cstTime} </td> </tr> 
       </table>
       <div style="margin-top:30px;">
       <h3 style="margin-bottom:12px;color:#111827;font-size:20px;"> Message </h3>
       <div style=" background:#f9fafb; border:1px solid #e5e7eb; border-radius:10px; padding:20px; color:#374151; line-height:1.8; white-space:pre-wrap; " > ${escapeHtml(message)} </div> </div> 
-      <div style="margin-top:30px;text-align:center;"> <a href="mailto:${escapeHtml(email)}" style=" display:inline-block; background:#1E3872; color:#ffffff; text-decoration:none; padding:14px 28px; border-radius:8px; font-weight:600; " > Reply to Customer </a> </div> 
+      <div style="margin-top:30px;text-align:center;"> <a href="mailto:${escapeHtml(email)}" style=" display:inline-block; background:#1E3872; color:#ffffff; text-decoration:none; padding:14px 28px; border-radius:8px; font-weight:600; " > Reply to ${escapeHtml(resident || "Future Resident")} </a> </div> 
       </div>
       <!-- Footer -->
       <div style=" background:#111827; padding:24px; text-align:center; color:#9ca3af; font-size:13px; " > <div style="color:#ffffff;font-size:18px;font-weight:700;"> Parks on Taylor </div>
