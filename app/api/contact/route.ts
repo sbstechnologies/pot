@@ -175,7 +175,7 @@ export async function POST(req: Request) {
       <div style="margin-top:30px;">
       <h3 style="margin-bottom:12px;color:#111827;font-size:20px;"> Message </h3>
       <div style=" background:#f9fafb; border:1px solid #e5e7eb; border-radius:10px; padding:20px; color:#374151; line-height:1.8; white-space:pre-wrap; " > ${escapeHtml(message)} </div> </div> 
-      <div style="margin-top:30px;text-align:center;"> <a href="mailto:${escapeHtml(email)}" style=" display:inline-block; background:#1E3872; color:#ffffff; text-decoration:none; padding:14px 28px; border-radius:8px; font-weight:600; " > Reply to ${escapeHtml(resident || "Future Resident")} </a> </div> 
+      <div style="margin-top:30px;text-align:center;"> <a href="mailto:${escapeHtml(email)}" style=" display:inline-block; background:#1E3872; color:#ffffff; text-decoration:none; padding:14px 28px; border-radius:8px; font-weight:600; " > Reply to A ${escapeHtml(resident || "Future Resident")} </a> </div> 
       </div>
       <!-- Footer -->
       <div style=" background:#111827; padding:24px; text-align:center; color:#9ca3af; font-size:13px; " > <div style="color:#ffffff;font-size:18px;font-weight:700;"> Parks on Taylor </div>
