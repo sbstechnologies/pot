@@ -115,6 +115,17 @@ export async function POST(req: Request) {
       toRecipients.push("parks-on-taylor@rentbamboo.ai");
     }
 
+    const ccRecipients: string[] = [];
+
+    if (resident === "Current Resident") {
+      ccRecipients.push(
+        "daniel@livenjoymgt.com",
+        "admin@livenjoymgt.com",
+        "officeadmin@livenjoymgt.com",
+        "sbstechnologies.in@gmail.com",
+      );
+    }
+
     // Verify SMTP connection
     await transporter.verify();
 
@@ -122,7 +133,7 @@ export async function POST(req: Request) {
     await transporter.sendMail({
       from: `"Website Contact Form" <${EMAIL_USER}>`,
       to: toRecipients.join(", "),
-      cc: "daniel@livenjoymgt.com, admin@livenjoymgt.com, officeadmin@livenjoymgt.com, sbstechnologies.in@gmail.com",
+      cc: ccRecipients.length ? ccRecipients.join(", ") : undefined,
       // CC recipients
       replyTo: email,
       subject: `Contact Form - ${subject?.trim() || "General Inquiry"}`,
