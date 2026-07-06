@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import CookieSettings from "./CookieSettings";
+import CookieSettings from "@/app/components/CookieSettings";
 import Link from "next/link";
 
 export default function CookieConsent() {
