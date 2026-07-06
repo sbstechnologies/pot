@@ -2,7 +2,6 @@
 
 import { useEffect, useState } from "react";
 import CookieSettings from "@/app/components/CookieSettings";
-import Link from "next/link";
 
 export default function CookieConsent() {
   const [showBanner, setShowBanner] = useState(false);
@@ -55,8 +54,8 @@ export default function CookieConsent() {
       {showBanner && (
         <div className="fixed bottom-5 right-5 z-50 w-full max-w-[310px] rounded-[18px] bg-[#FFFDF5] p-3 shadow-[0_8px_30px_rgba(0,0,0,0.12)] border border-[#EBE9E0]/40">
           {/* Inner Content Card Box - Reduced height with tight padding */}
-          <div className="rounded-[12px] border border-[#EBE9E0] bg-[#F4F3EA] p-3">
-            <h2 className="mb-1 text-[12px] font-bold text-[#213A70]">
+          <div className="rounded-xl border border-[#EBE9E0] bg-[#F4F3EA] p-3">
+            <h2 className="mb-1 text-xs font-bold text-[#213A70]">
               Cookies Policy
             </h2>
 
@@ -64,16 +63,14 @@ export default function CookieConsent() {
               We use cookies and tools like Microsoft Clarity to improve your
               browsing experience, analyze site traffic, and support our leasing
               operations. By clicking{" "}
-              <span className="font-semibold">'Accept All'</span>, you consent
-              to our use of these tools.
-              <br />
-              View our{" "}
-              <Link
+              <span className="font-semibold">"Accept All"</span>, you consent
+              to our use of these tools. View our{" "}
+              <a
                 href="/legal"
                 className="font-semibold text-gray-600 hover:text-gray-900 transition-colors"
               >
                 Privacy Policy
-              </Link>
+              </a>
               .
             </p>
           </div>
