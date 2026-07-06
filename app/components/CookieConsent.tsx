@@ -2,6 +2,7 @@
 
 import { useEffect, useState } from "react";
 import CookieSettings from "./CookieSettings";
+import Link from "next/link";
 
 export default function CookieConsent() {
   const [showBanner, setShowBanner] = useState(false);
@@ -20,7 +21,7 @@ export default function CookieConsent() {
   const saveConsent = (
     necessary: boolean,
     performanceCookies: boolean,
-    marketingCookies: boolean
+    marketingCookies: boolean,
   ) => {
     localStorage.setItem(
       "cookieConsent",
@@ -28,7 +29,7 @@ export default function CookieConsent() {
         necessary,
         performance: performanceCookies,
         marketing: marketingCookies,
-      })
+      }),
     );
     setShowBanner(false);
     setShowSettings(false);
@@ -53,7 +54,6 @@ export default function CookieConsent() {
       {/* Main Cookie Banner - Compact width (310px) and minimal height spacing */}
       {showBanner && (
         <div className="fixed bottom-5 right-5 z-50 w-full max-w-[310px] rounded-[18px] bg-[#FFFDF5] p-3 shadow-[0_8px_30px_rgba(0,0,0,0.12)] border border-[#EBE9E0]/40">
-          
           {/* Inner Content Card Box - Reduced height with tight padding */}
           <div className="rounded-[12px] border border-[#EBE9E0] bg-[#F4F3EA] p-3">
             <h2 className="mb-1 text-[12px] font-bold text-[#213A70]">
@@ -61,20 +61,19 @@ export default function CookieConsent() {
             </h2>
 
             <p className="text-[10.5px] leading-[1.45] text-[#5C5A52]">
-              We use cookies and tools like Microsoft Clarity to improve your browsing
-  experience, analyze site traffic, and support our leasing operations. By
-  clicking <span className="font-semibold">'Accept All'</span>, you consent
-  to our use of these tools.
-  <br />
-  View our{" "}
-              <a
-                href="https://www.parksontaylorapts.com/legal"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-bold text-[#213A70] underline"
+              We use cookies and tools like Microsoft Clarity to improve your
+              browsing experience, analyze site traffic, and support our leasing
+              operations. By clicking{" "}
+              <span className="font-semibold">'Accept All'</span>, you consent
+              to our use of these tools.
+              <br />
+              View our{" "}
+              <Link
+                href="/legal"
+                className="font-semibold text-gray-600 hover:text-gray-900 transition-colors"
               >
                 Privacy Policy
-              </a>
+              </Link>
               .
             </p>
           </div>

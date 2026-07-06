@@ -214,8 +214,8 @@ export default function SendMessage() {
             >
               {loading ? "Sending Message..." : "→ Submit Message"}
             </button>
-            <p className="mt-2 text-center text-[12px] text-[#9aa3b2]">
-              We respond to all inquiries within 1 business day. ·{" "}
+            <p className="mt-2 text-center sm:text-[10px] md:text-[12px] lg:text-[14px] text-[#9aa3b2]">
+              We respond to all inquiries within 1 business day.{" "}
               <a
                 href={`tel:${siteConfig.phone.replace(/\D/g, "")}`}
                 className="font-semibold text-gray-600 hover:text-gray-900 transition-colors"
