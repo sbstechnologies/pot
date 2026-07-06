@@ -24,9 +24,7 @@ const container = {
 
 export default function LegalContent() {
   return (
-    <main
-      className={`${jakarta.variable} bg-[#F5F2ED] text-[#4A4A4A]  text-justify`}
-    >
+    <main className={`${jakarta.variable} bg-[#F5F2ED] text-[#4A4A4A]`}>
       <motion.div
         className="bg-[#F5F2ED] pt-10 pb-24 px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto"
         variants={container}
