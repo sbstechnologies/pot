@@ -4,6 +4,8 @@ import "@/app/globals.css";
 import { Toaster } from "react-hot-toast";
 import { GoogleTagManager } from "@next/third-parties/google";
 import DisableInspect from "@/app/components/DisableInspect";
+import SmoothScroll from "@/app/components/SmoothScroll";
+import CookieConsent from "@/app/components/CookieConsent";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -205,6 +207,8 @@ export default function RootLayout({
 
         {process.env.NODE_ENV === "production" && <DisableInspect />}
 
+        <SmoothScroll />
+        <CookieConsent />
         {children}
 
         <Toaster

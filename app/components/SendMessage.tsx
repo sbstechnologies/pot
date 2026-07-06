@@ -5,6 +5,7 @@ import { toast } from "react-hot-toast";
 import { siteConfig } from "@/app/config/content";
 import ThankYouDialog from "@/app/components/ThankYouDialog";
 import { useRouter } from "next/navigation";
+import Link from "next/link";
 
 export default function SendMessage() {
   const [loading, setLoading] = useState(false);
@@ -82,7 +83,7 @@ export default function SendMessage() {
       <div className="overflow-hidden rounded-[26px] border border-[#e4e1db] bg-white shadow-[0_10px_30px_rgba(0,0,0,0.05)]">
         <div className="h-1 w-full bg-gradient-to-r from-[#1E3872] to-[#E39B2D]" />
 
-        <div className="p-6 md:p-10 lg:p-14 xl:p-16 xxl:p-20">
+        <div className="p-6 md:p-10 lg:p-12 xl:p-12 xxl:p-20">
           <h2 className="font-[Instrument_Serif] text-[30px] leading-[1.1] text-[#1f2937] md:text-[40px]">
             Send Us a Message
           </h2>
@@ -124,7 +125,6 @@ export default function SendMessage() {
                 />
               </div>
             </div>
-
             <div className="grid grid-cols-1 gap-5 md:grid-cols-2">
               <div>
                 <label className="mb-2 block text-[12px] font-semibold tracking-[0.12em] text-[#4b5563]">
@@ -177,7 +177,6 @@ export default function SendMessage() {
                 </select>
               </div>
             </div>
-
             <div>
               <label className="mb-2 block text-[12px] font-semibold tracking-[0.12em] text-[#4b5563]">
                 MESSAGE *
@@ -192,11 +191,22 @@ export default function SendMessage() {
                 className="w-full resize-none rounded-xl border border-[#cfd6e2] bg-white px-4 py-3 text-[15px] text-black placeholder:text-gray-500 outline-none transition-colors focus:border-[#1E3872] focus:ring-2 focus:ring-[#1E3872]/10"
               />
             </div>
-
+            <p className="mt-2 text-justify text-[13px] leading-5 text-gray-500">
+              By providing your phone number, you agree to receive text messages
+              from Parks on Taylor regarding leasing and maintenance. Message
+              &amp; data rates may apply. Reply STOP to opt out. View our{" "}
+              <Link
+                href="/legal"
+                className="font-semibold text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                Privacy Policy
+              </Link>
+              .
+            </p>
             <button
               type="submit"
               disabled={loading}
-              className={`w-full rounded-xl py-4 text-[17px] font-semibold text-white transition duration-300 ${
+              className={`w-full rounded-xl py-4 text-[16px] font-semibold text-white transition duration-300 ${
                 loading
                   ? "cursor-not-allowed bg-gray-400"
                   : "bg-[#1E3872] hover:bg-[#162b59]"
@@ -204,10 +214,14 @@ export default function SendMessage() {
             >
               {loading ? "Sending Message..." : "→ Submit Message"}
             </button>
-
-            <p className="mt-2 text-center text-[13px] text-[#9aa3b2]">
+            <p className="mt-2 text-center text-[12px] text-[#9aa3b2]">
               We respond to all inquiries within 1 business day. ·{" "}
-              {siteConfig.phone}
+              <a
+                href={`tel:${siteConfig.phone.replace(/\D/g, "")}`}
+                className="font-semibold text-gray-600 hover:text-gray-900 transition-colors"
+              >
+                {siteConfig.phone}
+              </a>
             </p>
           </form>
         </div>
