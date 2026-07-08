@@ -249,11 +249,11 @@ export default function Home() {
               <div className="flex flex-col xs:flex-row flex-wrap items-start xs:items-center gap-2 sm:gap-3">
                 <div className="flex flex-wrap gap-2">
                   <span
-                    className="font-[Instrument_Serif] font-bold text-[20px] sm:text-[18px]
+                    className="font-[Instrument_Serif] font-normal text-[20px] sm:text-[18px]
     font-size: 20px;
     letter-spacing: -0.02em sm:text-[18px] tracking-[-0.02em] text-[#f5f2ee] letter-spacing: -0.02em; leading-none   px-3 py-1  whitespace-nowrap"
                   >
-                    Only $99 Total to Move In
+                    Special Promotion - Huge Specials
                   </span>
                   <span className="font-[Plus_Jakarta_Sans] text-xs sm:text-[13px] font-semibold text-[#f5f2ee]/80 bg-[#f5f2ee]/15 px-3 py-1 rounded-full whitespace-nowrap">
                     1BR from $799 · A1–A3

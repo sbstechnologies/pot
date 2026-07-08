@@ -65,6 +65,7 @@ export default function PromoCardWidget() {
                 <strong className="text-[#2D3230] font-bold">
                   {PromoCardWidgetConfig.cards[0].highlight}
                 </strong>{" "}
+                <br />
                 {PromoCardWidgetConfig.cards[0].suffix}
               </p>
             </div>
@@ -81,6 +82,7 @@ export default function PromoCardWidget() {
                 <strong className="text-[#2D3230] font-bold">
                   {PromoCardWidgetConfig.cards[1].highlight}
                 </strong>
+
                 {PromoCardWidgetConfig.cards[1].suffix}
               </p>
             </div>
