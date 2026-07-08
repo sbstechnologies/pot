@@ -36,7 +36,7 @@ export default function PromoCardWidget() {
                 Limited Time
               </p>
               <p className="font-['Instrument_Serif',Georgia,serif] text-[17px] tracking-[-0.02em] text-[#F5F2ED] m-0 mt-[1px] leading-[1.15]">
-                First Month Free
+                Special Promotion
               </p>
             </div>
           </div>
@@ -61,11 +61,11 @@ export default function PromoCardWidget() {
                 {PromoCardWidgetConfig.cards[0].title}
               </p>
               <p className="font-['Plus_Jakarta_Sans'] text-[11px] text-[#5A6260] m-0 mt-[2px] leading-[1.45]">
-                Only{" "}
+                {PromoCardWidgetConfig.cards[0].text}{" "}
                 <strong className="text-[#2D3230] font-bold">
                   {PromoCardWidgetConfig.cards[0].highlight}
                 </strong>{" "}
-                — limited units remaining
+                {PromoCardWidgetConfig.cards[0].suffix}
               </p>
             </div>
           </div>
@@ -78,10 +78,10 @@ export default function PromoCardWidget() {
                 {PromoCardWidgetConfig.cards[1].title}
               </p>
               <p className="font-['Plus_Jakarta_Sans'] text-[11px] text-[#5A6260] m-0 mt-[2px] leading-[1.45]">
-                On select units when you apply{" "}
                 <strong className="text-[#2D3230] font-bold">
-                  before {PromoCardWidgetConfig.cards[1].highlight}
+                  {PromoCardWidgetConfig.cards[1].highlight}
                 </strong>
+                {PromoCardWidgetConfig.cards[1].suffix}
               </p>
             </div>
           </div>

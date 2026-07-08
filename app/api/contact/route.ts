@@ -122,7 +122,6 @@ export async function POST(req: Request) {
         "daniel@livenjoymgt.com",
         "admin@livenjoymgt.com",
         "officeadmin@livenjoymgt.com",
-        "sbstechnologies.in@gmail.com",
       );
     }
 

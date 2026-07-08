@@ -229,7 +229,7 @@ export const footerLocation = [
 export const lookLeaseSpecial = {
   id: "look",
   badge: "LOOK & LEASE SPECIAL",
-  text: "Only $99 Total to Move In – Limited Units!",
+  text: "Huge Leasing Specials! Act fast for our best rate !.",
 };
 
 export const headerConfig = {
@@ -343,20 +343,20 @@ export const leasePortalConfig = {
 
 export const PromoCardWidgetConfig = {
   label: "Limited Time",
-  title: "First Month Free",
+  title: "Special Promotion",
   cards: [
     {
-      title: "Look & Lease Special",
-      text: "Only",
-      highlight: "$99 total",
-      suffix: "to move in",
+      title: "Huge Leasing Specials",
+      text: "Act fast to lock in our",
+      highlight: "best rates",
+      suffix: "limited availability remaining",
       theme: "orange",
     },
     {
-      title: "First Month Free",
-      text: "Apply before",
-      highlight: "July 31",
-      suffix: "",
+      title: "Contact Us Today",
+      text: "",
+      highlight: "Call us right now",
+      suffix: " for full details on current offers, Restrictions apply.",
       theme: "blue",
     },
   ],

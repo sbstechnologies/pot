@@ -228,8 +228,8 @@ export default function Contact() {
             </h2>
 
             <p className="font-[Plus_Jakarta_Sans] mt-3 text-[17px] text-white md:text-[18px]">
-              Only <span className="font-bold">$99 total to move in</span> —
-              limited units available. Contact us today!
+              Act fast to get our <span className="font-bold">best rates</span>{" "}
+              while they last. Contact us for current details today!
             </p>
           </div>
 
