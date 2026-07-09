@@ -10,6 +10,7 @@ import ComplianceNotice from "@/app/components/ComplianceNotice";
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
 
+
 export default function Contact() {
   const router = useRouter();
 

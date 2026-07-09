@@ -127,7 +127,7 @@ export const metadata: Metadata = {
   manifest: "/site.webmanifest",
 
   verification: {
-    google: "'GTM-TP5GT43T",
+    google: "GTM-WLHG2WWT",
   },
 
   referrer: "origin-when-cross-origin",
@@ -184,7 +184,7 @@ export default function RootLayout({
       <body className="min-h-screen font-sans antialiased">
         <noscript>
           <iframe
-            src="https://www.googletagmanager.com/ns.html?id=GTM-TP5GT43T"
+            src="https://www.googletagmanager.com/ns.html?id=GTM-WLHG2WWT"
             height="0"
             width="0"
             style={{
@@ -194,7 +194,7 @@ export default function RootLayout({
           />
         </noscript>
 
-        <GoogleTagManager gtmId="GTM-TP5GT43T" />
+        <GoogleTagManager gtmId="GTM-WLHG2WWT" />
 
         <script
           type="application/ld+json"
