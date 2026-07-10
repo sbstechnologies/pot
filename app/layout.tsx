@@ -1,8 +1,13 @@
 import type { Metadata, Viewport } from "next";
+import type { ReactNode } from "react";
+
 import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
-import "@/app/globals.css";
-import { Toaster } from "react-hot-toast";
+import Script from "next/script";
 import { GoogleTagManager } from "@next/third-parties/google";
+import { Toaster } from "react-hot-toast";
+
+import "@/app/globals.css";
+
 import DisableInspect from "@/app/components/DisableInspect";
 import SmoothScroll from "@/app/components/SmoothScroll";
 import CookieConsent from "@/app/components/CookieConsent";
@@ -31,6 +36,7 @@ export const viewport: Viewport = {
   initialScale: 1,
   maximumScale: 1,
   userScalable: false,
+  themeColor: "#1E3872",
 };
 
 export const metadata: Metadata = {
@@ -51,13 +57,8 @@ export const metadata: Metadata = {
     "Apartments for Rent Sherman Texas",
     "The Parks on Taylor",
     "Pet Friendly Apartments Sherman",
-    "1 Bedroom Apartments Sherman TX",
-    "2 Bedroom Apartments Sherman TX",
     "Luxury Apartments Sherman",
     "Apartment Homes Sherman TX",
-    "Rental Homes Sherman Texas",
-    "Sherman TX Housing",
-    "Grayson County Apartments",
   ],
 
   applicationName: "The Parks on Taylor Apartments Homes",
@@ -71,6 +72,7 @@ export const metadata: Metadata = {
 
   creator: "The Parks on Taylor Apartments Homes",
   publisher: "The Parks on Taylor Apartments Homes",
+
   category: "Real Estate",
 
   alternates: {
@@ -80,7 +82,6 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
-    nocache: false,
     googleBot: {
       index: true,
       follow: true,
@@ -91,9 +92,9 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "The Parks on Taylor Apartments Homes | Sherman, Texas",
+    title: "The Parks on Taylor Apartments Homes",
     description:
-      "Find beautiful apartment homes in Sherman, Texas with spacious floor plans, modern amenities, and a pet-friendly community.",
+      "Find beautiful apartment homes in Sherman, Texas with spacious floor plans and premium amenities.",
     url: "https://theparksontaylor.com",
     siteName: "The Parks on Taylor Apartments Homes",
     locale: "en_US",
@@ -103,7 +104,7 @@ export const metadata: Metadata = {
         url: "/images/logo.png",
         width: 1200,
         height: 630,
-        alt: "The Parks on Taylor Apartments Homes in Sherman TX",
+        alt: "The Parks on Taylor",
       },
     ],
   },
@@ -117,18 +118,22 @@ export const metadata: Metadata = {
 
   icons: {
     icon: [
-      { url: "/favicon.ico" },
-      { url: "/favicon-32x32.png", sizes: "32x32" },
-      { url: "/favicon-16x16.png", sizes: "16x16" },
+      {
+        url: "/favicon.ico",
+      },
+      {
+        url: "/favicon-32x32.png",
+        sizes: "32x32",
+      },
+      {
+        url: "/favicon-16x16.png",
+        sizes: "16x16",
+      },
     ],
     apple: "/apple-touch-icon.png",
   },
 
   manifest: "/site.webmanifest",
-
-  verification: {
-    google: "GTM-WLHG2WWT",
-  },
 
   referrer: "origin-when-cross-origin",
 
@@ -136,14 +141,14 @@ export const metadata: Metadata = {
     "geo.region": "US-TX",
     "geo.placename": "Sherman",
     "geo.position": "33.6357;-96.6089",
-    ICBM: "33.6357, -96.6089",
+    ICBM: "33.6357,-96.6089",
   },
 };
 
 export default function RootLayout({
   children,
 }: Readonly<{
-  children: React.ReactNode;
+  children: ReactNode;
 }>) {
   const apartmentSchema = {
     "@context": "https://schema.org",
@@ -211,6 +216,15 @@ export default function RootLayout({
         <CookieConsent />
 
         {children}
+
+        <Script
+          id="rentbamboo-charles"
+          src="https://charles.rentbamboo.com/w"
+          strategy="afterInteractive"
+          data-client-id="bamboo_7mkc8jx3"
+          data-position="right"
+          data-color="#1E3872"
+        />
 
         <Toaster
           position="top-right"
