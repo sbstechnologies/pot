@@ -16,6 +16,16 @@ import { Plus_Jakarta_Sans } from "next/font/google";
 
 import { siteConfig } from "@/app/config/content";
 
+const handleScheduleTour = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  e.preventDefault();
+
+  if (window.RentBamboo?.open) {
+    window.RentBamboo.open();
+  } else {
+    window.location.href = "/contact/";
+  }
+};
+
 import {
   Wrench,
   Clock,
@@ -200,6 +210,7 @@ export default function Home() {
 
               <a
                 href="/contact/"
+                onClick={handleScheduleTour}
                 className="flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-3 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-[#f5f2ed] text-[14px] font-semibold transition duration-300 hover:bg-white/10"
               >
                 Schedule a Tour
@@ -628,9 +639,10 @@ export default function Home() {
                 <div className="mt-4 sm:mt-6 grid sm:grid-cols-2 gap-3">
                   <a
                     href="/contact/"
+                    onClick={handleScheduleTour}
                     className="text-center w-full rounded-full border border-[#1e3872] text-[#1e3872] py-3.5 sm:py-4 px-5 text-[14px] sm:text-[15px] font-semibold hover:bg-[#f2f5fb] transition"
                   >
-                    Schedule Tour
+                    Schedule A Tour
                   </a>
                   <a
                     href="https://livenjoy.myresman.com/Portal/Applicants/New/POTS?a=1588"
@@ -1452,6 +1464,7 @@ export default function Home() {
             </a>
             <a
               href="/contact/"
+              onClick={handleScheduleTour}
               className="flex items-center justify-center gap-2 px-8 sm:px-9 py-4 sm:py-[15px] rounded-full bg-transparent text-[rgba(245,242,237,0.85)] font-[Plus_Jakarta_Sans] text-[14px] sm:text-[15px] font-semibold border-[1.5px] border-[rgba(245,242,237,0.25)] cursor-pointer tracking-[0.01em] hover:bg-white/[0.03] transition-colors"
             >
               Schedule Private Tour

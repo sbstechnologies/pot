@@ -5,6 +5,16 @@ import Image from "next/image";
 import { headerConfig } from "@/app/config/content";
 import DisableInspect from "@/app/components/DisableInspect";
 
+const handleScheduleTour = (e: React.MouseEvent<HTMLAnchorElement>) => {
+  e.preventDefault();
+
+  if (window.RentBamboo?.open) {
+    window.RentBamboo.open();
+  } else {
+    window.location.href = "/contact/";
+  }
+};
+
 export default function Footer() {
   return (
     <section className="bg-[#0f1e48] px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto pt-16 text-white">
@@ -87,15 +97,16 @@ export default function Footer() {
             {/* BUTTON */}
             <a
               href="/contact/"
+              onClick={handleScheduleTour}
               className="
-                mt-10 mb-10 inline-flex items-center gap-3
-                rounded-full border border-[#24468d]
-                bg-[#0d2347]
-                px-7 py-4
-                text-[15px] font-semibold text-white
-                transition hover:bg-[#14315f]
-                font-[Plus_Jakarta_Sans]
-              "
+    mt-10 mb-10 inline-flex items-center gap-3
+    rounded-full border border-[#24468d]
+    bg-[#0d2347]
+    px-7 py-4
+    text-[15px] font-semibold text-white
+    transition hover:bg-[#14315f]
+    font-[Plus_Jakarta_Sans]
+  "
             >
               Schedule a Private Tour
               <ArrowRight size={15} />
@@ -166,7 +177,11 @@ export default function Footer() {
               </li>
 
               <li>
-                <a href="/contact/" className="hover:text-white transition">
+                <a
+                  href="/contact/"
+                  onClick={handleScheduleTour}
+                  className="hover:text-white transition"
+                >
                   Schedule a Tour
                 </a>
               </li>
