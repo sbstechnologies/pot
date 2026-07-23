@@ -40,7 +40,7 @@ import {
 
 import FooterLegalBar from "@/app/components/FooterLegalBar";
 import ComplianceNotice from "@/app/components/ComplianceNotice";
-import TourScheduler from "./components/TourScheduler";
+import TourScheduler from "@/app/components/TourScheduler";
 
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
