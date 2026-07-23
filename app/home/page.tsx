@@ -40,6 +40,7 @@ import {
 
 import FooterLegalBar from "@/app/components/FooterLegalBar";
 import ComplianceNotice from "@/app/components/ComplianceNotice";
+import TourScheduler from "./components/TourScheduler";
 
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
@@ -113,6 +114,13 @@ export default function Home() {
 
   // Card gap in px at each breakpoint (matches gap-4 sm:gap-5 lg:gap-6)
   const cardGap = cols === 1 ? 0 : cols === 2 ? 20 : 24;
+
+  const [showTourScheduler, setShowTourScheduler] = useState(false);
+
+  const handleScheduleTour = (e: React.MouseEvent<HTMLAnchorElement>) => {
+    e.preventDefault();
+    setShowTourScheduler(true);
+  };
 
   return (
     <>
@@ -199,7 +207,8 @@ export default function Home() {
               </a>
 
               <a
-                href="/contact/"
+                href="#"
+                onClick={handleScheduleTour}
                 className="flex items-center justify-center gap-2 w-full sm:w-auto px-7 py-3 rounded-full border border-white/20 bg-white/5 backdrop-blur-sm text-[#f5f2ed] text-[14px] font-semibold transition duration-300 hover:bg-white/10"
               >
                 Schedule a Tour
@@ -627,7 +636,8 @@ export default function Home() {
                 </div>
                 <div className="mt-4 sm:mt-6 grid sm:grid-cols-2 gap-3">
                   <a
-                    href="/contact/"
+                    href="#"
+                    onClick={handleScheduleTour}
                     className="text-center w-full rounded-full border border-[#1e3872] text-[#1e3872] py-3.5 sm:py-4 px-5 text-[14px] sm:text-[15px] font-semibold hover:bg-[#f2f5fb] transition"
                   >
                     Schedule Tour
@@ -1451,7 +1461,8 @@ export default function Home() {
               </svg>
             </a>
             <a
-              href="/contact/"
+              href="#"
+              onClick={handleScheduleTour}
               className="flex items-center justify-center gap-2 px-8 sm:px-9 py-4 sm:py-[15px] rounded-full bg-transparent text-[rgba(245,242,237,0.85)] font-[Plus_Jakarta_Sans] text-[14px] sm:text-[15px] font-semibold border-[1.5px] border-[rgba(245,242,237,0.25)] cursor-pointer tracking-[0.01em] hover:bg-white/[0.03] transition-colors"
             >
               Schedule Private Tour
@@ -1498,6 +1509,10 @@ export default function Home() {
       <Footer />
       <ComplianceNotice />
       <FooterLegalBar />
+      <TourScheduler
+        open={showTourScheduler}
+        onClose={() => setShowTourScheduler(false)}
+      />
     </>
   );
 }
