@@ -640,7 +640,7 @@ export default function Home() {
                     onClick={handleScheduleTour}
                     className="text-center w-full rounded-full border border-[#1e3872] text-[#1e3872] py-3.5 sm:py-4 px-5 text-[14px] sm:text-[15px] font-semibold hover:bg-[#f2f5fb] transition"
                   >
-                    Schedule Tour
+                    Schedule a Tour
                   </a>
                   <a
                     href="https://livenjoy.myresman.com/Portal/Applicants/New/POTS?a=1588"
