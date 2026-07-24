@@ -11,7 +11,7 @@ const jakarta = Plus_Jakarta_Sans({
 
 export default function HousingVoucher() {
   return (
-    <section className="bg-[#F4F0EA] py-16 md:py-24">
+    <section className="bg-[#F4F0EA] py-6 py-16 md:py-24">
       <div className="mx-auto px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 ">
         <div className="overflow-hidden rounded-[32px] border border-stone-200 bg-white shadow-[0_16px_50px_rgba(15,23,42,0.08)] transition-shadow duration-300 hover:shadow-[0_20px_60px_rgba(15,23,42,0.12)]">
           <div className="border-l-[6px] border-[#C8A97E] p-8 sm:p-10 lg:p-14 xl:p-16">

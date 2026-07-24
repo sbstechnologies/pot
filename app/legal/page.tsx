@@ -6,9 +6,8 @@ import Footer from "@/app/components/Footer";
 import { siteConfig } from "@/app/config/content";
 import FooterLegalBar from "@/app/components/FooterLegalBar";
 
-import ComplianceNotice from "@/app/components/ComplianceNotice";
-
 import LegalContent from "@/app/components/LegalContent";
+import HousingVoucher from "@/app/components/HousingVoucher";
 
 export default function Contact() {
   return (
@@ -33,6 +32,8 @@ export default function Contact() {
       </section>
 
       <LegalContent />
+
+      <HousingVoucher />
 
       {/* ===== OFFER CTA ===== */}
       <section className="bg-[#f5f2ed] pb-20 px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-auto md:pb-20">
@@ -63,8 +64,9 @@ export default function Contact() {
           </div>
         </div>
       </section>
+
       <Footer />
-      <ComplianceNotice />
+
       <FooterLegalBar />
     </>
   );
