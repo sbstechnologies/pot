@@ -8,7 +8,6 @@ import FooterLegalBar from "@/app/components/FooterLegalBar";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
 
 import SendMessage from "@/app/components/SendMessage";
-import HousingVoucher from "@/app/components/HousingVoucher";
 
 export default function Contact() {
   return (
@@ -214,7 +213,6 @@ export default function Contact() {
           <SendMessage />
         </div>
       </section>
-      <HousingVoucher />
 
       {/* ===== OFFER CTA ===== */}
       <section className="bg-[#f5f2ed] pb-14 px-6 xs:px-6 sm:px-6 md:px-20 lg:px-40 xl:px-40 xxl:px-80 mx-automd:pb-20">

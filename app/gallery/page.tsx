@@ -14,7 +14,6 @@ import {
 import FooterLegalBar from "@/app/components/FooterLegalBar";
 
 import { Instrument_Serif } from "next/font/google";
-import HousingVoucher from "@/app/components/HousingVoucher";
 
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
@@ -227,8 +226,6 @@ export default function Gallery() {
           </button>
         </div>
       )}
-
-      <HousingVoucher />
 
       <Footer />
 

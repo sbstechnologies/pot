@@ -7,8 +7,6 @@ import { useState, useMemo } from "react";
 import { images, floorPlans, type FloorPlan } from "@/app/config/content";
 import FooterLegalBar from "@/app/components/FooterLegalBar";
 
-import HousingVoucher from "@/app/components/HousingVoucher";
-
 type CardProps = {
   plan: FloorPlan;
   isSelected: boolean;
@@ -736,8 +734,6 @@ export default function Floor() {
           </div>
         </div>
       </section>
-
-      <HousingVoucher />
 
       <Footer />
 
