@@ -39,8 +39,8 @@ import {
 } from "@/app/config/content";
 
 import FooterLegalBar from "@/app/components/FooterLegalBar";
-import ComplianceNotice from "@/app/components/ComplianceNotice";
 import TourScheduler from "@/app/components/TourScheduler";
+import HousingVoucher from "@/app/components/HousingVoucher";
 
 const instrumentSerif = Instrument_Serif({
   subsets: ["latin"],
@@ -1398,6 +1398,8 @@ export default function Home() {
         </div>
       </section>
 
+      <HousingVoucher />
+
       {/* ================= LEASING CTA ================= */}
       <section
         id="leasing-cta"
@@ -1465,7 +1467,7 @@ export default function Home() {
               onClick={handleScheduleTour}
               className="flex items-center justify-center gap-2 px-8 sm:px-9 py-4 sm:py-[15px] rounded-full bg-transparent text-[rgba(245,242,237,0.85)] font-[Plus_Jakarta_Sans] text-[14px] sm:text-[15px] font-semibold border-[1.5px] border-[rgba(245,242,237,0.25)] cursor-pointer tracking-[0.01em] hover:bg-white/[0.03] transition-colors"
             >
-              Schedule Private Tour
+              Schedule a Private Tour
             </a>
           </div>
 
@@ -1507,7 +1509,7 @@ export default function Home() {
       <PromoCardWidget />
 
       <Footer />
-      <ComplianceNotice />
+
       <FooterLegalBar />
       <TourScheduler
         open={showTourScheduler}
