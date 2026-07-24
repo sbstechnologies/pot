@@ -6,10 +6,10 @@ import Footer from "@/app/components/Footer";
 import { siteConfig } from "@/app/config/content";
 import FooterLegalBar from "@/app/components/FooterLegalBar";
 import { MapPin, Phone, Mail, Clock } from "lucide-react";
-import ComplianceNotice from "@/app/components/ComplianceNotice";
+
 import { motion } from "framer-motion";
 import { useRouter } from "next/navigation";
-
+import HousingVoucher from "@/app/components/HousingVoucher";
 
 export default function Contact() {
   const router = useRouter();
@@ -207,9 +207,9 @@ export default function Contact() {
           </div>
         </div>
       </section>
-
+      <HousingVoucher />
       <Footer />
-      <ComplianceNotice />
+
       <FooterLegalBar />
     </>
   );

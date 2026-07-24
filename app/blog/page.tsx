@@ -3,10 +3,11 @@ import { useState } from "react";
 import HeaderOther from "@/app/components/HeaderOther";
 import Footer from "@/app/components/Footer";
 import { images, type Post, posts, featuredPost } from "@/app/config/content";
-import LoriChatWidget from "@/app/components/LoriChatWidget";
+
 import PromoCardWidget from "@/app/components/PromoCardWidget";
-import FooterLegalBar from "../components/FooterLegalBar";
-import ComplianceNotice from "../components/ComplianceNotice";
+import FooterLegalBar from "@/app/components/FooterLegalBar";
+
+import HousingVoucher from "@/app/components/HousingVoucher";
 
 export default function Blog() {
   const [showTopBar, setShowTopBar] = useState(true);
@@ -259,8 +260,9 @@ export default function Blog() {
           </div>
         </div>
       )}
+      <HousingVoucher />
       <Footer />
-      <ComplianceNotice />
+
       <FooterLegalBar />
     </>
   );
