@@ -2,7 +2,7 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "The Parks on Taylor Apartments Homes",
+    name: "The Parks on Taylor Apartment Homes",
     short_name: "Parks on Taylor",
     description:
       "Discover spacious 1 & 2-bedroom apartments for rent in Sherman, Texas.",

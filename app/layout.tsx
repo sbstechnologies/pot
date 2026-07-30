@@ -44,7 +44,7 @@ export const metadata: Metadata = {
 
   title: {
     default:
-      "The Parks on Taylor Apartments Homes | Apartments for Rent in Sherman, TX",
+      "The Parks on Taylor Apartment Homes | Apartments for Rent in Sherman, TX",
     template: "%s | The Parks on Taylor",
   },
 
@@ -61,17 +61,17 @@ export const metadata: Metadata = {
     "Apartment Homes Sherman TX",
   ],
 
-  applicationName: "The Parks on Taylor Apartments Homes",
+  applicationName: "The Parks on Taylor Apartment Homes",
 
   authors: [
     {
-      name: "The Parks on Taylor Apartments Homes",
+      name: "The Parks on Taylor Apartment Homes",
       url: "https://theparksontaylor.com",
     },
   ],
 
-  creator: "The Parks on Taylor Apartments Homes",
-  publisher: "The Parks on Taylor Apartments Homes",
+  creator: "The Parks on Taylor Apartment Homes",
+  publisher: "The Parks on Taylor Apartment Homes",
 
   category: "Real Estate",
 
@@ -92,11 +92,11 @@ export const metadata: Metadata = {
   },
 
   openGraph: {
-    title: "The Parks on Taylor Apartments Homes",
+    title: "The Parks on Taylor Apartment Homes",
     description:
       "Find beautiful apartment homes in Sherman, Texas with spacious floor plans and premium amenities.",
     url: "https://theparksontaylor.com",
-    siteName: "The Parks on Taylor Apartments Homes",
+    siteName: "The Parks on Taylor Apartment Homes",
     locale: "en_US",
     type: "website",
     images: [
@@ -111,7 +111,7 @@ export const metadata: Metadata = {
 
   twitter: {
     card: "summary_large_image",
-    title: "The Parks on Taylor Apartments Homes",
+    title: "The Parks on Taylor Apartment Homes",
     description: "Modern apartment living in Sherman, Texas.",
     images: ["/images/logo.png"],
   },
@@ -153,7 +153,7 @@ export default function RootLayout({
   const apartmentSchema = {
     "@context": "https://schema.org",
     "@type": "ApartmentComplex",
-    name: "The Parks on Taylor Apartments Homes",
+    name: "The Parks on Taylor Apartment Homes",
     image: "https://theparksontaylor.com/images/logo.png",
     url: "https://theparksontaylor.com",
     telephone: "+1-903-961-6391",

@@ -33,21 +33,22 @@ export default function TourScheduler({ open, onClose }: TourSchedulerProps) {
           aria-label="Close"
           onClick={onClose}
           className="
-        absolute
-        right-3
-        top-3
-        z-20
-        flex
-        h-11
-        w-11
-        items-center
-        justify-center
-        rounded-full
-        bg-white
-        shadow-lg
-        transition
-        hover:bg-gray-100
-      "
+    absolute
+    right-3
+    top-3
+    z-20
+    flex
+    h-11
+    w-11
+    items-center
+    justify-center
+    rounded-full
+    bg-[#1E3872]
+    text-white
+    shadow-lg
+    transition
+    hover:bg-[#162C5A]
+  "
         >
           ✕
         </button>
