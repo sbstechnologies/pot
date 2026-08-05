@@ -11,6 +11,7 @@ import "@/app/globals.css";
 import CookieConsent from "@/app/components/CookieConsent";
 import DisableInspect from "@/app/components/DisableInspect";
 import SmoothScroll from "@/app/components/SmoothScroll";
+import RentBambooWidget from "@/app/components/RentBambooWidget";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -205,14 +206,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
 
         {children}
 
-        <Script
-          id="rentbamboo-widget"
-          src="https://charles.rentbamboo.com/w"
-          strategy="afterInteractive"
-          data-client-id="bamboo_7mkc8jx3"
-          data-position="right"
-          data-color="#1E3872"
-        />
+        <RentBambooWidget />
 
         <Toaster
           position="top-right"
