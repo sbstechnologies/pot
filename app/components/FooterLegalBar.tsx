@@ -1,3 +1,5 @@
+"use client";
+
 import Link from "next/link";
 import { ArrowUp } from "lucide-react";
 import Image from "next/image";
@@ -50,13 +52,15 @@ export default function FooterLegalBar() {
           </Link>
 
           <button
-            onClick={() =>
+            type="button"
+            onClick={() => {
               window.scrollTo({
                 top: 0,
                 behavior: "smooth",
-              })
-            }
-            className="w-9 h-9 rounded-lg border border-[#1E3872]/40 bg-[#1E3872]/15 flex items-center justify-center hover:bg-[#1E3872]/25 transition-all"
+              });
+            }}
+            aria-label="Back to top"
+            className="flex h-9 w-9 items-center justify-center rounded-lg border border-[#1E3872]/40 bg-[#1E3872]/15 transition-all hover:bg-[#1E3872]/25"
           >
             <ArrowUp size={14} className="text-white/60" />
           </button>

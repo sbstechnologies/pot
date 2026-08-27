@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 
 import { Instrument_Serif, Plus_Jakarta_Sans } from "next/font/google";
+import { siteConfig } from "../config/content";
 
 const instrument = Instrument_Serif({
   subsets: ["latin"],
@@ -545,17 +546,17 @@ export default function LegalContent() {
           online application flows on this website, or if you require assistance
           with any part of our site, please contact our leasing office at{" "}
           <a
-            href="tel:+19039616391"
+            href={siteConfig.tel}
             className="font-semibold text-[#294B86] hover:underline"
           >
-            (903) 961-6391
+            {siteConfig.phone}
           </a>{" "}
           or email{" "}
           <a
-            href="mailto:potmanager@livenjoymgt.com"
+            href={`mailto:${siteConfig.email}`}
             className="font-semibold text-[#294B86] hover:underline"
           >
-            potmanager@livenjoymgt.com
+            {siteConfig.email}
           </a>{" "}
           during regular business hours, and we will be happy to assist you.
         </motion.p>

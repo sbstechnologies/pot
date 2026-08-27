@@ -4,13 +4,13 @@ import type { ReactNode } from "react";
 import { Geist, Geist_Mono, Plus_Jakarta_Sans } from "next/font/google";
 import Script from "next/script";
 import { GoogleTagManager } from "@next/third-parties/google";
-import { Toaster } from "react-hot-toast";
 
 import "@/app/globals.css";
 
 import CookieConsent from "@/app/components/CookieConsent";
 import DisableInspect from "@/app/components/DisableInspect";
 import SmoothScroll from "@/app/components/SmoothScroll";
+import ToastProvider from "@/app/components/ToastProvider";
 
 const plusJakartaSans = Plus_Jakarta_Sans({
   variable: "--font-plus-jakarta-sans",
@@ -217,30 +217,19 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           </Script>
         )}
 
-        <SmoothScroll />
-        <CookieConsent />
-
-        {children}
-
-        <script
+        <Script
           id="rentbamboo-charles"
           src="https://charles.rentbamboo.com/w"
           data-client-id="bamboo_7mkc8jx3"
+          strategy="afterInteractive"
           data-position="right"
           data-color="#1E3872"
-        ></script>
-
-        <Toaster
-          position="top-right"
-          toastOptions={{
-            duration: 5000,
-            style: {
-              background: "#1E3872",
-              color: "#fff",
-              borderRadius: "12px",
-            },
-          }}
         />
+        <SmoothScroll />
+        <CookieConsent />
+        <ToastProvider />
+
+        {children}
       </body>
     </html>
   );

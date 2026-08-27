@@ -152,8 +152,8 @@ export const images = {
 export const siteConfig = {
   name: "Parks on Taylor",
   address: "1200 West Taylor Street, Sherman, TX 75092",
-  phone: "(903) 961–6391",
-  tel: "tel:+19039616391",
+  phone: "(903) 357-5214",
+  tel: "tel:+19033575214",
   email: "potmanager@livenjoymgt.com",
   hours: "Mon–Fri : 8:30 AM – 5:30 PM",
   hours1: "Sat : 10 AM – 4 PM",

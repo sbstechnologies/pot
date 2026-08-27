@@ -179,7 +179,7 @@ export async function POST(req: Request) {
       <!-- Footer -->
       <div style=" background:#111827; padding:24px; text-align:center; color:#9ca3af; font-size:13px; " > <div style="color:#ffffff;font-size:18px;font-weight:700;"> Parks on Taylor </div>
       <div style="margin-top:8px;"> 1200 West Taylor Street, Sherman, TX 75092</div>
-      <div style="margin-top:6px;"> 📞 (903) 961–6391 </div>
+      <div style="margin-top:6px;"> 📞 (903) 357-5214 </div>
       <div style="margin-top:15px;"> This email was automatically generated from the website contact form. </div>
       <div style="margin-top:10px;"> © ${new Date().getFullYear()} Parks on Taylor. All Rights Reserved. </div> </div>
       `,
