@@ -90,11 +90,17 @@ export default function Footer() {
                     className="text-[#76a1ff] shrink-0 mt-[3px]"
                   />
 
-                  <span>{siteConfig.hours}</span>
-                </div>
+                  <div className="flex flex-col gap-0">
+                    <span className="font-[Plus_Jakarta_Sans] text-[13px] leading-[1.4] text-[rgba(245,242,237,0.55)]">
+                      {siteConfig.hours}
+                    </span>
 
-                <div className="flex items-start gap-3">
-                  <span>{siteConfig.hours1}</span>
+                    {siteConfig.hours1 && (
+                      <span className="font-[Plus_Jakarta_Sans] text-[13px] leading-[1.4] text-[rgba(245,242,237,0.55)]">
+                        {siteConfig.hours1}
+                      </span>
+                    )}
+                  </div>
                 </div>
               </div>
 
