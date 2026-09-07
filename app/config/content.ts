@@ -1,4 +1,72 @@
-import toast from "react-hot-toast";
+export const siteConfig = {
+  name: "Parks on Taylor",
+  address: "1200 West Taylor Street, Sherman, TX 75092",
+  phone: "(903) 357-5214",
+  tel: "tel:+19033575214",
+  email: "potmanager@livenjoymgt.com",
+  hours: "Mon–Fri : 8:30 AM – 5:30 PM",
+  hours1: "Sat : 10 AM – 4 PM",
+  applyLink: "https://livenjoy.myresman.com/Portal/Applicants/New/POTS?a=1588",
+};
+
+export const lookLeaseSpecial = {
+  id: "look",
+  badge: "LOOK & LEASE SPECIAL",
+  text: "Huge Leasing Specials! Act fast for our best rate! Move in by September 30th !",
+};
+
+export const floorPlansSpecial = {
+  id: "floor-plans-special",
+  badge: "LOOK & LEASE SPECIAL",
+  headline: "Special Promotion - Huge Specials",
+  badges: ["1BR from $799", "2BR from $849 "],
+  phone: "(903) 357-5214",
+  tel: "tel:+19033575214",
+};
+
+export const lookLeaseOffer = {
+  id: "look-lease-offer",
+  tagline: "LIMITED TIME OFFER",
+  title: "Look & Lease Special",
+  subtext:
+    "Act fast to get our best rates while they last. 1BRs from $799, 2BRs from $849.",
+  highlight: " Must move in by September 30, 2026 !",
+  buttonText: "Call Now: (903) 357-5214",
+  buttonHref: "tel:+19033575214",
+};
+
+// ======================================================
+// PROMOTION
+// ======================================================
+
+export const PromoCardWidgetConfig = {
+  label: "LIMITED TIME",
+  title: "Special Promotion",
+
+  cards: [
+    {
+      title: "Huge Leasing Specials",
+      text: "Act fast to lock in our best rates. Limited availability remaining.",
+      highlight: "",
+      suffix: "",
+      theme: "orange",
+    },
+    {
+      title: "Contact Us Today",
+      text: "Call us right now for full details.",
+      highlight: "Must move in by September 30, 2026.",
+      suffix: "",
+      theme: "blue",
+    },
+  ],
+
+  buttonText: "Apply Now",
+
+  applyLink: "https://livenjoy.myresman.com/Portal/Applicants/New/POTS?a=1588",
+
+  phone: "Call us: (903) 357-5214",
+  phoneLink: "tel:+19033575214",
+};
 
 export const images = {
   // HOME
@@ -149,16 +217,6 @@ export const images = {
   alt62: "Farm to table dining and local restaurant experience in Sherman TX",
 };
 
-export const siteConfig = {
-  name: "Parks on Taylor",
-  address: "1200 West Taylor Street, Sherman, TX 75092",
-  phone: "(903) 357-5214",
-  tel: "tel:+19033575214",
-  email: "potmanager@livenjoymgt.com",
-  hours: "Mon–Fri : 8:30 AM – 5:30 PM",
-  hours1: "Sat : 10 AM – 4 PM",
-};
-
 export const units = [
   {
     name: "A1",
@@ -225,12 +283,6 @@ export const footerLocation = [
     distance: "5 mi",
   },
 ];
-
-export const lookLeaseSpecial = {
-  id: "look",
-  badge: "LOOK & LEASE SPECIAL",
-  text: "Huge Leasing Specials! Act fast for our best rate !.",
-};
 
 export const headerConfig = {
   logo: {
@@ -339,29 +391,6 @@ export const leasePortalConfig = {
 
   availabilityText:
     "Prices and availability subject to change · Pets welcome · Call (903) 961-6391",
-};
-
-export const PromoCardWidgetConfig = {
-  label: "Limited Time",
-  title: "Special Promotion",
-  cards: [
-    {
-      title: "Huge Leasing Specials",
-      text: "Act fast to lock in our",
-      highlight: "best rates",
-      suffix: "limited availability remaining",
-      theme: "orange",
-    },
-    {
-      title: "Contact Us Today",
-      text: "",
-      highlight: "Call us right now",
-      suffix: " for full details on current offers, Restrictions apply.",
-      theme: "blue",
-    },
-  ],
-  buttonText: "Apply Now",
-  applyLink: "https://livenjoy.myresman.com/Portal/Applicants/New/POTS?a=1588",
 };
 
 //home page

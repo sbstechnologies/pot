@@ -265,10 +265,10 @@ export default function Home() {
                     Special Promotion - Huge Specials
                   </span>
                   <span className="font-[Plus_Jakarta_Sans] text-xs sm:text-[13px] font-semibold text-[#f5f2ee]/80 bg-[#f5f2ee]/15 px-3 py-1 rounded-full whitespace-nowrap">
-                    1BR from $799 · A1–A3
+                    1BR from $799
                   </span>
                   <span className="font-[Plus_Jakarta_Sans] text-xs sm:text-[13px] font-semibold text-[#f5f2ee]/80 bg-[#f5f2ee]/15 px-3 py-1 rounded-full whitespace-nowrap">
-                    2BR from $999 · B1–B3
+                    2BR from $849
                   </span>
                 </div>
               </div>
@@ -643,7 +643,7 @@ export default function Home() {
                     Schedule a Tour
                   </a>
                   <a
-                    href="https://livenjoy.myresman.com/Portal/Applicants/New/POTS?a=1588"
+                    href={siteConfig.applyLink}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="block w-full text-center rounded-full bg-[#1e3872] text-white py-3.5 sm:py-4 px-5 text-[14px] sm:text-[15px] font-semibold shadow-[0_8px_20px_rgba(30,56,114,0.18)] hover:bg-[#15306a] transition"
@@ -1442,8 +1442,9 @@ export default function Home() {
           {/* CTA BUTTONS — stack on mobile */}
           <div className="flex flex-col sm:flex-row justify-center gap-3 sm:gap-3.5 flex-wrap mb-10 sm:mb-12 px-4 sm:px-0">
             <a
-              href="https://livenjoy.myresman.com/Portal/Applicants/New/POTS?a=1588"
+              href={siteConfig.applyLink}
               target="_blank"
+              rel="noopener noreferrer"
               className="flex items-center justify-center gap-2 px-8 sm:px-9 py-4 sm:py-[15px] rounded-full bg-[#1e3872] text-[#f5f2ed] font-[Plus_Jakarta_Sans] text-[14px] sm:text-[15px] font-bold cursor-pointer shadow-[rgba(30,56,114,0.5)_0px_4px_24px] tracking-[0.01em] border-none outline-none hover:opacity-95 transition-opacity"
             >
               Apply Now
