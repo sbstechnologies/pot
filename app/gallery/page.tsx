@@ -57,20 +57,40 @@ function ImageCard({ item, index, onView }: ImageCardProps) {
 export default function Gallery() {
   const [activeFilter, setActiveFilter] = useState<FilterType>("All");
   const [currentIndex, setCurrentIndex] = useState<number | null>(null);
-
-  // Filters out the 18th item globally (index 17 corresponds to 6th row, 3rd column in a 3-column setup)
-  const filteredGallery = (
+  const filteredGallery =
     activeFilter === "All"
       ? gallery
-      : gallery.filter((item) => item.category === activeFilter)
-  ).filter((_, index) => index !== 17);
+      : gallery.filter((item) => item.category === activeFilter);
 
   const filters: { label: FilterType; count: string }[] = [
-    { label: "All", count: "" },
-    { label: "Exteriors", count: "3" },
-    { label: "Interiors", count: "7" },
-    { label: "Amenities", count: "5" },
-    { label: "Neighborhood", count: "4" },
+    {
+      label: "All",
+      count: String(gallery.length),
+    },
+    {
+      label: "Exteriors",
+      count: String(
+        gallery.filter((item) => item.category === "Exteriors").length,
+      ),
+    },
+    {
+      label: "Interiors",
+      count: String(
+        gallery.filter((item) => item.category === "Interiors").length,
+      ),
+    },
+    {
+      label: "Amenities",
+      count: String(
+        gallery.filter((item) => item.category === "Amenities").length,
+      ),
+    },
+    {
+      label: "Neighborhood",
+      count: String(
+        gallery.filter((item) => item.category === "Neighborhood").length,
+      ),
+    },
   ];
 
   const closeModal = () => setCurrentIndex(null);
