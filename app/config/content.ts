@@ -12,7 +12,7 @@ export const siteConfig = {
 export const lookLeaseSpecial = {
   id: "look",
   badge: "LOOK & LEASE SPECIAL",
-  text: "Huge Leasing Specials! Act fast for our best rate! Move in by September 30th !",
+  text: "Huge Leasing Specials! Act fast for our best rate! Move in by October 31, 2026!",
 };
 
 export const floorPlansSpecial = {
@@ -30,7 +30,7 @@ export const lookLeaseOffer = {
   title: "Look & Lease Special",
   subtext:
     "Act fast to get our best rates while they last. 1BRs from $799, 2BRs from $849.",
-  highlight: " Must move in by September 30, 2026 !",
+  highlight: " Must move in by October 31, 2026!",
   buttonText: "Call Now: (903) 357-5214",
   buttonHref: "tel:+19033575214",
 };
@@ -54,7 +54,7 @@ export const PromoCardWidgetConfig = {
     {
       title: "Contact Us Today",
       text: "Call us right now for full details.",
-      highlight: "Must move in by September 30, 2026.",
+      highlight: "Must move in by October 31, 2026.",
       suffix: "",
       theme: "blue",
     },
