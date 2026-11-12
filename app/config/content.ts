@@ -1,11 +1,24 @@
+// ======================================================
+// SITE CONFIG
+// ======================================================
+
 export const siteConfig = {
-  name: "Parks on Taylor",
-  address: "1200 West Taylor Street, Sherman, TX 75092",
+  name: "Parks on Taylor at Sherman",
+  shortName: "Parks on Taylor",
+
+  address: "1200 West Taylor Street, Sherman, TX 7509",
+
   phone: "(903) 357-5214",
   tel: "tel:+19033575214",
+
   email: "potmanager@livenjoymgt.com",
-  hours: "Mon–Fri : 8:30 AM – 5:30 PM",
-  hours1: "Sat : 10 AM – 4 PM",
+  propertyManagerEmail: "potasstmanager@livenjoymgt.com",
+
+  hours: "Mon–Fri: 8:30 AM – 5:30 PM",
+  hours1: "Sat: 10:00 AM – 4:00 PM",
+
+  website: "https://www.parksontaylorapts.com",
+
   applyLink: "https://livenjoy.myresman.com/Portal/Applicants/New/POTS?a=1588",
 };
 
